@@ -12,6 +12,7 @@ import { ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { NgxMaskModule } from 'ngx-mask';
+import { AngularValidateBrLibModule  } from 'angular-validate-br';
 
 import { FullComponent } from './layouts/full/full.component';
 import { BlankComponent } from './layouts/blank/blank.component';
@@ -58,6 +59,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     NgxMaskModule.forRoot(),
     NgbModule.forRoot(),
     PerfectScrollbarModule,
+    AngularValidateBrLibModule,
     AppRoutingModule,
     ReactiveFormsModule
   ],
