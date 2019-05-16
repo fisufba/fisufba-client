@@ -6,6 +6,7 @@ import {
   NgbCarouselConfig
 } from '@ng-bootstrap/ng-bootstrap';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -14,7 +15,8 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 export class NavigationComponent implements AfterViewInit {
   name: string;
   public config: PerfectScrollbarConfigInterface = {};
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal,
+              private router: Router) {}
 
   // This is for Notifications
   notifications: Object[] = [
@@ -102,5 +104,10 @@ export class NavigationComponent implements AfterViewInit {
     );
 
     $('body').trigger('resize');
+  }
+
+  onLogout() {
+    localStorage.setItem('isLoggedin', 'false');
+    this.router.navigateByUrl('');
   }
 }

@@ -4,15 +4,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { FullComponent } from './layouts/full/full.component';
 import { BlankComponent } from './layouts/blank/blank.component';
+import { LoginComponent } from './auth/login/login.component'
 
 export const routes: Routes = [
   {
     path: '',
     component: FullComponent,
     children: [
-      { path: '', redirectTo: '/fisufba', pathMatch: 'full' },
+      { path: '', redirectTo: '/login', pathMatch: 'full' },
       {
-        path: 'fisufba',
+        path: 'home',
         loadChildren: './starter/starter.module#StarterModule'
       },
       {
@@ -26,9 +27,8 @@ export const routes: Routes = [
     component: BlankComponent,
     children: [
       {
-        path: 'auth',
-        loadChildren:
-          './auth/auth.module#AuthModule'
+        path: 'login',
+        component: LoginComponent
       }
     ]
   },

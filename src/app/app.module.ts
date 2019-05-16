@@ -8,8 +8,11 @@ import {
 } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
+import { NgxMaskModule } from 'ngx-mask';
+import { AngularValidateBrLibModule  } from 'angular-validate-br';
 
 import { FullComponent } from './layouts/full/full.component';
 import { BlankComponent } from './layouts/blank/blank.component';
@@ -25,10 +28,9 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpinnerComponent } from './shared/spinner.component';
-import { LoginComponent } from './auth/login/login.component';
 import { AuthComponent } from './auth/auth.component';
+import { LoginComponent } from './auth/login/login.component';
 
-import { AuthRoutes  } from './auth/auth.routing';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -45,8 +47,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     NavigationComponent,
     BreadcrumbComponent,
     SidebarComponent,
-    LoginComponent,
-    AuthComponent
+    AuthComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
@@ -54,10 +56,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    NgxMaskModule.forRoot(),
     NgbModule.forRoot(),
     PerfectScrollbarModule,
+    AngularValidateBrLibModule,
     AppRoutingModule,
-    RouterModule.forChild(AuthRoutes),
+    ReactiveFormsModule
   ],
   providers: [
     {
