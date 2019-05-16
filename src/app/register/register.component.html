@@ -1,0 +1,51 @@
+<div class="login-register">
+  <div class="login-box card">
+    <div class="card-body">
+      <form class="form-horizontal form-material"
+            id="loginform"
+            [formGroup]="signupForm">
+        <h3 class="box-title m-b-20">Novo Paciente</h3>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <input class="form-control"
+                   type="text"
+                   formControlName="nome"
+                   placeholder="Nome">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <input class="form-control"
+                   type="text"
+                   mask="000.000.000-00"
+                   formControlName="cpf"
+                   required
+                   placeholder="CPF">
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="col-xs-12">
+            <input class="form-control"
+                   type="text"
+                   formControlName="email"
+                   placeholder="E-mail">
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="col-xs-12">
+            <input class="form-control"
+                    type="text"
+                    formControlName="telefone"
+                    mask="(00)0 0000-0000"
+                    placeholder="Telefone">
+          </div>
+        </div>
+        <div class="form-group text-center p-b-20">
+          <div class="col-xs-12">
+            <a [routerLink]="['/login']" class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light">Cadastrar</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
