@@ -108,6 +108,6 @@ export class NavigationComponent implements AfterViewInit {
 
   onLogout() {
     localStorage.setItem('isLoggedin', 'false');
-    this.router.navigateByUrl('home');
+    this.router.navigateByUrl('');
   }
 }
