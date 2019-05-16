@@ -10,6 +10,7 @@ import { ValidateBrService } from 'angular-validate-br';
 export class RegisterComponent implements OnInit {
 
   signupForm: any;
+  disableLogin: boolean = true;
 
   constructor(private validateBrService: ValidateBrService) {}
 
@@ -27,7 +28,10 @@ export class RegisterComponent implements OnInit {
     })
   }
 
-  isValid() {
-    console.log(this.signupForm.status)
+  onUpdateForm() {
+    if(this.signupForm.status === 'VALID') {
+      // send data
+      this.disableLogin = false;
+    }
   }
 }
