@@ -17,7 +17,9 @@ export class LoginComponent implements OnInit, AfterViewInit {
   ngOnInit() {
 
     this.loginForm = new FormGroup({
-      'email': new FormControl('', [Validators.required, Validators.email]),
+        'cpf': new FormControl('', [Validators.required,
+                                    Validators.minLength(11),
+                                    Validators.maxLength(11)]),
       'password': new FormControl('', [Validators.required, Validators.minLength(6)])
     })
 
@@ -30,7 +32,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
     localStorage.setItem('isLoggedin', 'true');
   }
 
-  onChangeForm() {
+  onUpdateForm() {
     if(this.loginForm.valid) {
       this.disableLogin = false;
     }
