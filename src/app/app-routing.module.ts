@@ -11,9 +11,9 @@ export const routes: Routes = [
     path: '',
     component: FullComponent,
     children: [
-      { path: '', redirectTo: '', pathMatch: 'full' },
+      { path: '', redirectTo: '/login', pathMatch: 'full' },
       {
-        path: '',
+        path: 'home',
         loadChildren: './starter/starter.module#StarterModule'
       },
       {

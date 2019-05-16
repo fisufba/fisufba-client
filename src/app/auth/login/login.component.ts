@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
   onLogin() {
     localStorage.setItem('isLoggedin', 'true');
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('home');
   }
 
   onUpdateForm() {
