@@ -4,7 +4,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { FullComponent } from './layouts/full/full.component';
 import { BlankComponent } from './layouts/blank/blank.component';
-import { LoginComponent } from './auth/login/login.component'
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 export const routes: Routes = [
   {
@@ -29,6 +30,10 @@ export const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent
+      },
+      {
+        path: 'novo/paciente',
+        component: RegisterComponent
       }
     ]
   },
