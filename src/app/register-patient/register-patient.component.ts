@@ -4,10 +4,10 @@ import { ValidateBrService } from 'angular-validate-br';
 
 @Component({
   selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  templateUrl: './register-patient.component.html',
+  styleUrls: ['./register-patient.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterPatientComponent implements OnInit {
 
   signupForm: any;
   disableLogin: boolean = true;
