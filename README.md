@@ -14,6 +14,12 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
+## Building From a Docker Container
+
+Run `docker build -t fisufba-client . &&  docker run --rm -v "$(pwd)/dist-prod:/app/dist" fisufba-client` to build the production files into an `dist-prod/www` directory.
+
+Serve those files through a web server or use a local debugging server, for example `python3 -m http.server --directory ./dist-prod/www 9000`.
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
