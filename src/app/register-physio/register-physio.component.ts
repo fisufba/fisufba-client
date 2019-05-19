@@ -10,13 +10,13 @@ import { ValidateBrService } from 'angular-validate-br';
 export class RegisterPhysioComponent implements OnInit {
 
   registerForm: any;
-  //disableLogin: boolean = true;
+  disableBtn: boolean = true;
 
   constructor(private validateBrService: ValidateBrService) {}
 
   ngOnInit() {
 
-    this.loginForm = new FormGroup({
+    this.registerForm = new FormGroup({
     	'name': new FormControl('', [Validators.required]),
       'cpf': new FormControl('', [Validators.required,
                                     this.validateBrService.cpf,
@@ -32,5 +32,10 @@ export class RegisterPhysioComponent implements OnInit {
     })
 
   }
-
+  
+  onUpdateForm() {
+    if(this.registerForm.valid) {
+      this.disableBtn = false;
+    }
+  }
 }
