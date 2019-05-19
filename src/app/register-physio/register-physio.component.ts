@@ -23,7 +23,7 @@ export class RegisterPhysioComponent implements OnInit {
                                     Validators.minLength(11),
                                     Validators.maxLength(11)]),
       'phone' : new FormControl('', [Validators.required,
-      															Validators.minLength(8),
+      															Validators.minLength(10),
       															Validators.maxLength(11)]),
       'email' : new FormControl('', [Validators.required,
      																Validators.email]),
