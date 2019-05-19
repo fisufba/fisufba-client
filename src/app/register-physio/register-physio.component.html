@@ -1,36 +1,54 @@
 <div class="login-register">
   <div class="login-box card">
     <div class="card-body">
-      <form class="form-horizontal form-material" id="loginform">
+      <form class="form-horizontal form-material"
+      [formGroup]="registerForm" id="registerform">
         <h3 class="box-title m-b-20">Cadastrar Fisioterapeuta </h3>
         <div class="form-group">
           <div class="col-xs-12">
-            <input class="form-control" required="" type="text" placeholder="Nome">
+            <input class="form-control"
+                   type="text"
+                   formControlName="name"
+                   placeholder="Nome">
           </div>
         </div>
            <div class="form-group">
           <div class="col-xs-12">
-            <input class="form-control" required="" type="text" placeholder="CPF">
+            <input class="form-control"
+                   type="text"
+                   formControlName="cpf"
+                   placeholder="CPF">
           </div>
         </div>
            <div class="form-group">
           <div class="col-xs-12">
-            <input class="form-control" required="" type="text" placeholder="Telefone">
+            <input class="form-control"
+                   type="text"
+                   formControlName="phone"
+                   placeholder="Telefone">
           </div>
         </div>
         <div class="form-group ">
           <div class="col-xs-12">
-            <input class="form-control" required="" type="email" placeholder="E-mail">
+            <input class="form-control"
+                   type="email"
+                   formControlName="email"
+                   placeholder="E-mail">
           </div>
         </div>
         <div class="form-group ">
           <div class="col-xs-12">
-            <input class="form-control" required="" type="password" placeholder="Senha">
+            <input class="form-control"
+                   type="password"
+                   formControlName="password"
+                   placeholder="Senha">
           </div>
         </div>
         <div class="form-group">
           <div class="col-xs-12">
-            <input class="form-control" required="" type="password" placeholder="Confirmação de senha">
+            <input class="form-control"
+                   type="password"
+                   placeholder="Confirmação de senha">
           </div>
         </div>
         <div class="form-group text-center p-b-20">
