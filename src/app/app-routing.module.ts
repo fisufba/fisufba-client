@@ -6,6 +6,7 @@ import { FullComponent } from './layouts/full/full.component';
 import { BlankComponent } from './layouts/blank/blank.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { RegisterPhysioComponent } from './register-physio/register-physio.component';
 
 export const routes: Routes = [
   {
@@ -20,6 +21,10 @@ export const routes: Routes = [
       {
         path: 'component',
         loadChildren: './component/component.module#ComponentsModule'
+      },
+      {
+        path: 'novo/fisioterapeuta',
+        component: RegisterPhysioComponent
       },
     ]
   },

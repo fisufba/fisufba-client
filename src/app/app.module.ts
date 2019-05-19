@@ -32,6 +32,7 @@ import { SpinnerComponent } from './shared/spinner.component';
 import { AuthComponent } from './auth/auth.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { RegisterPhysioComponent } from './register-physio/register-physio.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -51,7 +52,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SidebarComponent,
     AuthComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    RegisterPhysioComponent
   ],
   imports: [
     CommonModule,
