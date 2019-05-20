@@ -28,6 +28,14 @@ export const routes: Routes = [
         path: 'novo/fisioterapeuta',
         component: RegisterPhysioComponent
       },
+      {
+        path: 'novo/paciente',
+        component: RegisterPatientComponent
+      },
+      {
+        path: 'novo/atendente',
+        component: RegisterManagerComponent
+      }
     ]
   },
   {
@@ -38,14 +46,6 @@ export const routes: Routes = [
         path: 'login',
         component: LoginComponent
       },
-      {
-        path: 'novo/paciente',
-        component: RegisterPatientComponent
-      },
-      {
-        path: 'novo/atendente',
-        component: RegisterManagerComponent
-      }
     ]
   },
 ];
