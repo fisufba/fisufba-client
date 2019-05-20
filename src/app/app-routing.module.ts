@@ -5,7 +5,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FullComponent } from './layouts/full/full.component';
 import { BlankComponent } from './layouts/blank/blank.component';
 import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { RegisterPatientComponent } from './register-patient/register-patient.component';
+import { RegisterManagerComponent } from './register-manager/register-manager.component';
+
 import { RegisterPhysioComponent } from './register-physio/register-physio.component';
 
 export const routes: Routes = [
@@ -38,7 +40,11 @@ export const routes: Routes = [
       },
       {
         path: 'novo/paciente',
-        component: RegisterComponent
+        component: RegisterPatientComponent
+      },
+      {
+        path: 'novo/atendente',
+        component: RegisterManagerComponent
       }
     ]
   },
