@@ -20,21 +20,19 @@ export const ROUTES: RouteInfo[] = [
     labelClass: '',
     extralink: false,
     submenu: []
-  },
-/*
-  {
+  }, {
     path: '',
-    title: 'Component',
-    icon: 'mdi mdi-bullseye',
+    title: 'Paciente',
+    icon: 'mdi mdi-account-card-details',
     class: 'has-arrow',
     label: '',
     labelClass: '',
     extralink: false,
     submenu: [
       {
-        path: '/component/accordion',
-        title: 'Accordion',
-        icon: '',
+        path: '/novo/paciente',
+        title: 'Novo Paciente',
+        icon: 'mdi mdi-account-plus',
         class: '',
         label: '',
         labelClass: '',
