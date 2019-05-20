@@ -12,9 +12,9 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/starter',
-    title: 'Starter Page',
-    icon: 'mdi mdi-gauge',
+    path: '/home',
+    title: 'Início',
+    icon: 'mdi mdi-home',
     class: '',
     label: '',
     labelClass: '',
