@@ -4,8 +4,8 @@ import { ValidateBrService } from 'angular-validate-br';
 
 @Component({
   selector: 'app-register',
-  templateUrl: './register-patient.component.html',
-  styleUrls: ['./register-patient.component.css']
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
 export class RegisterPatientComponent implements OnInit {
 
