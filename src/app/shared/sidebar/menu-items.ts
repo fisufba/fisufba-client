@@ -40,5 +40,25 @@ export const ROUTES: RouteInfo[] = [
         submenu: []
       },
     ]
-  },*/
+  }, {
+    path: '',
+    title: 'Atendente',
+    icon: 'mdi mdi-account',
+    class: 'has-arrow',
+    label: '',
+    labelClass: '',
+    extralink: false,
+    submenu: [
+      {
+        path: '/novo/atendente',
+        title: 'Novo Atendente',
+        icon: 'mdi mdi-account-plus',
+        class: '',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: []
+      },
+    ]
+  },
 ];
