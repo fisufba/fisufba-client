@@ -35,6 +35,8 @@ import { RegisterPhysioComponent } from './register-physio/register-physio.compo
 import { RegisterPatientComponent } from './patient/register/register.component';
 import { RegisterManagerComponent } from './manager/register/register.component';
 import { ProfilePatientComponent } from './patient/profile/profile.component';
+import { SettingsComponent } from './patient/patient/profile/settings/settings.component';
+import { PatientPageComponent } from './patient/page/page.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -57,7 +59,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     RegisterPatientComponent,
     RegisterManagerComponent,
     RegisterPhysioComponent,
-    ProfilePatientComponent
+    ProfilePatientComponent,
+    SettingsComponent,
+    PatientPageComponent
   ],
   imports: [
     CommonModule,
