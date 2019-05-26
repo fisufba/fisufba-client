@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatientPageComponent implements OnInit {
 
+  currentPage;
   constructor() { }
 
   ngOnInit() {
+    this.currentPage = 'viewProfile'
   }
 
+  display(page) {
+    return (this.currentPage === page);
+  }
+
+  setPage(page) {
+    this.currentPage = page;
+  }
 }
