@@ -4,8 +4,8 @@ import { ValidateBrService } from 'angular-validate-br';
 
 @Component({
   selector: 'app-register-manager',
-  templateUrl: './register-manager.component.html',
-  styleUrls: ['./register-manager.component.css']
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
 export class RegisterManagerComponent implements OnInit {
 

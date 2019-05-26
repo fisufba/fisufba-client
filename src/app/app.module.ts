@@ -32,8 +32,11 @@ import { SpinnerComponent } from './shared/spinner.component';
 import { AuthComponent } from './auth/auth.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterPhysioComponent } from './register-physio/register-physio.component';
-import { RegisterPatientComponent } from './register-patient/register-patient.component';
-import { RegisterManagerComponent } from './register-manager/register-manager.component';
+import { RegisterPatientComponent } from './patient/register/register.component';
+import { RegisterManagerComponent } from './manager/register/register.component';
+import { ProfilePatientComponent } from './patient/profile/profile.component';
+import { SettingsComponent } from './patient/patient/profile/settings/settings.component';
+import { PatientPageComponent } from './patient/page/page.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -55,7 +58,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     LoginComponent,
     RegisterPatientComponent,
     RegisterManagerComponent,
-    RegisterPhysioComponent
+    RegisterPhysioComponent,
+    ProfilePatientComponent,
+    SettingsComponent,
+    PatientPageComponent
   ],
   imports: [
     CommonModule,
