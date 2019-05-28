@@ -78,5 +78,34 @@ export const ROUTES: RouteInfo[] = [
         submenu: []
       },
     ]
-  },
+  }, {
+    path: '',
+    title: 'Fisioterapeuta',
+    icon: 'mdi mdi-account',
+    class: 'has-arrow',
+    label: '',
+    labelClass: '',
+    extralink: false,
+    submenu: [
+      {
+        path: '/novo/fisioterapeuta',
+        title: 'Novo Fisioterapeuta',
+        icon: 'mdi mdi-account-plus',
+        class: '',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: []
+      }, {
+        path: '/fisioterapeuta',
+        title: 'Fisioterapeuta',
+        icon: 'mdi mdi-account',
+        class: '',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: []
+      },
+    ]
+  }
 ];
