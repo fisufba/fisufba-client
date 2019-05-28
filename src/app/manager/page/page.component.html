@@ -10,8 +10,8 @@
           <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('updateProfile')" role="tab">Configurações</a>
         </li>
       </ul>
-      <app-patient-profile *ngIf="display('viewProfile')"></app-patient-profile>
-      <app-update *ngIf="display('updateProfile')"></app-update>
+      <app-manager-profile *ngIf="display('viewProfile')"></app-manager-profile>
+      <app-manager-update *ngIf="display('updateProfile')"></app-manager-update>
     </div>
   </div>
 </div>
