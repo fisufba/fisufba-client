@@ -1,0 +1,164 @@
+<div class="card">
+  <div class="card-body">
+    <form class="form-horizontal form-material"
+          id="loginform"
+          (keyup)="onUpdateForm()">
+      <h3 class="box-title m-b-20">Formulário Sociodemográfico</h3>
+    <h5>Queixa principal e funcional</h5>
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 placeholder="Diagnóstico clínico">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 required
+                 placeholder="Queixa principal">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 required
+                 placeholder="Queixa funcional">
+        </div>
+      </div>
+
+      <h5>História clínica e funcional do paciente</h5>
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 placeholder="História clínica">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 required
+                 placeholder="História funcional">
+        </div>
+      </div>
+
+      <h5>Planejamento de testes físico-funcionais</h5>
+
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 required
+                 placeholder="Estrutura e função">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 required
+                 placeholder="Atividade e participação">
+        </div>
+      </div>
+
+      <h5>Resultados do teste físico-funcional</h5>
+
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 required
+                 placeholder="Resultado do teste físico-funcional">
+        </div>
+      </div>
+
+      <h5>Resultados dos exames complementares</h5>
+
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 required
+                 placeholder="Resultado dos exames complementares">
+        </div>
+      </div>
+
+          <h5>Diagnóstico funcional-cinético</h5>
+
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 required
+                 placeholder="Deficiência">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 required
+                 placeholder="Limitação de atividade">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 required
+                 placeholder="Restrição de participação">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 required
+                 placeholder="Fatores ambientais">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 required
+                 placeholder="Objetivos funcionais">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 required
+                 placeholder="Plano terapêutico">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-12">
+          <input class="form-control"
+                 type="text"
+                 required
+                 placeholder="Data de reavaliação">
+        </div>
+      </div>
+
+
+      <div class="form-group text-center p-b-20">
+        <div class="col-xs-12">
+          <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light"
+                  [routerLink]="['/patient']"
+                  >Salvar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
