@@ -40,6 +40,9 @@ import { UpdateComponent } from './patient/update/update.component';
 import { UpdateManagerComponent } from './manager/update/update.component';
 import { ManagerPageComponent } from './manager/page/page.component';
 import { ProfileComponent } from './manager/profile/profile.component';
+import { FormsComponent } from './forms/forms.component';
+import { SociodemographicComponent } from './forms/sociodemographic/sociodemographic.component';
+import { KineticComponent } from './forms/kinetic/kinetic.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -67,7 +70,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     UpdateComponent,
     UpdateManagerComponent,
     ManagerPageComponent,
-    ProfileComponent
+    ProfileComponent,
+    FormsComponent,
+    SociodemographicComponent,
+    KineticComponent
   ],
   imports: [
     CommonModule,
