@@ -23,8 +23,8 @@ export class AuthService {
   }
 
   login(cpf: string, password: string): Observable<boolean> {
-    const post_body = {'cpf': cpf, 'password': password};
-    return this.post('/accounts/login', post_body).pipe(
+    const postBody = {'cpf': cpf, 'password': password};
+    return this.post('/accounts/login', postBody).pipe(
       tap(payload => this.setAuthToken(payload['token'], payload['user_id'])),
       map(payload => true),
       catchError(error => {
@@ -39,8 +39,8 @@ export class AuthService {
   }
 
   logout(): Observable<boolean> {
-    const post_body = {'token': this.getAuthToken()};
-    return this.post('/accounts/logout', post_body).pipe(
+    const postBody = {'token': this.getAuthToken()};
+    return this.post('/accounts/logout', postBody).pipe(
       tap(payload => this.clearAuthToken()),
       map(payload => true),
       catchError(this.errorHandler(false))
@@ -59,10 +59,10 @@ export class AuthService {
     return new HttpHeaders();
   }
 
-  private setAuthToken(token: string, user_id: number) {
+  private setAuthToken(token: string, userId: number) {
     try {
       localStorage.setItem('token', token);
-      localStorage.setItem('user_id', user_id.toString());
+      localStorage.setItem('user_id', userId.toString());
     } catch(err) {
       this.clearAuthToken();
       throw err;
@@ -70,9 +70,9 @@ export class AuthService {
   }
 
   getUserId(): number | null {
-    let user_id_str = localStorage.getItem('user_id');
-    if(user_id_str != null)
-      return parseInt(user_id_str);
+    let userIdStr = localStorage.getItem('user_id');
+    if(userIdStr != null)
+      return parseInt(userIdStr);
     return null;
   }
 
