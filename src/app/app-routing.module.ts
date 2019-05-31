@@ -9,6 +9,7 @@ import { RegisterPatientComponent } from './patient/register/register.component'
 import { RegisterManagerComponent } from './manager/register/register.component';
 
 import { PatientPageComponent } from './patient/page/page.component';
+import { ManagerPageComponent } from './manager/page/page.component';
 
 import { RegisterPhysioComponent } from './register-physio/register-physio.component';
 
@@ -43,8 +44,8 @@ export const routes: Routes = [
         component: PatientPageComponent
       },
       {
-        path: 'paciente#settings',
-        component: RegisterPhysioComponent
+        path: 'atendente',
+        component: ManagerPageComponent
       },
     ]
   },
