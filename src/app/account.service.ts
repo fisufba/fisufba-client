@@ -20,7 +20,7 @@ export interface Account {
   cpf: string; // cpf without mask
   phone: string; // phone without mask
   email: string;
-  groups: AccountGroup[];
+  groups?: AccountGroup[];
 }
 
 @Injectable({
@@ -33,7 +33,7 @@ export class AccountService {
     private authService: AuthService)
   {}
 
-  getAccountInfo(userId: number): Observable<Account | null> {
+  getAccount(userId: number): Observable<Account | null> {
     return this.authService.get(`/accounts/${userId}`).pipe(
       map(payload => this.payloadToAccountData(payload["user"])),
       catchError(this.errorHandler(null))
@@ -44,6 +44,15 @@ export class AccountService {
     const userId = account.id;
     const body = this.accountDataToPayload(account, password);
     return this.authService.post('/accounts', body).pipe(
+      map(payload => payload["user_id"]),
+      catchError(this.errorHandler(null))
+    );
+  }
+
+  updateAccount(account: Account): Observable<number | null> {
+    const userId = account.id;
+    const body = this.accountDataToPayload(account, undefined);
+    return this.authService.patch(`/accounts/${userId}`, body).pipe(
       map(payload => payload["user_id"]),
       catchError(this.errorHandler(null))
     );
@@ -60,7 +69,8 @@ export class AccountService {
     };
   }
 
-  private accountDataToPayload(account: Account, password: string): Object {
+  private accountDataToPayload(account: Account, 
+                               password: string | undefined): Object {
     return {
       id: account.id,
       display_name: account.displayName,
@@ -72,35 +82,21 @@ export class AccountService {
     }
   }
 
+  private errorHandler<T>(result: T) {
+    return (error: HttpErrorResponse): Observable<T> => {
+      this.messageService.handleGenericError(error);
+      return of(result as T);
+    };
+  }
 
-
-
-
-  // TODO the following functions should probably be moved to somewhere else
-
-
+  // TODO the following function is duplicated in many places, should probably
+  // be moved to somewhere else
   private maskCpf(cpf: string): string {
     const comp1 = cpf.substring(0, 3);
     const comp2 = cpf.substring(3, 6);
     const comp3 = cpf.substring(6, 9);
     const comp4 = cpf.substring(9, 11);
     return `${comp1}.${comp2}.${comp3}-${comp4}`;
-  }
-
-
-  private errorHandler<T>(result: T) {
-    return (error: HttpErrorResponse): Observable<T> => {
-      this.handleGenericError(error);
-      return of(result as T);
-    };
-  }
-
-  private handleGenericError<T>(error: HttpErrorResponse) {
-      // FIXME currently the server message is very bad! We should reach
-      //       an agreement regarding these messages.
-      console.log("@@@@@@@@ " + JSON.stringify(error));
-      const message = error.error.message;
-      this.messageService.add(error.error.message);
   }
 }
 
