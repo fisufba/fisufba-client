@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ValidateBrService } from 'angular-validate-br';
 
+import { AccountService, Account, AccountGroup } from '../../account.service';
+
 @Component({
   selector: 'app-register-manager',
   templateUrl: './register.component.html',
@@ -12,7 +14,9 @@ export class RegisterManagerComponent implements OnInit {
   signupForm: any;
   disableLogin: boolean = true;
 
-  constructor(private validateBrService: ValidateBrService) {}
+  constructor(
+    private validateBrService: ValidateBrService,
+    private accountService: AccountService) {}
 
   ngOnInit() {
 
@@ -40,5 +44,31 @@ export class RegisterManagerComponent implements OnInit {
       // send data
       this.disableLogin = false;
     }
+  }
+
+  onCadastrar() {
+    const password = this.signupForm.get('senha').value;
+    const confirmPassword = this.signupForm.get('confirm-senha').value;
+
+    if(password != confirmPassword) {
+      // TODO
+      return;
+    }
+
+    const account: Account = {
+      id: -1,
+      displayName: this.signupForm.get('nome').value,
+      cpf: this.signupForm.get('cpf').value,
+      email: this.signupForm.get('email').value,
+      phone: this.signupForm.get('phone').value,
+      groups: [AccountGroup.Attendant]
+    };
+
+    this.accountService.createAccount(account, password).subscribe(createdUserId => {
+      if(createdUserId != null) {
+        // TODO
+        console.log(`Created account id ${createdUserId} for attendant`);
+      }
+    });
   }
 }

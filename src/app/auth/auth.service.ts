@@ -47,6 +47,11 @@ export class AuthService {
     );
   }
 
+  get(path: string): Observable<Object> {
+    const headers = this.getAuthHeader();
+    return this.http.get(`${environment.apiUrl}${path}`, {headers: headers});
+  }
+
   post(path: string, body: any): Observable<Object> {
     const headers = this.getAuthHeader();
     return this.http.post(`${environment.apiUrl}${path}`, body, {headers: headers});
