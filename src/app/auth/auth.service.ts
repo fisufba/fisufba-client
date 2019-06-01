@@ -31,7 +31,7 @@ export class AuthService {
         if(this.isHttpError(error, 403)) {
           this.messageService.add("Usuário ou senha incorretos");
         } else {
-          this.handleGenericError(error);
+          this.messageService.handleGenericError(error);
         }
         return of(false);
       })
@@ -55,6 +55,11 @@ export class AuthService {
   post(path: string, body: any): Observable<Object> {
     const headers = this.getAuthHeader();
     return this.http.post(`${environment.apiUrl}${path}`, body, {headers: headers});
+  }
+
+  patch(path: string, body: any): Observable<Object> {
+    const headers = this.getAuthHeader();
+    return this.http.patch(`${environment.apiUrl}${path}`, body, {headers: headers});
   }
 
   getAuthHeader(): HttpHeaders {
@@ -92,16 +97,9 @@ export class AuthService {
 
   private errorHandler<T>(result: T) {
     return (error: HttpErrorResponse): Observable<T> => {
-      this.handleGenericError(error);
+      this.messageService.handleGenericError(error);
       return of(result as T);
     };
-  }
-
-  private handleGenericError<T>(error: HttpErrorResponse) {
-      // FIXME currently the server message is very bad! We should reach
-      //       an agreement regarding these messages.
-      const message = error.error.message;
-      this.messageService.add(error.error.message);
   }
 
   private isHttpError(error: HttpErrorResponse, status: number) {
