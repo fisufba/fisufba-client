@@ -2,6 +2,8 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ValidateBrService } from 'angular-validate-br';
 
+import { AccountService, Account, AccountGroup } from '../account.service';
+
 @Component({
   selector: 'app-register-physio',
   templateUrl: './register-physio.component.html',
@@ -12,7 +14,9 @@ export class RegisterPhysioComponent implements OnInit {
   registerForm: any;
   disableBtn: boolean = true;
 
-  constructor(private validateBrService: ValidateBrService) {}
+  constructor(
+    private validateBrService: ValidateBrService,
+    private accountService: AccountService) {}
 
   ngOnInit() {
 
@@ -37,5 +41,27 @@ export class RegisterPhysioComponent implements OnInit {
     if(this.registerForm.valid) {
       this.disableBtn = false;
     }
+  }
+
+  onCadastrar() {
+    const password = this.registerForm.get('password').value;
+
+    // TODO where is the confirmation password?
+
+    const account: Account = {
+      id: -1,
+      displayName: this.registerForm.get('name').value,
+      cpf: this.registerForm.get('cpf').value,
+      email: this.registerForm.get('email').value,
+      phone: this.registerForm.get('phone').value,
+      groups: [AccountGroup.Physiotherapist]
+    };
+
+    this.accountService.createAccount(account, password).subscribe(createdUserId => {
+      if(createdUserId != null) {
+        // TODO
+        console.log(`Created account id ${createdUserId} for physiotherapist`);
+      }
+    });
   }
 }
