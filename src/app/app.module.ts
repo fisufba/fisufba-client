@@ -43,6 +43,7 @@ import { ProfileComponent } from './manager/profile/profile.component';
 import { FormsComponent } from './forms/forms.component';
 import { SociodemographicComponent } from './forms/sociodemographic/sociodemographic.component';
 import { KineticComponent } from './forms/kinetic/kinetic.component';
+import { GoniometryComponent } from './forms/goniometry/goniometry.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -73,7 +74,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ProfileComponent,
     FormsComponent,
     SociodemographicComponent,
-    KineticComponent
+    KineticComponent,
+    GoniometryComponent,
   ],
   imports: [
     CommonModule,
