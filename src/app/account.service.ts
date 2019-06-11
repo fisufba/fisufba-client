@@ -62,7 +62,7 @@ export class AccountService {
     return {
       id: payload['id'],
       displayName: payload['display_name'],
-      cpf: payload['cpf'].replace(/\.|\-/g, ''),
+      cpf: payload['cpf'],
       phone: payload['phone'].replace(/\(|\)|\.|\-/g, ''),
       email: payload['email'],
       groups: payload['groups']
@@ -75,7 +75,7 @@ export class AccountService {
       id: account.id,
       display_name: account.displayName,
       password: password,
-      cpf: this.maskCpf(account.cpf),
+      cpf: account.cpf,
       phone: account.phone,
       email: account.email,
       user_group_names: account.groups,
@@ -87,16 +87,6 @@ export class AccountService {
       this.messageService.handleGenericError(error);
       return of(result as T);
     };
-  }
-
-  // TODO the following function is duplicated in many places, should probably
-  // be moved to somewhere else
-  private maskCpf(cpf: string): string {
-    const comp1 = cpf.substring(0, 3);
-    const comp2 = cpf.substring(3, 6);
-    const comp3 = cpf.substring(6, 9);
-    const comp4 = cpf.substring(9, 11);
-    return `${comp1}.${comp2}.${comp3}-${comp4}`;
   }
 }
 

@@ -24,6 +24,7 @@ export class AuthService {
 
   login(cpf: string, password: string): Observable<boolean> {
     const postBody = {'cpf': cpf, 'password': password};
+    this.clearAuthToken();
     return this.post('/accounts/login', postBody).pipe(
       tap(payload => this.setAuthToken(payload['token'], payload['user_id'])),
       map(payload => true),
