@@ -21,6 +21,9 @@
         <li class="nav-item">
           <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('muscleStrength')" role="tab">Força muscular</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('ashworth')" role="tab">Ashworth</a>
+        </li>
       </ul>
       <app-patient-profile *ngIf="display('viewProfile')"></app-patient-profile>
       <app-update *ngIf="display('updateProfile')"></app-update>
@@ -28,6 +31,7 @@
       <app-kinetic *ngIf="display('kinetic')"></app-kinetic>
       <app-goniometry *ngIf="display('goniometry')"></app-goniometry>
       <app-muscle-strength *ngIf="display('muscleStrength')"></app-muscle-strength>
+      <app-ashworth *ngIf="display('ashworth')"></app-ashworth>
     </div>
   </div>
 </div>

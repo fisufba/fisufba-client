@@ -1,0 +1,45 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="box-title m-b-20">Ashworth</h3>
+    <h5>Estrutura e função</h5>
+
+    <form class="form-horizontal form-material" (keyup)="onUpdateForm()">
+
+      <div class="form-group">
+        <div class="col-xs-12 col-lg-4">
+          <label for="">Músculo avaliado</label>
+          <input class="form-control"
+                 type="text">
+        </div>
+      </div>
+
+      <div class="col-lg-4 d-flex align-items-center">
+        <div class="form-group">
+          <div class="col-xs-12 col-lg-10 p-0">
+            <label for="">E</label>
+            <input class="form-control"
+                   type="number">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12 col-lg-10">
+            <label for="">D</label>
+            <input class="form-control"
+                   type="number">
+          </div>
+        </div>
+        <button class="btn btn btn-circle btn-sm btn-block text-uppercase waves-effect waves-light"><i class="mdi mdi-plus"></i></button>
+      </div>
+
+
+      <div class="form-group text-center p-b-20">
+        <div class="col-lg-4">
+          <button class="btn btn-info btn-md btn-block text-uppercase waves-effect waves-light"
+                  [routerLink]="['/patient']"
+                  >Salvar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

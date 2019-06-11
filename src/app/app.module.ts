@@ -45,6 +45,7 @@ import { SociodemographicComponent } from './forms/sociodemographic/sociodemogra
 import { KineticComponent } from './forms/kinetic/kinetic.component';
 import { GoniometryComponent } from './forms/goniometry/goniometry.component';
 import { MuscleStrengthComponent } from './forms/muscle-strength/muscle-strength.component';
+import { AshworthComponent } from './forms/ashworth/ashworth.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -77,7 +78,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SociodemographicComponent,
     KineticComponent,
     GoniometryComponent,
-    MuscleStrengthComponent
+    MuscleStrengthComponent,
+    AshworthComponent
   ],
   imports: [
     CommonModule,
