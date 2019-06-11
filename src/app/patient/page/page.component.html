@@ -18,12 +18,16 @@
         <li class="nav-item">
           <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('goniometry')" role="tab">Goniometria</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('muscleStrength')" role="tab">Força muscular</a>
+        </li>
       </ul>
       <app-patient-profile *ngIf="display('viewProfile')"></app-patient-profile>
       <app-update *ngIf="display('updateProfile')"></app-update>
       <app-sociodemographic *ngIf="display('sociodemographic')"></app-sociodemographic>
       <app-kinetic *ngIf="display('kinetic')"></app-kinetic>
       <app-goniometry *ngIf="display('goniometry')"></app-goniometry>
+      <app-muscle-strength *ngIf="display('muscleStrength')"></app-muscle-strength>
     </div>
   </div>
 </div>
