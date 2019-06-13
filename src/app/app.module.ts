@@ -46,6 +46,7 @@ import { KineticComponent } from './forms/kinetic/kinetic.component';
 import { GoniometryComponent } from './forms/goniometry/goniometry.component';
 import { MuscleStrengthComponent } from './forms/muscle-strength/muscle-strength.component';
 import { AshworthComponent } from './forms/ashworth/ashworth.component';
+import { PainScaleComponent } from './forms/pain-scale/pain-scale.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -79,7 +80,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     KineticComponent,
     GoniometryComponent,
     MuscleStrengthComponent,
-    AshworthComponent
+    AshworthComponent,
+    PainScaleComponent
   ],
   imports: [
     CommonModule,

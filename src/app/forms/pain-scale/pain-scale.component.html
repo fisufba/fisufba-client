@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-body">
+
+    <ngb-alert class="alert " role="alert">
+      <strong>Legenda</strong> <br/>
+      <strong>O 1 2 - </strong> Leve <br/>
+      <strong>3 4 5 6 7 - </strong> Moderada <br/>
+      <strong>8 9 10 - </strong> Intensa <br/>
+    </ngb-alert>
+
+    <form class="form-horizontal form-material"
+          (keyup)="onUpdateForm()">
+      <h3 class="box-title m-b-20">Escala numérica da dor</h3>
+
+      <div class="col-md-3 d-flex justify-content-between">
+        <ngb-rating [(rate)]="currentRate">
+          <ng-template let-fill="fill">
+            <span class="star" [class.filled]="fill === 100"><i class="mdi mdi-checkbox-blank-circle"></i></span>
+          </ng-template>
+        </ngb-rating>
+        <button class="btn btn btn-circle btn-sm btn-block text-uppercase waves-effect waves-light"><i class="mdi mdi-plus"></i></button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
