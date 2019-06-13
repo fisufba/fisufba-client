@@ -30,6 +30,9 @@
         <li class="nav-item">
           <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('PiPe')" role="tab">Pi Pe</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('sensorial')" role="tab">Sensorial</a>
+        </li>
       </ul>
       <app-patient-profile *ngIf="display('viewProfile')"></app-patient-profile>
       <app-update *ngIf="display('updateProfile')"></app-update>
@@ -40,6 +43,7 @@
       <app-ashworth *ngIf="display('ashworth')"></app-ashworth>
       <app-pain-scale *ngIf="display('painScale')"></app-pain-scale>
       <app-pi-pe *ngIf="display('PiPe')"></app-pi-pe>
+      <app-sensorial *ngIf="display('sensorial')"></app-sensorial>
     </div>
   </div>
 </div>
