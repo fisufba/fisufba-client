@@ -24,3 +24,8 @@
   overflow: hidden;
   color: red;
 }
+
+.btn-circle {
+  min-width: 3em;
+  min-height: 3em;
+}
