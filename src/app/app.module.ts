@@ -47,6 +47,7 @@ import { GoniometryComponent } from './forms/goniometry/goniometry.component';
 import { MuscleStrengthComponent } from './forms/muscle-strength/muscle-strength.component';
 import { AshworthComponent } from './forms/ashworth/ashworth.component';
 import { PainScaleComponent } from './forms/pain-scale/pain-scale.component';
+import { PiPeComponent } from './forms/pi-pe/pi-pe.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -81,7 +82,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     GoniometryComponent,
     MuscleStrengthComponent,
     AshworthComponent,
-    PainScaleComponent
+    PainScaleComponent,
+    PiPeComponent
   ],
   imports: [
     CommonModule,
