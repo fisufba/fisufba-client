@@ -52,17 +52,17 @@ export interface KineticForm extends Form {
   functionalHistory: string;
   structureAndFunction: StructureAndFunction[];
   activityAndParticipation: ActivityAndParticipation[];
-  physicalFunctionalTestsResults: string;
-  complementaryExamsResults: string;
-  deficiencyDiagnosis: string;
-  activityLimitationDiagnosis: string;
-  participationRestrictionDiagnosis: string;
-  environmentFactorsDiagnosis: string;
-  functionalObjectivesDiagnosis: string[];
-  therapeuticPlanDiagnosis: string[];
-  reevaluationDates: Date[];
-  academicAssessor: string;
-  preceptorAssessor: string;
+  physicalFunctionalTestsResults: string | null;
+  complementaryExamsResults: string | null;
+  deficiencyDiagnosis: string | null;
+  activityLimitationDiagnosis: string | null;
+  participationRestrictionDiagnosis: string | null;
+  environmentFactorsDiagnosis: string | null;
+  functionalObjectivesDiagnosis: string[] | null;
+  therapeuticPlanDiagnosis: string[] | null;
+  reevaluationDates: Date[] | null;
+  academicAssessor: string | null;
+  preceptorAssessor: string | null;
 }
 
 @Injectable({

@@ -63,7 +63,7 @@ export class AccountService {
       id: payload['id'],
       displayName: payload['display_name'],
       cpf: payload['cpf'],
-      phone: payload['phone'].replace(/\(|\)|\.|\-/g, ''),
+      phone: payload['phone'],
       email: payload['email'],
       groups: payload['groups']
     };
