@@ -1,0 +1,158 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="box-title m-b-20">TINETI</h3>
+    <form class="form-horizontal form-material d-flex flex-row" (keyup)="onUpdateForm()" style="flex-wrap: wrap">
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Equilibrio Sentado</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="equilibrioSentado1" name="equilibrioSentado" class="custom-control-input">
+          <label class="custom-control-label" for="equilibrioSentado1">Inclina-se ou desliza na cadeira</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="equilibrioSentado2" name="equilibrioSentado" class="custom-control-input">
+          <label class="custom-control-label" for="equilibrioSentado2">Estável, seguro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Levanta-se da cadeira</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levanta1" name="levanta" class="custom-control-input">
+          <label class="custom-control-label" for="levanta1">Incapaz, sem ajuda</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levanta2" name="levanta" class="custom-control-input">
+          <label class="custom-control-label" for="levanta2">Capaz, usa membros superiores para auxiliar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levanta3" name="levanta" class="custom-control-input">
+          <label class="custom-control-label" for="levanta3">Capaz sem usar membros superiores</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Tentativas para se levantar</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="tentativas1" name="tentativa" class="custom-control-input">
+          <label class="custom-control-label" for="tentativas1">Incapaz, sem ajuda</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="tentativas2" name="tentativa" class="custom-control-input">
+          <label class="custom-control-label" for="tentativas2">Capaz, requer mais de uma tentativa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="tentativas3" name="tentativa" class="custom-control-input">
+          <label class="custom-control-label" for="tentativas3">Capaz de se levantar, uma tentativa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Equilibrio de pé imediato</h5>
+        <small>Primeiros cinco segundos</small>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="equilibrioImediato1" name="equilibrioImediato" class="custom-control-input">
+          <label class="custom-control-label" for="equilibrioImediato1">Instável (cambalea, move os pés oscila o tronco)</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="equilibrioImediato2" name="equilibrioImediato" class="custom-control-input">
+          <label class="custom-control-label" for="equilibrioImediato2">Estável mas usa dispositivo de auxílio à marcha</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="equilibrioImediato3" name="equilibrioImediato" class="custom-control-input">
+          <label class="custom-control-label" for="equilibrioImediato3">Estável sem dispositivo de auxilio</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Equilíbrio de pé</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="equilibrio1" name="equilibrio" class="custom-control-input">
+          <label class="custom-control-label" for="equilibrio1">Instável (cambalea, move os pés oscila o tronco)</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="equilibrio2" name="equilibrio" class="custom-control-input">
+          <label class="custom-control-label" for="equilibrio2">Estável mas usa dispositivo de auxílio à marcha</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="equilibrio3" name="equilibrio" class="custom-control-input">
+          <label class="custom-control-label" for="equilibrio3">Estável sem dispositivo de auxilio</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Desequilíbrio no esterno</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="desequilibrio1" name="desequilibrio" class="custom-control-input">
+          <label class="custom-control-label" for="desequilibrio1">Começa a cair</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="desequilibrio2" name="desequilibrio" class="custom-control-input">
+          <label class="custom-control-label" for="desequilibrio2">Cambaleia, se agarra e se segura em si mesmo</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="desequilibrio3" name="desequilibrio" class="custom-control-input">
+          <label class="custom-control-label" for="desequilibrio3">Estável</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Olhos fechados</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="olhosFechados1" name="olhosFechados" class="custom-control-input">
+          <label class="custom-control-label" for="olhosFechados1">Instável</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="olhosFechados2" name="olhosFechados" class="custom-control-input">
+          <label class="custom-control-label" for="olhosFechados2">Estável</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Girar 360º</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="girar1" name="girar" class="custom-control-input">
+          <label class="custom-control-label" for="girar1">Instabilidade (se agarra, cambaleia)</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="girar2" name="girar" class="custom-control-input">
+          <label class="custom-control-label" for="girar2">Passos descontinuados</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="girar3" name="girar" class="custom-control-input">
+          <label class="custom-control-label" for="girar3">Continuidade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Sentar-se</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentar1" name="sentar" class="custom-control-input">
+          <label class="custom-control-label" for="sentar1">Inseguro (não avalia bem a distancia, cai na cadeira)</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentar2" name="sentar" class="custom-control-input">
+          <label class="custom-control-label" for="sentar2">Usa os braços ou não tem movimentos suaves</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentar3" name="sentar" class="custom-control-input">
+          <label class="custom-control-label" for="sentar3">Seguro, movimentos suaves</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-4 mb-4">
+        <h5>Escore de equilíbrio</h5>
+        <input type="text" class="form-control">
+      </div>
+
+      <div class="col-sm-12 col-md-12 mb-4">
+      <div class="form-group text-center p-b-20">
+        <div class="col-lg-12 p-0">
+          <button class="btn btn-info btn-md btn-block text-uppercase waves-effect waves-light"
+                  [routerLink]="['/patient']"
+                  >Salvar</button>
+        </div>
+      </div>
+      </div>
+    </form>
+  </div>
+</div>
