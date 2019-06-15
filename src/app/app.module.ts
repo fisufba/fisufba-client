@@ -50,6 +50,7 @@ import { PainScaleComponent } from './forms/pain-scale/pain-scale.component';
 import { PiPeComponent } from './forms/pi-pe/pi-pe.component';
 import { SensorialComponent } from './forms/sensorial/sensorial.component';
 import { TinetiComponent } from './forms/tineti/tineti.component';
+import { WalkTestComponent } from './forms/walk-test/walk-test.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -87,7 +88,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PainScaleComponent,
     PiPeComponent,
     SensorialComponent,
-    TinetiComponent
+    TinetiComponent,
+    WalkTestComponent
   ],
   imports: [
     CommonModule,
