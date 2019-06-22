@@ -39,6 +39,9 @@
         <li class="nav-item">
           <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('walkTest')" role="tab">Teste de caminhada</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('bostonProtocol')" role="tab">Protocolo de Boston</a>
+        </li>
       </ul>
       <app-patient-profile *ngIf="display('viewProfile')"></app-patient-profile>
       <app-update *ngIf="display('updateProfile')"></app-update>
@@ -52,6 +55,7 @@
       <app-sensorial *ngIf="display('sensorial')"></app-sensorial>
       <app-tineti *ngIf="display('tineti')"></app-tineti>
       <app-walk-test *ngIf="display('walkTest')"></app-walk-test>
+      <app-boston-protocol *ngIf="display('bostonProtocol')"></app-boston-protocol>
     </div>
   </div>
 </div>
