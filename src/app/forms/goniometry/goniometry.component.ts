@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./goniometry.component.css']
 })
 export class GoniometryComponent implements OnInit {
+  n:number = 1;
+  fields:any = Array.from({length: 1}, (x,i) => i);
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  updateFields() {
+    this.fields = Array.from({length: this.n}, (x,i) => i);
+  }
+
+  addElement() {
+    this.n++;
+    this.updateFields();
   }
 
 }
