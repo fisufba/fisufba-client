@@ -47,6 +47,7 @@ import { GoniometryComponent } from './forms/goniometry/goniometry.component';
 import { MuscleStrengthComponent } from './forms/muscle-strength/muscle-strength.component';
 import { AshworthComponent } from './forms/ashworth/ashworth.component';
 import { PainScaleComponent } from './forms/pain-scale/pain-scale.component';
+import { BalanceScaleComponent } from './forms/balance-scale/balance-scale.component';
 import { PiPeComponent } from './forms/pi-pe/pi-pe.component';
 import { SensorialComponent } from './forms/sensorial/sensorial.component';
 import { TinetiComponent } from './forms/tineti/tineti.component';
@@ -87,6 +88,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MuscleStrengthComponent,
     AshworthComponent,
     PainScaleComponent,
+    BalanceScaleComponent,
     PiPeComponent,
     SensorialComponent,
     TinetiComponent,
