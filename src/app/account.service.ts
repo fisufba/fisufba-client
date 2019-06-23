@@ -58,6 +58,31 @@ export class AccountService {
     );
   }
 
+  searchAccount(
+    cpf: string, displayName: string, 
+    phone: string, email: string): Observable<Account[] | null> {
+
+      let params = [];
+
+      if(cpf.length > 0)
+        params.push(`cpf=${cpf}`);
+      if(displayName.length > 0)
+        params.push(`display_name=${displayName}`);
+      if(phone.length > 0)
+        params.push(`phone=${phone}`);
+      if(email.length > 0)
+        params.push(`email=${email}`);
+
+      return this.authService.get(`/accounts/search?${params.join('&')}`).pipe(
+        map(payload => {
+          const payloadItems = payload["_embedded"]["items"];
+          return payloadItems.filter(item => (item["type"] == "user"))
+                             .map(item => this.payloadToAccountData(item["_embedded"]));
+        }),
+        catchError(this.errorHandler(null))
+      );
+  }
+
   private payloadToAccountData(payload: Object): Account {
     return {
       id: payload['id'],
