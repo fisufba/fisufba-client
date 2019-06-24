@@ -1,0 +1,298 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="box-title m-b-20">OSWESTRY</h3>
+    <form class="form-horizontal form-material d-flex flex-row" (keyup)="onUpdateForm()" style="flex-wrap: wrap">
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Intensidade da dor</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="intensidadeDor1" name="intensidadeDor" class="custom-control-input">
+          <label class="custom-control-label" for="intensidadeDor1">Tolera dor leve sem medicamento</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="intensidadeDor2" name="intensidadeDor" class="custom-control-input">
+          <label class="custom-control-label" for="intensidadeDor2">Tolera dor forte sem medicamento</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="intensidadeDor3" name="intensidadeDor" class="custom-control-input">
+          <label class="custom-control-label" for="intensidadeDor3">Medicamento alivia dor</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="intensidadeDor4" name="intensidadeDor" class="custom-control-input">
+          <label class="custom-control-label" for="intensidadeDor4">Medicamento alivia dor parcialmente</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="intensidadeDor5" name="intensidadeDor" class="custom-control-input">
+          <label class="custom-control-label" for="intensidadeDor5">Medicamento alivia muito pouco a dor</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="intensidadeDor6" name="intensidadeDor" class="custom-control-input">
+          <label class="custom-control-label" for="intensidadeDor6">Medicamento não alivia dor</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Cuidados pessoais</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="cuidadosPessoais1" name="cuidadosPessoais" class="custom-control-input">
+          <label class="custom-control-label" for="cuidadosPessoais1">Cuida-se sem dor</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="cuidadosPessoais2" name="cuidadosPessoais" class="custom-control-input">
+          <label class="custom-control-label" for="cuidadosPessoais2">Cuida-se com dor</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="cuidadosPessoais3" name="cuidadosPessoais" class="custom-control-input">
+          <label class="custom-control-label" for="cuidadosPessoais3">Cuida-se mas lento e cuidadoso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="cuidadosPessoais4" name="cuidadosPessoais" class="custom-control-input">
+          <label class="custom-control-label" for="cuidadosPessoais4">Necessita de alguma ajuda</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="cuidadosPessoais5" name="cuidadosPessoais" class="custom-control-input">
+          <label class="custom-control-label" for="cuidadosPessoais5">Necessita de ajuda na maioria das vezes</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="cuidadosPessoais6" name="cuidadosPessoais" class="custom-control-input">
+          <label class="custom-control-label" for="cuidadosPessoais6">Necessita de ajuda total</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Carga</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carga1" name="carga" class="custom-control-input">
+          <label class="custom-control-label" for="carga1">Levanta peso sem dor</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carga2" name="carga" class="custom-control-input">
+          <label class="custom-control-label" for="carga2">Levanta peso com dor</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carga3" name="carga" class="custom-control-input">
+          <label class="custom-control-label" for="carga3">Não levanta peso, mas carrega peso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carga4" name="carga" class="custom-control-input">
+          <label class="custom-control-label" for="carga4">Carrega peso leve</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carga5" name="carga" class="custom-control-input">
+          <label class="custom-control-label" for="carga5">Carrega peso muito leve</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carga6" name="carga" class="custom-control-input">
+          <label class="custom-control-label" for="carga6">Não carrega peso</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Caminhar</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="caminhar1" name="caminhar" class="custom-control-input">
+          <label class="custom-control-label" for="caminhar1">Caminha qualquer distancia</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="caminhar2" name="caminhar" class="custom-control-input">
+          <label class="custom-control-label" for="caminhar2">Caminha menos de 1 km</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="caminhar3" name="caminhar" class="custom-control-input">
+          <label class="custom-control-label" for="caminhar3">Caminhar menos de 500m</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="caminhar4" name="caminhar" class="custom-control-input">
+          <label class="custom-control-label" for="caminhar4">Caminha menos de 250m</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="caminhar5" name="caminhar" class="custom-control-input">
+          <label class="custom-control-label" for="caminhar5">Caminha com ajuda de órtese</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="caminhar6" name="caminhar" class="custom-control-input">
+          <label class="custom-control-label" for="caminhar6">Não caminha</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Sentar</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentar1" name="sentar" class="custom-control-input">
+          <label class="custom-control-label" for="sentar1">Senta em qualquer lugar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentar2" name="sentar" class="custom-control-input">
+          <label class="custom-control-label" for="sentar2">Senta apenas em alguns lugares</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentar3" name="sentar" class="custom-control-input">
+          <label class="custom-control-label" for="sentar3">Senta por menos de 1 hora</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentar4" name="sentar" class="custom-control-input">
+          <label class="custom-control-label" for="sentar4">Senta por menos de 30 minutos</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentar5" name="sentar" class="custom-control-input">
+          <label class="custom-control-label" for="sentar5">Senta por menos de 10 minutos</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentar6" name="sentar" class="custom-control-input">
+          <label class="custom-control-label" for="sentar6">Não senta</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Posição</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="posicao1" name="posicao" class="custom-control-input">
+          <label class="custom-control-label" for="posicao1">Fica de pé sem dor</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="posicao2" name="posicao" class="custom-control-input">
+          <label class="custom-control-label" for="posicao2">Fica de pé com dor</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="posicao3" name="posicao" class="custom-control-input">
+          <label class="custom-control-label" for="posicao3">Não fica de pé por mais de 1 hora</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="posicao4" name="posicao" class="custom-control-input">
+          <label class="custom-control-label" for="posicao4">Não fica de pé por mais de 30 minutos</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="posicao5" name="posicao" class="custom-control-input">
+          <label class="custom-control-label" for="posicao5">Não fica de pé por mais de 10 minutos</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="posicao6" name="posicao" class="custom-control-input">
+          <label class="custom-control-label" for="posicao6">Não fica de pé</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Repouso</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="repouso1" name="repouso" class="custom-control-input">
+          <label class="custom-control-label" for="repouso1">Dorme bem</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="repouso2" name="repouso" class="custom-control-input">
+          <label class="custom-control-label" for="repouso2">Dorme usando medicamento</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="repouso3" name="repouso" class="custom-control-input">
+          <label class="custom-control-label" for="repouso3">Dorme com medicamento por menos de 6 horas</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="repouso4" name="repouso" class="custom-control-input">
+          <label class="custom-control-label" for="repouso4">Dorme com medicamentos por menos de 4 horas</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="repouso5" name="repouso" class="custom-control-input">
+          <label class="custom-control-label" for="repouso5">Dorme com medicamento por menos de 2 horas</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="repouso6" name="repouso" class="custom-control-input">
+          <label class="custom-control-label" for="repouso6">Não dorme</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Atividade sexual</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadeSexual1" name="atividadeSexual" class="custom-control-input">
+          <label class="custom-control-label" for="atividadeSexual1">Não causa dor</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadeSexual2" name="atividadeSexual" class="custom-control-input">
+          <label class="custom-control-label" for="atividadeSexual2">Causa dor</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadeSexual3" name="atividadeSexual" class="custom-control-input">
+          <label class="custom-control-label" for="atividadeSexual3">Próximo do normal com muita dor</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadeSexual4" name="atividadeSexual" class="custom-control-input">
+          <label class="custom-control-label" for="atividadeSexual4">Severamente restrito</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadeSexual5" name="atividadeSexual" class="custom-control-input">
+          <label class="custom-control-label" for="atividadeSexual5">Quase sem sexo</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadeSexual6" name="atividadeSexual" class="custom-control-input">
+          <label class="custom-control-label" for="atividadeSexual6">Sem sexo</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Vida social</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaSocial1" name="vidaSocial" class="custom-control-input">
+          <label class="custom-control-label" for="vidaSocial1">Normal sem dor</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaSocial2" name="vidaSocial" class="custom-control-input">
+          <label class="custom-control-label" for="vidaSocial2">Normal com dor</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaSocial3" name="vidaSocial" class="custom-control-input">
+          <label class="custom-control-label" for="vidaSocial3">Limitada apenas a atividades energéticas</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaSocial4" name="vidaSocial" class="custom-control-input">
+          <label class="custom-control-label" for="vidaSocial4">Limitada, não saindo tão frequentemente</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaSocial5" name="vidaSocial" class="custom-control-input">
+          <label class="custom-control-label" for="vidaSocial5">Restrita à casa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaSocial6" name="vidaSocial" class="custom-control-input">
+          <label class="custom-control-label" for="vidaSocial6">Sem vida social</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Viagem</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="viagem1" name="viagem" class="custom-control-input">
+          <label class="custom-control-label" for="viagem1">Normal sem dor</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="viagem2" name="viagem" class="custom-control-input">
+          <label class="custom-control-label" for="viagem2">Normal com dor</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="viagem3" name="viagem" class="custom-control-input">
+          <label class="custom-control-label" for="viagem3">Restrita a menos de 2 horas</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="viagem4" name="viagem" class="custom-control-input">
+          <label class="custom-control-label" for="viagem4">Restrita a menos de 1 hora</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="viagem5" name="viagem" class="custom-control-input">
+          <label class="custom-control-label" for="viagem5">Restrita a menos de 30 minutos</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="viagem6" name="viagem" class="custom-control-input">
+          <label class="custom-control-label" for="viagem6">Apenas ao hospital e ao doutor</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-12 mb-4">
+        <div class="form-group text-center p-b-20">
+          <div class="col-lg-12 p-0">
+            <button class="btn btn-info btn-md btn-block text-uppercase waves-effect waves-light"
+                    [routerLink]="['/patient']"
+                    >Salvar</button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

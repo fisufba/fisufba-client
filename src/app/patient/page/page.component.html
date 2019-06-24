@@ -60,6 +60,9 @@
         <li class="nav-item">
           <a class="nav-link" data-toggle="tab" (click)="setPage('lefs')" role="tab">LEFS</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" (click)="setPage('oswestry')" role="tab">OSWESTRY</a>
+        </li>
       </ul>
       <app-patient-profile *ngIf="display('viewProfile')"></app-patient-profile>
       <app-update *ngIf="display('updateProfile')"></app-update>
@@ -80,6 +83,7 @@
       <app-fabq *ngIf="display('fabq')"></app-fabq>
       <app-womac *ngIf="display('womac')"></app-womac>
       <app-lefs *ngIf="display('lefs')"></app-lefs>
+      <app-oswestry *ngIf="display('oswestry')"></app-oswestry>
     </div>
   </div>
 </div>

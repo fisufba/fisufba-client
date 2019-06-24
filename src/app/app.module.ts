@@ -58,6 +58,7 @@ import { AofasComponent } from './forms/aofas/aofas.component';
 import { FabqComponent } from './forms/fabq/fabq.component';
 import { WomacComponent } from './forms/womac/womac.component';
 import { LefsComponent } from './forms/lefs/lefs.component';
+import { OswestryComponent } from './forms/oswestry/oswestry.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -103,7 +104,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AofasComponent,
     FabqComponent,
     WomacComponent,
-    LefsComponent
+    LefsComponent,
+    OswestryComponent
   ],
   imports: [
     CommonModule,
