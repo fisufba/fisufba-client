@@ -53,6 +53,7 @@ import { SensorialComponent } from './forms/sensorial/sensorial.component';
 import { TinetiComponent } from './forms/tineti/tineti.component';
 import { WalkTestComponent } from './forms/walk-test/walk-test.component';
 import { BostonProtocolComponent } from './forms/boston-protocol/boston-protocol.component';
+import { DashComponent } from './forms/dash/dash.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -93,7 +94,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SensorialComponent,
     TinetiComponent,
     WalkTestComponent,
-    BostonProtocolComponent
+    BostonProtocolComponent,
+    DashComponent
   ],
   imports: [
     CommonModule,
