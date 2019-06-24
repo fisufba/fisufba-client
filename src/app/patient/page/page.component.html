@@ -4,52 +4,55 @@
       <!-- Nav tabs -->
       <ul class="nav nav-tabs profile-tab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#profile" (click)="setPage('viewProfile')" role="tab">Perfil</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('viewProfile')" role="tab">Perfil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('updateProfile')" role="tab">Dados pessoais</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('updateProfile')" role="tab">Dados pessoais</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('sociodemographic')" role="tab">Sociodemográfico</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('sociodemographic')" role="tab">Sociodemográfico</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('kinetic')" role="tab">Cinético-Funcional</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('kinetic')" role="tab">Cinético-Funcional</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('goniometry')" role="tab">Goniometria</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('goniometry')" role="tab">Goniometria</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('muscleStrength')" role="tab">Força muscular</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('muscleStrength')" role="tab">Força muscular</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('ashworth')" role="tab">Ashworth</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('ashworth')" role="tab">Ashworth</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('painScale')" role="tab">Escala numérica da dor</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('painScale')" role="tab">Escala numérica da dor</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('PiPe')" role="tab">Pi Pe</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('PiPe')" role="tab">Pi Pe</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('sensorial')" role="tab">Sensorial</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('sensorial')" role="tab">Sensorial</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('tineti')" role="tab">TINETI</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('tineti')" role="tab">TINETI</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('walkTest')" role="tab">Teste de caminhada</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('walkTest')" role="tab">Teste de caminhada</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('bostonProtocol')" role="tab">Protocolo de Boston</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('bostonProtocol')" role="tab">Protocolo de Boston</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('balanceScale')" role="tab">Escala de equilíbrio de BERG</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('balanceScale')" role="tab">Escala de equilíbrio de BERG</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('dash')" role="tab">DASH</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('dash')" role="tab">DASH</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('aofas')" role="tab">AOFAS</a>
+          <a class="nav-link" data-toggle="tab" (click)="setPage('aofas')" role="tab">AOFAS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" (click)="setPage('fabq')" role="tab">FABQ</a>
         </li>
       </ul>
       <app-patient-profile *ngIf="display('viewProfile')"></app-patient-profile>
@@ -68,6 +71,7 @@
       <app-balance-scale *ngIf="display('balanceScale')"></app-balance-scale>
       <app-dash *ngIf="display('dash')"></app-dash>
       <app-aofas *ngIf="display('aofas')"></app-aofas>
+      <app-fabq *ngIf="display('fabq')"></app-fabq>
     </div>
   </div>
 </div>

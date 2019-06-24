@@ -55,6 +55,7 @@ import { WalkTestComponent } from './forms/walk-test/walk-test.component';
 import { BostonProtocolComponent } from './forms/boston-protocol/boston-protocol.component';
 import { DashComponent } from './forms/dash/dash.component';
 import { AofasComponent } from './forms/aofas/aofas.component';
+import { FabqComponent } from './forms/fabq/fabq.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -97,7 +98,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     WalkTestComponent,
     BostonProtocolComponent,
     DashComponent,
-    AofasComponent
+    AofasComponent,
+    FabqComponent
   ],
   imports: [
     CommonModule,
