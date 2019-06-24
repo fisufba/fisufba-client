@@ -57,6 +57,7 @@ import { DashComponent } from './forms/dash/dash.component';
 import { AofasComponent } from './forms/aofas/aofas.component';
 import { FabqComponent } from './forms/fabq/fabq.component';
 import { WomacComponent } from './forms/womac/womac.component';
+import { LefsComponent } from './forms/lefs/lefs.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -101,7 +102,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DashComponent,
     AofasComponent,
     FabqComponent,
-    WomacComponent
+    WomacComponent,
+    LefsComponent
   ],
   imports: [
     CommonModule,
