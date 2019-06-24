@@ -1,0 +1,598 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="box-title m-b-20">Índice WOMAC para Osteoartrite</h3>
+    <form class="form-horizontal form-material d-flex flex-row" (keyup)="onUpdateForm()" style="flex-wrap: wrap">
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h4>Qual a intensidade da sua dor?</h4>
+        <h5>Caminhando em um lugar plano</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="caminharPlano1" name="caminharPlano" class="custom-control-input">
+          <label class="custom-control-label" for="caminharPlano1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="caminharPlano2" name="caminharPlano" class="custom-control-input">
+          <label class="custom-control-label" for="caminharPlano2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="caminharPlano3" name="caminharPlano" class="custom-control-input">
+          <label class="custom-control-label" for="caminharPlano3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="caminharPlano4" name="caminharPlano" class="custom-control-input">
+          <label class="custom-control-label" for="caminharPlano4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="caminharPlano5" name="caminharPlano" class="custom-control-input">
+          <label class="custom-control-label" for="caminharPlano5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Subindo ou descendo escadas</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="escadas1" name="escadas" class="custom-control-input">
+          <label class="custom-control-label" for="escadas1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="escadas2" name="escadas" class="custom-control-input">
+          <label class="custom-control-label" for="escadas2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="escadas3" name="escadas" class="custom-control-input">
+          <label class="custom-control-label" for="escadas3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="escadas4" name="escadas" class="custom-control-input">
+          <label class="custom-control-label" for="escadas4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="escadas5" name="escadas" class="custom-control-input">
+          <label class="custom-control-label" for="escadas5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>A noite deitado na cama</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="noiteCama1" name="noiteCama" class="custom-control-input">
+          <label class="custom-control-label" for="noiteCama1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="noiteCama2" name="noiteCama" class="custom-control-input">
+          <label class="custom-control-label" for="noiteCama2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="noiteCama3" name="noiteCama" class="custom-control-input">
+          <label class="custom-control-label" for="noiteCama3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="noiteCama4" name="noiteCama" class="custom-control-input">
+          <label class="custom-control-label" for="noiteCama4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="noiteCama5" name="noiteCama" class="custom-control-input">
+          <label class="custom-control-label" for="noiteCama5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Sentando-se ou deitando-se</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentandoDeitando1" name="sentandoDeitando" class="custom-control-input">
+          <label class="custom-control-label" for="sentandoDeitando1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentandoDeitando2" name="sentandoDeitando" class="custom-control-input">
+          <label class="custom-control-label" for="sentandoDeitando2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentandoDeitando3" name="sentandoDeitando" class="custom-control-input">
+          <label class="custom-control-label" for="sentandoDeitando3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentandoDeitando4" name="sentandoDeitando" class="custom-control-input">
+          <label class="custom-control-label" for="sentandoDeitando4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentandoDeitando5" name="sentandoDeitando" class="custom-control-input">
+          <label class="custom-control-label" for="sentandoDeitando5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Ficando em pé</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="emPe1" name="emPe" class="custom-control-input">
+          <label class="custom-control-label" for="emPe1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="emPe2" name="emPe" class="custom-control-input">
+          <label class="custom-control-label" for="emPe2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="emPe3" name="emPe" class="custom-control-input">
+          <label class="custom-control-label" for="emPe3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="emPe4" name="emPe" class="custom-control-input">
+          <label class="custom-control-label" for="emPe4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="emPe5" name="emPe" class="custom-control-input">
+          <label class="custom-control-label" for="emPe5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h4>Qual o grau de dificuldade que você tem ao:</h4>
+        <h5>Descer escadas</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="descerEscadas1" name="descerEscadas" class="custom-control-input">
+          <label class="custom-control-label" for="descerEscadas1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="descerEscadas2" name="descerEscadas" class="custom-control-input">
+          <label class="custom-control-label" for="descerEscadas2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="descerEscadas3" name="descerEscadas" class="custom-control-input">
+          <label class="custom-control-label" for="descerEscadas3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="descerEscadas4" name="descerEscadas" class="custom-control-input">
+          <label class="custom-control-label" for="descerEscadas4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="descerEscadas5" name="descerEscadas" class="custom-control-input">
+          <label class="custom-control-label" for="descerEscadas5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Subir escadas</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="subirEscadas1" name="subirEscadas" class="custom-control-input">
+          <label class="custom-control-label" for="subirEscadas1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="subirEscadas2" name="subirEscadas" class="custom-control-input">
+          <label class="custom-control-label" for="subirEscadas2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="subirEscadas3" name="subirEscadas" class="custom-control-input">
+          <label class="custom-control-label" for="subirEscadas3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="subirEscadas4" name="subirEscadas" class="custom-control-input">
+          <label class="custom-control-label" for="subirEscadas4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="subirEscadas5" name="subirEscadas" class="custom-control-input">
+          <label class="custom-control-label" for="subirEscadas5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Levantar-se estando sentada</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levantar1" name="levantar" class="custom-control-input">
+          <label class="custom-control-label" for="levantar1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levantar2" name="levantar" class="custom-control-input">
+          <label class="custom-control-label" for="levantar2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levantar3" name="levantar" class="custom-control-input">
+          <label class="custom-control-label" for="levantar3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levantar4" name="levantar" class="custom-control-input">
+          <label class="custom-control-label" for="levantar4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levantar5" name="levantar" class="custom-control-input">
+          <label class="custom-control-label" for="levantar5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Ficar em pé</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="dificuldadeEmPe1" name="dificuldadeEmPe" class="custom-control-input">
+          <label class="custom-control-label" for="dificuldadeEmPe1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="dificuldadeEmPe2" name="dificuldadeEmPe" class="custom-control-input">
+          <label class="custom-control-label" for="dificuldadeEmPe2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="dificuldadeEmPe3" name="dificuldadeEmPe" class="custom-control-input">
+          <label class="custom-control-label" for="dificuldadeEmPe3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="dificuldadeEmPe4" name="dificuldadeEmPe" class="custom-control-input">
+          <label class="custom-control-label" for="dificuldadeEmPe4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="dificuldadeEmPe5" name="dificuldadeEmPe" class="custom-control-input">
+          <label class="custom-control-label" for="dificuldadeEmPe5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Abaixar-se para pegar algo</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="abaixar1" name="abaixar" class="custom-control-input">
+          <label class="custom-control-label" for="abaixar1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="abaixar2" name="abaixar" class="custom-control-input">
+          <label class="custom-control-label" for="abaixar2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="abaixar3" name="abaixar" class="custom-control-input">
+          <label class="custom-control-label" for="abaixar3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="abaixar4" name="abaixar" class="custom-control-input">
+          <label class="custom-control-label" for="abaixar4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="abaixar5" name="abaixar" class="custom-control-input">
+          <label class="custom-control-label" for="abaixar5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Andar no plano</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="andarPlano1" name="andarPlano" class="custom-control-input">
+          <label class="custom-control-label" for="andarPlano1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="andarPlano2" name="andarPlano" class="custom-control-input">
+          <label class="custom-control-label" for="andarPlano2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="andarPlano3" name="andarPlano" class="custom-control-input">
+          <label class="custom-control-label" for="andarPlano3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="andarPlano4" name="andarPlano" class="custom-control-input">
+          <label class="custom-control-label" for="andarPlano4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="andarPlano5" name="andarPlano" class="custom-control-input">
+          <label class="custom-control-label" for="andarPlano5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Entrar e sair do carro</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carro1" name="carro" class="custom-control-input">
+          <label class="custom-control-label" for="carro1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carro2" name="carro" class="custom-control-input">
+          <label class="custom-control-label" for="carro2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carro3" name="carro" class="custom-control-input">
+          <label class="custom-control-label" for="carro3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carro4" name="carro" class="custom-control-input">
+          <label class="custom-control-label" for="carro4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carro5" name="carro" class="custom-control-input">
+          <label class="custom-control-label" for="carro5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Ir fazer compras</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="compras1" name="compras" class="custom-control-input">
+          <label class="custom-control-label" for="compras1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="compras2" name="compras" class="custom-control-input">
+          <label class="custom-control-label" for="compras2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="compras3" name="compras" class="custom-control-input">
+          <label class="custom-control-label" for="compras3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="compras4" name="compras" class="custom-control-input">
+          <label class="custom-control-label" for="compras4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="compras5" name="compras" class="custom-control-input">
+          <label class="custom-control-label" for="compras5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Colocar meias</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="colocarMeias1" name="colocarMeias" class="custom-control-input">
+          <label class="custom-control-label" for="colocarMeias1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="colocarMeias2" name="colocarMeias" class="custom-control-input">
+          <label class="custom-control-label" for="colocarMeias2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="colocarMeias3" name="colocarMeias" class="custom-control-input">
+          <label class="custom-control-label" for="colocarMeias3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="colocarMeias4" name="colocarMeias" class="custom-control-input">
+          <label class="custom-control-label" for="colocarMeias4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="colocarMeias5" name="colocarMeias" class="custom-control-input">
+          <label class="custom-control-label" for="colocarMeias5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Levantar-se da cama</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levantarCama1" name="levantarCama" class="custom-control-input">
+          <label class="custom-control-label" for="levantarCama1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levantarCama2" name="levantarCama" class="custom-control-input">
+          <label class="custom-control-label" for="levantarCama2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levantarCama3" name="levantarCama" class="custom-control-input">
+          <label class="custom-control-label" for="levantarCama3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levantarCama4" name="levantarCama" class="custom-control-input">
+          <label class="custom-control-label" for="levantarCama4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levantarCama5" name="levantarCama" class="custom-control-input">
+          <label class="custom-control-label" for="levantarCama5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Tirar as meias</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="meias1" name="meias" class="custom-control-input">
+          <label class="custom-control-label" for="meias1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="meias2" name="meias" class="custom-control-input">
+          <label class="custom-control-label" for="meias2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="meias3" name="meias" class="custom-control-input">
+          <label class="custom-control-label" for="meias3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="meias4" name="meias" class="custom-control-input">
+          <label class="custom-control-label" for="meias4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="meias5" name="meias" class="custom-control-input">
+          <label class="custom-control-label" for="meias5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Ficar deitado na cama</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="banho1" name="banho" class="custom-control-input">
+          <label class="custom-control-label" for="banho1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="banho2" name="banho" class="custom-control-input">
+          <label class="custom-control-label" for="banho2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="banho3" name="banho" class="custom-control-input">
+          <label class="custom-control-label" for="banho3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="banho4" name="banho" class="custom-control-input">
+          <label class="custom-control-label" for="banho4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="banho5" name="banho" class="custom-control-input">
+          <label class="custom-control-label" for="banho5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Entrar e sair do banho</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="banho1" name="banho" class="custom-control-input">
+          <label class="custom-control-label" for="banho1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="banho2" name="banho" class="custom-control-input">
+          <label class="custom-control-label" for="banho2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="banho3" name="banho" class="custom-control-input">
+          <label class="custom-control-label" for="banho3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="banho4" name="banho" class="custom-control-input">
+          <label class="custom-control-label" for="banho4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="banho5" name="banho" class="custom-control-input">
+          <label class="custom-control-label" for="banho5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Se sentar</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentar1" name="sentar" class="custom-control-input">
+          <label class="custom-control-label" for="sentar1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentar2" name="sentar" class="custom-control-input">
+          <label class="custom-control-label" for="sentar2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentar3" name="sentar" class="custom-control-input">
+          <label class="custom-control-label" for="sentar3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentar4" name="sentar" class="custom-control-input">
+          <label class="custom-control-label" for="sentar4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentar5" name="sentar" class="custom-control-input">
+          <label class="custom-control-label" for="sentar5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Sentar e levantar do vaso sanitário</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentarVaso1" name="sentarVaso" class="custom-control-input">
+          <label class="custom-control-label" for="sentarVaso1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentarVaso2" name="sentarVaso" class="custom-control-input">
+          <label class="custom-control-label" for="sentarVaso2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentarVaso3" name="sentarVaso" class="custom-control-input">
+          <label class="custom-control-label" for="sentarVaso3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentarVaso4" name="sentarVaso" class="custom-control-input">
+          <label class="custom-control-label" for="sentarVaso4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentarVaso5" name="sentarVaso" class="custom-control-input">
+          <label class="custom-control-label" for="sentarVaso5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Fazer tarefas domésticas pesadas</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="tarefasPesadas1" name="t"refasPesadas class="custom-control-input">
+          <label class="custom-control-label" for="t1refasPesadas">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="t2refasPesadas" name="t"refasPesadas class="custom-control-input">
+          <label class="custom-control-label" for="t2refasPesadas">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="t3refasPesadas" name="t"refasPesadas class="custom-control-input">
+          <label class="custom-control-label" for="t3refasPesadas">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="t4refasPesadas" name="t"refasPesadas class="custom-control-input">
+          <label class="custom-control-label" for="t4refasPesadas">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="t5refasPesadas" name="t"refasPesadas class="custom-control-input">
+          <label class="custom-control-label" for="t5refasPesadas">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Fazer tarefas domésticas leves</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="tarefasLeves1" name="tarefasLeves" class="custom-control-input">
+          <label class="custom-control-label" for="tarefasLeves1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="tarefasLeves2" name="tarefasLeves" class="custom-control-input">
+          <label class="custom-control-label" for="tarefasLeves2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="tarefasLeves3" name="tarefasLeves" class="custom-control-input">
+          <label class="custom-control-label" for="tarefasLeves3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="tarefasLeves4" name="tarefasLeves" class="custom-control-input">
+          <label class="custom-control-label" for="tarefasLeves4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="tarefasLeves5" name="tarefasLeves" class="custom-control-input">
+          <label class="custom-control-label" for="tarefasLeves5">Muito intensa</label>
+        </div>
+      </div>
+
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h4>Com relação à rigidez</h4>
+        <h5>Qual é a intensidade de sua rigidez logo após acordar de manhã?</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="rigidezAcordar1" name="rigidezAcordar" class="custom-control-input">
+          <label class="custom-control-label" for="rigidezAcordar1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="rigidezAcordar2" name="rigidezAcordar" class="custom-control-input">
+          <label class="custom-control-label" for="rigidezAcordar2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="rigidezAcordar3" name="rigidezAcordar" class="custom-control-input">
+          <label class="custom-control-label" for="rigidezAcordar3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="rigidezAcordar4" name="rigidezAcordar" class="custom-control-input">
+          <label class="custom-control-label" for="rigidezAcordar4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="rigidezAcordar5" name="rigidezAcordar" class="custom-control-input">
+          <label class="custom-control-label" for="rigidezAcordar5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Qual é a intensidade de sua rigidez após se sentar, se deitar ou repousar no decorrer do dia?</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="rigidezDeitar1" name="rigidezDeitar" class="custom-control-input">
+          <label class="custom-control-label" for="rigidezDeitar1">Nenhuma</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="rigidezDeitar2" name="rigidezDeitar" class="custom-control-input">
+          <label class="custom-control-label" for="rigidezDeitar2">Pouca</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="rigidezDeitar3" name="rigidezDeitar" class="custom-control-input">
+          <label class="custom-control-label" for="rigidezDeitar3">Moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="rigidezDeitar4" name="rigidezDeitar" class="custom-control-input">
+          <label class="custom-control-label" for="rigidezDeitar4">Intensa</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="rigidezDeitar5" name="rigidezDeitar" class="custom-control-input">
+          <label class="custom-control-label" for="rigidezDeitar5">Muito intensa</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-12 mb-4">
+        <div class="form-group text-center p-b-20">
+          <div class="col-lg-12 p-0">
+            <button class="btn btn-info btn-md btn-block text-uppercase waves-effect waves-light"
+                    [routerLink]="['/patient']"
+                    >Salvar</button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

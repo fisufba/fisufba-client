@@ -54,6 +54,9 @@
         <li class="nav-item">
           <a class="nav-link" data-toggle="tab" (click)="setPage('fabq')" role="tab">FABQ</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" (click)="setPage('womac')" role="tab">WOMAC</a>
+        </li>
       </ul>
       <app-patient-profile *ngIf="display('viewProfile')"></app-patient-profile>
       <app-update *ngIf="display('updateProfile')"></app-update>
@@ -72,6 +75,7 @@
       <app-dash *ngIf="display('dash')"></app-dash>
       <app-aofas *ngIf="display('aofas')"></app-aofas>
       <app-fabq *ngIf="display('fabq')"></app-fabq>
+      <app-womac *ngIf="display('womac')"></app-womac>
     </div>
   </div>
 </div>

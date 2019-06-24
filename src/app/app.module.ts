@@ -56,6 +56,7 @@ import { BostonProtocolComponent } from './forms/boston-protocol/boston-protocol
 import { DashComponent } from './forms/dash/dash.component';
 import { AofasComponent } from './forms/aofas/aofas.component';
 import { FabqComponent } from './forms/fabq/fabq.component';
+import { WomacComponent } from './forms/womac/womac.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -99,7 +100,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BostonProtocolComponent,
     DashComponent,
     AofasComponent,
-    FabqComponent
+    FabqComponent,
+    WomacComponent
   ],
   imports: [
     CommonModule,
