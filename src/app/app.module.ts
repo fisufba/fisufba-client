@@ -54,6 +54,7 @@ import { TinetiComponent } from './forms/tineti/tineti.component';
 import { WalkTestComponent } from './forms/walk-test/walk-test.component';
 import { BostonProtocolComponent } from './forms/boston-protocol/boston-protocol.component';
 import { DashComponent } from './forms/dash/dash.component';
+import { AofasComponent } from './forms/aofas/aofas.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -95,7 +96,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     TinetiComponent,
     WalkTestComponent,
     BostonProtocolComponent,
-    DashComponent
+    DashComponent,
+    AofasComponent
   ],
   imports: [
     CommonModule,

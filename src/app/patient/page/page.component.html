@@ -48,6 +48,9 @@
         <li class="nav-item">
           <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('dash')" role="tab">DASH</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#settings" (click)="setPage('aofas')" role="tab">AOFAS</a>
+        </li>
       </ul>
       <app-patient-profile *ngIf="display('viewProfile')"></app-patient-profile>
       <app-update *ngIf="display('updateProfile')"></app-update>
@@ -64,6 +67,7 @@
       <app-boston-protocol *ngIf="display('bostonProtocol')"></app-boston-protocol>
       <app-balance-scale *ngIf="display('balanceScale')"></app-balance-scale>
       <app-dash *ngIf="display('dash')"></app-dash>
+      <app-aofas *ngIf="display('aofas')"></app-aofas>
     </div>
   </div>
 </div>
