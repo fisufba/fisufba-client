@@ -7,6 +7,9 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { Router } from '@angular/router';
+
+import { AuthService } from '../../auth/auth.service';
+
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -15,8 +18,10 @@ import { Router } from '@angular/router';
 export class NavigationComponent implements AfterViewInit {
   name: string;
   public config: PerfectScrollbarConfigInterface = {};
-  constructor(private modalService: NgbModal,
-              private router: Router) {}
+  constructor(
+    private modalService: NgbModal,
+    private router: Router,
+    private authService: AuthService) {}
 
   // This is for Notifications
   notifications: Object[] = [
@@ -106,8 +111,10 @@ export class NavigationComponent implements AfterViewInit {
     $('body').trigger('resize');
   }
 
-  onLogout() {
-    localStorage.setItem('isLoggedin', 'false');
-    this.router.navigateByUrl('');
+  onLogout() { 
+    this.authService.logout().subscribe(isLoggedOut => {
+      if(isLoggedOut)
+        this.router.navigateByUrl('');
+    });
   }
 }
