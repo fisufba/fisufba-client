@@ -30,7 +30,7 @@ export class AuthService {
       map(payload => true),
       catchError(error => {
         if(this.isHttpError(error, 403)) {
-          this.messageService.add("Usuário ou senha incorretos");
+          this.messageService.addError("Usuário ou senha incorretos");
         } else {
           this.messageService.handleGenericError(error);
         }
