@@ -1,24 +1,24 @@
 <div class="card">
   <div class="card-body">
     <h3 class="box-title m-b-20">Escala AOFAS para tornozelo e retropé</h3>
-    <form class="form-horizontal form-material d-flex flex-row" (keyup)="onUpdateForm()" style="flex-wrap: wrap">
+    <form class="form-horizontal form-material d-flex flex-row" [formGroup]="form" (change)="onUpdateForm()" style="flex-wrap: wrap">
 
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Domínio dor</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="dor1" name="dor" class="custom-control-input">
+          <input type="radio" id="dor1" name="dor" formControlName="dor" class="custom-control-input" data-value="0">
           <label class="custom-control-label" for="dor1">Nenhuma</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="dor2" name="dor" class="custom-control-input">
+          <input type="radio" id="dor2" name="dor" formControlName="dor" class="custom-control-input" data-value="30">
           <label class="custom-control-label" for="dor2">Leve/ocasional</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="dor3" name="dor" class="custom-control-input">
+          <input type="radio" id="dor3" name="dor" formControlName="dor" class="custom-control-input" data-value="20">
           <label class="custom-control-label" for="dor3">Moderada/Diária</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="dor4" name="dor" class="custom-control-input">
+          <input type="radio" id="dor4" name="dor" formControlName="dor" class="custom-control-input" data-value="00">
           <label class="custom-control-label" for="dor4">Intensa/Quase sempre presente</label>
         </div>
       </div>
@@ -27,15 +27,19 @@
         <h5>Domínio Funcional</h5>
         <p>Refere-se a limitação nas atividades e danecessidades de suporte</p>
         <div class="custom-control custom-radio">
-          <input type="radio" id="funcional1" name="funcional" class="custom-control-input">
+          <input type="radio" id="funcional4" name="funcional" formControlName="funcional" class="custom-control-input" data-value="10">
+          <label class="custom-control-label" for="funcional4">Sem , sem suporte</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="funcional1" name="funcional" formControlName="funcional" class="custom-control-input" data-value="7">
           <label class="custom-control-label" for="funcional1">Sem limitação para AVD's mas limitação nas atividades recreacionais, sem suporte</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="funcional2" name="funcional" class="custom-control-input">
+          <input type="radio" id="funcional2" name="funcional" formControlName="funcional" class="custom-control-input" data-value="4">
           <label class="custom-control-label" for="funcional2">Limitação nas atividades diárias e recreacionais, utiliza bengala</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="funcional3" name="funcional" class="custom-control-input">
+          <input type="radio" id="funcional3" name="funcional" formControlName="funcional" class="custom-control-input" data-value="0">
           <label class="custom-control-label" for="funcional3">Limitação intensa nas atividades diárias e recreacionais, andador, muletas, cadeira-de-rodas, órtese</label>
         </div>
       </div>
@@ -43,19 +47,19 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Domínio distancia máxima de caminhada, quarteirões</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="distancia1" name="distancia" class="custom-control-input">
+          <input type="radio" id="distancia1" name="distancia" formControlName="distancia" class="custom-control-input" data-value="5">
           <label class="custom-control-label" for="distancia1">Mais que 6</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="distancia2" name="distancia" class="custom-control-input">
+          <input type="radio" id="distancia2" name="distancia" formControlName="distancia" class="custom-control-input" data-value="4">
           <label class="custom-control-label" for="distancia2">De 4 a 6</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="distancia3" name="distancia" class="custom-control-input">
+          <input type="radio" id="distancia3" name="distancia" formControlName="distancia" class="custom-control-input" data-value="2">
           <label class="custom-control-label" for="distancia3">De 1 a 3</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="distancia4" name="distancia" class="custom-control-input">
+          <input type="radio" id="distancia4" name="distancia" formControlName="distancia" class="custom-control-input" data-value="0">
           <label class="custom-control-label" for="distancia4">Menos que 1</label>
         </div>
       </div>
@@ -63,15 +67,15 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Domínio superfície de caminhada</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="superficie1" name="superficie" class="custom-control-input">
+          <input type="radio" id="superficie1" name="superficie" formControlName="superficie" class="custom-control-input" data-value="5">
           <label class="custom-control-label" for="superficie1">Sem dificuldade em qualquer superfície</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="superficie2" name="superficie" class="custom-control-input">
+          <input type="radio" id="superficie2" name="superficie" formControlName="superficie" class="custom-control-input" data-value="3">
           <label class="custom-control-label" for="superficie2">Alguma dificuldade em terrenos irregulares, escadas, inclinações e ladeiras</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="superficie3" name="superficie" class="custom-control-input">
+          <input type="radio" id="superficie3" name="superficie" formControlName="superficie" class="custom-control-input" data-value="0">
           <label class="custom-control-label" for="superficie3">Dificuldade intensa em terrenos irregulares, escadas, inclinações e ladeiras</label>
         </div>
       </div>
@@ -79,15 +83,15 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Domínio anormalidade da marcha</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="anormalidade1" name="anormalidade" class="custom-control-input">
+          <input type="radio" id="anormalidade1" name="anormalidade" formControlName="anormalidade" class="custom-control-input" data-value="8">
           <label class="custom-control-label" for="anormalidade1">Nenhuma, leve</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="anormalidade2" name="anormalidade" class="custom-control-input">
+          <input type="radio" id="anormalidade2" name="anormalidade" formControlName="anormalidade" class="custom-control-input" data-value="4">
           <label class="custom-control-label" for="anormalidade2">Evidente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="anormalidade3" name="anormalidade" class="custom-control-input">
+          <input type="radio" id="anormalidade3" name="anormalidade" formControlName="anormalidade" class="custom-control-input" data-value="0">
           <label class="custom-control-label" for="anormalidade3">Acentuada</label>
         </div>
       </div>
@@ -95,15 +99,15 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Domínio mobiliidade sagital (FLX + EXT)</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="sagital1" name="sagital" class="custom-control-input">
+          <input type="radio" id="sagital1" name="sagital" formControlName="sagital" class="custom-control-input" data-value="8">
           <label class="custom-control-label" for="sagital1">Normal ou levemente restrito (30º ou mais)</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="sagital2" name="sagital" class="custom-control-input">
+          <input type="radio" id="sagital2" name="sagital" formControlName="sagital" class="custom-control-input" data-value="4">
           <label class="custom-control-label" for="sagital2">Restrição moderada (15º - 29º)</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="sagital3" name="sagital" class="custom-control-input">
+          <input type="radio" id="sagital3" name="sagital" formControlName="sagital" class="custom-control-input" data-value="0">
           <label class="custom-control-label" for="sagital3">Restrição intensa (< 15º)</label>
         </div>
       </div>
@@ -111,15 +115,15 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Domínio mobilidade do retro-pé (INVERSÃO + EVERSÃO)</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="mobilidade1" name="mobilidade" class="custom-control-input">
+          <input type="radio" id="mobilidade1" name="mobilidade" formControlName="mobilidade" class="custom-control-input" data-value="6">
           <label class="custom-control-label" for="mobilidade1">Normal ou levemente restrito (75 - 100% do normal)</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="mobilidade2" name="mobilidade" class="custom-control-input">
+          <input type="radio" id="mobilidade2" name="mobilidade" formControlName="mobilidade" class="custom-control-input" data-value="3">
           <label class="custom-control-label" for="mobilidade2">Restrição moderada (25 - 74% do normal)</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="mobilidade3" name="mobilidade" class="custom-control-input">
+          <input type="radio" id="mobilidade3" name="mobilidade" formControlName="mobilidade" class="custom-control-input" data-value="0">
           <label class="custom-control-label" for="mobilidade3">Restrição intensa (< 25% do normal)</label>
         </div>
       </div>
@@ -127,11 +131,11 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Domínio estabilidade do tornozelo e retro-pé (anteroposterior, varo-valgo)</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="estabilidade1" name="estabilidade" class="custom-control-input">
+          <input type="radio" id="estabilidade1" name="estabilidade" formControlName="estabilidade" class="custom-control-input" data-value="8">
           <label class="custom-control-label" for="estabilidade1">Estável</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="estabilidade2" name="estabilidade" class="custom-control-input">
+          <input type="radio" id="estabilidade2" name="estabilidade" formControlName="estabilidade" class="custom-control-input" data-value="0">
           <label class="custom-control-label" for="estabilidade2">Instável</label>
         </div>
       </div>
@@ -139,16 +143,35 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Domínio alinhamento</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="alinhamento1" name="alinhamento" class="custom-control-input">
+          <input type="radio" id="alinhamento1" name="alinhamento" formControlName="alinhamento" class="custom-control-input" data-value="10">
           <label class="custom-control-label" for="alinhamento1">Bom, pé plantigrado, anti-pé e retro-pé bem alinhado</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="alinhamento2" name="alinhamento" class="custom-control-input">
+          <input type="radio" id="alinhamento2" name="alinhamento" formControlName="alinhamento" class="custom-control-input" data-value="5">
           <label class="custom-control-label" for="alinhamento2">Regular, pé plantigrado, algum grau de desalinhamento do tornozelo e retro-pé, sem sintomas</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="alinhamento3" name="alinhamento" class="custom-control-input">
+          <input type="radio" id="alinhamento3" name="alinhamento" formControlName="alinhamento" class="custom-control-input" data-value="0">
           <label class="custom-control-label" for="alinhamento3">Ruim, pé não plantigrado, desalinhamento intenso e sintomático</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="m-b-0">
+                  <i class="mdi mdi-clipboard-outline text-info"></i>
+                </h2>
+                <h3>{{ this.score }}/100</h3>
+                <h6 class="card-subtitle">Total</h6>
+              </div>
+              <div class="col-12">
+                <p><ngb-progressbar type="info" [value]="this.width"></ngb-progressbar></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
