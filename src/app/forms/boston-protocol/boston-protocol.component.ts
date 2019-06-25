@@ -9,7 +9,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class BostonProtocolComponent implements OnInit {
 
   form: any;
-  width: number;
+  width: number = 0;
   score: number = 0;
 
   constructor() { }
@@ -44,7 +44,6 @@ export class BostonProtocolComponent implements OnInit {
       for( let value in this.form.value) {
           this.score += Number(this.form.value[value]);
       }
-      console.log(this.score)
       this.width = (100*this.score)/100;
   }
 
