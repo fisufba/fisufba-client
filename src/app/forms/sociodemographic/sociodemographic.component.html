@@ -2,12 +2,13 @@
   <div class="card-body">
     <form class="form-horizontal form-material"
           id="loginform"
+          [formGroup]="form"
           (keyup)="onUpdateForm()">
       <h3 class="box-title m-b-20">Formulário Sociodemográfico</h3>
 
       <div class="form-group">
         <label class="control-label">Status civil</label>
-        <select class="form-control custom-select" data-placeholder="Selecione" tabindex="1">
+        <select class="form-control custom-select" data-placeholder="Selecione" tabindex="1" name="civilSatus" formControlName="civilSatus">
           <option value="Category 1">Solteiro(a)</option>
           <option value="Category 2">Casado(a)</option>
           <option value="Category 3">Divorciado(a)</option>
@@ -17,7 +18,7 @@
 
       <div class="form-group">
         <label class="control-label">Com quem mora</label>
-        <select class="form-control custom-select" data-placeholder="Selecione" tabindex="1">
+        <select class="form-control custom-select" data-placeholder="Selecione" tabindex="1" name="habitationStatus" formControlName="habitationStatus">
           <option value="Category 1">Sozinho</option>
           <option value="Category 2">Familiares</option>
           <option value="Category 3">Amigos</option>
@@ -27,7 +28,7 @@
 
       <div class="form-group">
         <label class="control-label">Educação</label>
-        <select class="form-control custom-select" data-placeholder="Selecione" tabindex="1">
+        <select class="form-control custom-select" data-placeholder="Selecione" tabindex="1" name="education" formControlName="education">
           <option value="Category 1">Analfabeto(a)</option>
           <option value="Category 2">Primeiro Grau</option>
           <option value="Category 3">Segundo Grau</option>
@@ -37,7 +38,7 @@
 
       <div class="form-group">
         <label class="control-label">Status ocupacional</label>
-        <select class="form-control custom-select" data-placeholder="Selecione" tabindex="1">
+        <select class="form-control custom-select" data-placeholder="Selecione" tabindex="1" name="ocupationalStatus" formControlName="ocupationalStatus">
           <option value="Category 1">Estudante</option>
           <option value="Category 2">Desempregado(a)</option>
           <option value="Category 3">Empregado(a)</option>
@@ -51,6 +52,8 @@
       <label class="control-label">Emprego atual</label>
       <input class="form-control"
              type="text"
+             name="currentJob"
+             formControlName="currentJob"
              required>
     </div>
   </div>
@@ -60,17 +63,19 @@
       <label class="control-label">Último emprego</label>
       <input class="form-control"
              type="text"
+             name="lastJob"
+             formControlName="lastJob"
              required>
     </div>
   </div>
 
   <div class="custom-control custom-checkbox mr-sm-2 m-b-15">
-    <input type="checkbox" class="custom-control-input" id="checkbox0" value="check">
+    <input type="checkbox" class="custom-control-input" id="checkbox0" value="check" name="sick" formControlName="sick">
     <label class="custom-control-label" for="checkbox0">Está doente?</label>
   </div>
 
   <div class="custom-control custom-checkbox mr-sm-2 m-b-15">
-    <input type="checkbox" class="custom-control-input" id="checkbox1" value="check">
+    <input type="checkbox" class="custom-control-input" id="checkbox1" value="check" name="medicine" formControlName="medicine">
     <label class="custom-control-label" for="checkbox1">Toma medicamento?</label>
   </div>
 
