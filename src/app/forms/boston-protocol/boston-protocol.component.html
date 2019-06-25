@@ -2,27 +2,27 @@
   <div class="card-body">
     <h3 class="box-title m-b-20">Protocolo de Boston</h3>
     <p>As questões seguintes se referem aos seus sintomas durante um típico período de 24 horas, nas duas últimas semanas.</p>
-    <form class="form-horizontal form-material d-flex flex-row" (keyup)="onUpdateForm()" style="flex-wrap: wrap">
+    <form class="form-horizontal form-material d-flex flex-row" [formGroup]="form" (change)="onUpdateForm()" style="flex-wrap: wrap">
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Qual é a gravidade da dor em punho ou mão que você tem à noite?</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="dorPunho1" name="dorPunho" class="custom-control-input">
+          <input type="radio" id="dorPunho1" name="dorPunho" formControlName="dorPunho" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="dorPunho1">Não tenho dor em punho ou mão à noite </label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="dorPunho2" name="dorPunho" class="custom-control-input">
+          <input type="radio" id="dorPunho2" name="dorPunho" formControlName="dorPunho" class="custom-control-input" data-value="2">
           <label class="custom-control-label" for="dorPunho2">Dor leve</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="dorPunho3" name="dorPunho" class="custom-control-input">
+          <input type="radio" id="dorPunho3" name="dorPunho" formControlName="dorPunho" class="custom-control-input" data-value="3">
           <label class="custom-control-label" for="dorPunho3">Dor moderada</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="dorPunho4" name="dorPunho" class="custom-control-input">
+          <input type="radio" id="dorPunho4" name="dorPunho" formControlName="dorPunho" class="custom-control-input" data-value="4">
           <label class="custom-control-label" for="dorPunho4">Dor forte</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="dorPunho5" name="dorPunho" class="custom-control-input">
+          <input type="radio" id="dorPunho5" name="dorPunho" formControlName="dorPunho" class="custom-control-input" data-value="5">
           <label class="custom-control-label" for="dorPunho5">Dor muito forte</label>
         </div>
       </div>
@@ -30,23 +30,23 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Com que freqüência você é acordado pela dor em punho ou mão, durante uma noite típica, nas duas últimas semanas?</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="acordaDorPunho1" name="acordaDorPunho" class="custom-control-input">
+          <input type="radio" id="acordaDorPunho1" name="acordaDorPunho" formControlName="acordaDorPunho" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="acordaDorPunho1">Nehuma </label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="acordaDorPunho2" name="acordaDorPunho" class="custom-control-input">
+          <input type="radio" id="acordaDorPunho2" name="acordaDorPunho" formControlName="acordaDorPunho" class="custom-control-input" data-value="2">
           <label class="custom-control-label" for="acordaDorPunho2">Uma</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="acordaDorPunho3" name="acordaDorPunho" class="custom-control-input">
+          <input type="radio" id="acordaDorPunho3" name="acordaDorPunho" formControlName="acordaDorPunho" class="custom-control-input" data-value="3">
           <label class="custom-control-label" for="acordaDorPunho3">Duas a três vezes</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="acordaDorPunho4" name="acordaDorPunho" class="custom-control-input">
+          <input type="radio" id="acordaDorPunho4" name="acordaDorPunho" formControlName="acordaDorPunho" class="custom-control-input" data-value="4">
           <label class="custom-control-label" for="acordaDorPunho4">Quatro a cinco vezes</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="acordaDorPunho5" name="acordaDorPunho" class="custom-control-input">
+          <input type="radio" id="acordaDorPunho5" name="acordaDorPunho" formControlName="acordaDorPunho" class="custom-control-input" data-value="5">
           <label class="custom-control-label" for="acordaDorPunho5">Mais que cinco vezes</label>
         </div>
       </div>
@@ -54,23 +54,23 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5> Você usualmente tem dor na mão ou punho durante o dia?</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="diaDorPunho1" name="diaDorPunho" class="custom-control-input">
+          <input type="radio" id="diaDorPunho1" name="diaDorPunho" formControlName="diaDorPunho" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="diaDorPunho1">Não</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="diaDorPunho2" name="diaDorPunho" class="custom-control-input">
+          <input type="radio" id="diaDorPunho2" name="diaDorPunho" formControlName="diaDorPunho" class="custom-control-input" data-value="2">
           <label class="custom-control-label" for="diaDorPunho2">Pouca dor durante o dia</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="diaDorPunho3" name="diaDorPunho" class="custom-control-input">
+          <input type="radio" id="diaDorPunho3" name="diaDorPunho" formControlName="diaDorPunho" class="custom-control-input" data-value="3">
           <label class="custom-control-label" for="diaDorPunho3">Dor moderada durante o dia</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="diaDorPunho4" name="diaDorPunho" class="custom-control-input">
+          <input type="radio" id="diaDorPunho4" name="diaDorPunho" formControlName="diaDorPunho" class="custom-control-input" data-value="4">
           <label class="custom-control-label" for="diaDorPunho4">Dor intensa durante o dia</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="diaDorPunho5" name="diaDorPunho" class="custom-control-input">
+          <input type="radio" id="diaDorPunho5" name="diaDorPunho" formControlName="diaDorPunho" class="custom-control-input" data-value="5">
           <label class="custom-control-label" for="diaDorPunho5">Dor muito intensa durante o dia</label>
         </div>
       </div>
@@ -78,23 +78,23 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Qual é a gravidade da dor em punho ou mão que você tem à noite?</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="noiteDorPunho1" name="noiteDorPunho" class="custom-control-input">
+          <input type="radio" id="noiteDorPunho1" name="noiteDorPunho" formControlName="noiteDorPunho" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="noiteDorPunho1">Nunca</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="noiteDorPunho2" name="noiteDorPunho" class="custom-control-input">
+          <input type="radio" id="noiteDorPunho2" name="noiteDorPunho" formControlName="noiteDorPunho" class="custom-control-input" data-value="2">
           <label class="custom-control-label" for="noiteDorPunho2">Uma ou duas vezes por dia</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="noiteDorPunho3" name="noiteDorPunho" class="custom-control-input">
+          <input type="radio" id="noiteDorPunho3" name="noiteDorPunho" formControlName="noiteDorPunho" class="custom-control-input" data-value="3">
           <label class="custom-control-label" for="noiteDorPunho3">Três a cinco vezes por dia</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="noiteDorPunho4" name="noiteDorPunho" class="custom-control-input">
+          <input type="radio" id="noiteDorPunho4" name="noiteDorPunho" formControlName="noiteDorPunho" class="custom-control-input" data-value="4">
           <label class="custom-control-label" for="noiteDorPunho4">Mais que cinco vezes por dia</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="noiteDorPunho5" name="noiteDorPunho" class="custom-control-input">
+          <input type="radio" id="noiteDorPunho5" name="noiteDorPunho" formControlName="noiteDorPunho" class="custom-control-input" data-value="5">
           <label class="custom-control-label" for="noiteDorPunho5">A dor é constante</label>
         </div>
       </div>
@@ -102,23 +102,23 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Quanto tempo, em média, duram os episódios de dor durante o dia?</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="tempoDorDia1" name="tempoDorDia" class="custom-control-input">
+          <input type="radio" id="tempoDorDia1" name="tempoDorDia" formControlName="tempoDorDia" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="tempoDorDia1">Nunca tenho dor durante o dia</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="tempoDorDia2" name="tempoDorDia" class="custom-control-input">
+          <input type="radio" id="tempoDorDia2" name="tempoDorDia" formControlName="tempoDorDia" class="custom-control-input" data-value="2">
           <label class="custom-control-label" for="tempoDorDia2">Menos que 10 minutos</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="tempoDorDia3" name="tempoDorDia" class="custom-control-input">
+          <input type="radio" id="tempoDorDia3" name="tempoDorDia" formControlName="tempoDorDia" class="custom-control-input" data-value="3">
           <label class="custom-control-label" for="tempoDorDia3">De 10 a 60 minutos</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="tempoDorDia4" name="tempoDorDia" class="custom-control-input">
+          <input type="radio" id="tempoDorDia4" name="tempoDorDia" formControlName="tempoDorDia" class="custom-control-input" data-value="4">
           <label class="custom-control-label" for="tempoDorDia4">Mais que 60 minutos</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="tempoDorDia5" name="tempoDorDia" class="custom-control-input">
+          <input type="radio" id="tempoDorDia5" name="tempoDorDia" formControlName="tempoDorDia" class="custom-control-input" data-value="5">
           <label class="custom-control-label" for="tempoDorDia5">A dor é constante durante o dia</label>
         </div>
       </div>
@@ -126,23 +126,23 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Você tem adormecimento (perda da sensibilidade) em sua mão?</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="adormecimento1" name="adormecimento" class="custom-control-input">
+          <input type="radio" id="adormecimento1" name="adormecimento" formControlName="adormecimento" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="adormecimento1">Não</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="adormecimento2" name="adormecimento" class="custom-control-input">
+          <input type="radio" id="adormecimento2" name="adormecimento" formControlName="adormecimento" class="custom-control-input" data-value="2">
           <label class="custom-control-label" for="adormecimento2">Pouco adormecimento</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="adormecimento3" name="adormecimento" class="custom-control-input">
+          <input type="radio" id="adormecimento3" name="adormecimento" formControlName="adormecimento" class="custom-control-input" data-value="3">
           <label class="custom-control-label" for="adormecimento3">Adormecimento moderado</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="adormecimento4" name="adormecimento" class="custom-control-input">
+          <input type="radio" id="adormecimento4" name="adormecimento" formControlName="adormecimento" class="custom-control-input" data-value="4">
           <label class="custom-control-label" for="adormecimento4">Adormecimento intenso</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="adormecimento5" name="adormecimento" class="custom-control-input">
+          <input type="radio" id="adormecimento5" name="adormecimento" formControlName="adormecimento" class="custom-control-input" data-value="5">
           <label class="custom-control-label" for="adormecimento5">Adormecimento muito intenso</label>
         </div>
       </div>
@@ -150,23 +150,23 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Você tem fraqueza na sua mão ou punho?</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="fraqueza1" name="fraqueza" class="custom-control-input">
+          <input type="radio" id="fraqueza1" name="fraqueza" formControlName="fraqueza" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="fraqueza1">Não</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="fraqueza2" name="fraqueza" class="custom-control-input">
+          <input type="radio" id="fraqueza2" name="fraqueza" formControlName="fraqueza" class="custom-control-input" data-value="2">
           <label class="custom-control-label" for="fraqueza2">Pouca fraqueza</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="fraqueza3" name="fraqueza" class="custom-control-input">
+          <input type="radio" id="fraqueza3" name="fraqueza" formControlName="fraqueza" class="custom-control-input" data-value="3">
           <label class="custom-control-label" for="fraqueza3">Fraqueza moderada</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="fraqueza4" name="fraqueza" class="custom-control-input">
+          <input type="radio" id="fraqueza4" name="fraqueza" formControlName="fraqueza" class="custom-control-input" data-value="4">
           <label class="custom-control-label" for="fraqueza4">Fraqueza intensa</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="fraqueza5" name="fraqueza" class="custom-control-input">
+          <input type="radio" id="fraqueza5" name="fraqueza" formControlName="fraqueza" class="custom-control-input" data-value="5">
           <label class="custom-control-label" for="fraqueza5">Fraqueza muito intensa</label>
         </div>
       </div>
@@ -174,23 +174,23 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Você tem sensação de formigamento em sua mão?</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="formigamento1" name="formigamento" class="custom-control-input">
+          <input type="radio" id="formigamento1" name="formigamento" formControlName="formigamento" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="formigamento1">Não</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="formigamento2" name="formigamento" class="custom-control-input">
+          <input type="radio" id="formigamento2" name="formigamento" formControlName="formigamento" class="custom-control-input" data-value="2">
           <label class="custom-control-label" for="formigamento2">Pouco formigamento</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="formigamento3" name="formigamento" class="custom-control-input">
+          <input type="radio" id="formigamento3" name="formigamento" formControlName="formigamento" class="custom-control-input" data-value="3">
           <label class="custom-control-label" for="formigamento3">Formigamento moderado</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="formigamento4" name="formigamento" class="custom-control-input">
+          <input type="radio" id="formigamento4" name="formigamento" formControlName="formigamento" class="custom-control-input" data-value="4">
           <label class="custom-control-label" for="formigamento4">Formigamento intenso</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="formigamento5" name="formigamento" class="custom-control-input">
+          <input type="radio" id="formigamento5" name="formigamento" formControlName="formigamento" class="custom-control-input" data-value="5">
           <label class="custom-control-label" for="formigamento5">Formigamento muito intenso</label>
         </div>
       </div>
@@ -198,23 +198,23 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Qual a intensidade do adormecimento (perda da sensibilidade) ou do formigamento à noite?</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="formigamentoNoite1" name="formigamentoNoite" class="custom-control-input">
+          <input type="radio" id="formigamentoNoite1" name="formigamentoNoite" formControlName="formigamentoNoite" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="formigamentoNoite1">Nenhuma</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="formigamentoNoite2" name="formigamentoNoite" class="custom-control-input">
+          <input type="radio" id="formigamentoNoite2" name="formigamentoNoite" formControlName="formigamentoNoite" class="custom-control-input" data-value="2">
           <label class="custom-control-label" for="formigamentoNoite2">Pouca</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="formigamentoNoite3" name="formigamentoNoite" class="custom-control-input">
+          <input type="radio" id="formigamentoNoite3" name="formigamentoNoite" formControlName="formigamentoNoite" class="custom-control-input" data-value="3">
           <label class="custom-control-label" for="formigamentoNoite3">Moderada</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="formigamentoNoite4" name="formigamentoNoite" class="custom-control-input">
+          <input type="radio" id="formigamentoNoite4" name="formigamentoNoite" formControlName="formigamentoNoite" class="custom-control-input" data-value="4">
           <label class="custom-control-label" for="formigamentoNoite4">Intensa</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="formigamentoNoite5" name="formigamentoNoite" class="custom-control-input">
+          <input type="radio" id="formigamentoNoite5" name="formigamentoNoite" formControlName="formigamentoNoite" class="custom-control-input" data-value="5">
           <label class="custom-control-label" for="formigamentoNoite5">Muito intensa</label>
         </div>
       </div>
@@ -222,23 +222,23 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Com que freqüência o adormecimento ou o formigamento acordaram você durante uma noite típica nas duas últimas semanas?</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="formigamentoAcorda1" name="formigamentoAcorda" class="custom-control-input">
+          <input type="radio" id="formigamentoAcorda1" name="formigamentoAcorda" formControlName="formigamentoAcorda" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="formigamentoAcorda1">Nenhuma</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="formigamentoAcorda2" name="formigamentoAcorda" class="custom-control-input">
+          <input type="radio" id="formigamentoAcorda2" name="formigamentoAcorda" formControlName="formigamentoAcorda" class="custom-control-input" data-value="2">
           <label class="custom-control-label" for="formigamentoAcorda2">Uma</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="formigamentoAcorda3" name="formigamentoAcorda" class="custom-control-input">
+          <input type="radio" id="formigamentoAcorda3" name="formigamentoAcorda" formControlName="formigamentoAcorda" class="custom-control-input" data-value="3">
           <label class="custom-control-label" for="formigamentoAcorda3">Duas a três vezes</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="formigamentoAcorda4" name="formigamentoAcorda" class="custom-control-input">
+          <input type="radio" id="formigamentoAcorda4" name="formigamentoAcorda" formControlName="formigamentoAcorda" class="custom-control-input" data-value="4">
           <label class="custom-control-label" for="formigamentoAcorda4">Quatro a cinco vezes</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="formigamentoAcorda5" name="formigamentoAcorda" class="custom-control-input">
+          <input type="radio" id="formigamentoAcorda5" name="formigamentoAcorda" formControlName="formigamentoAcorda" class="custom-control-input" data-value="5">
           <label class="custom-control-label" for="formigamentoAcorda5">Mais que cinco vezes</label>
         </div>
       </div>
@@ -246,23 +246,23 @@
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Você tem dificuldade em pegar e usar pequenos objetos, tais como chaves ou canetas?</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="dificuldadeObjetos1" name="dificuldadeObjetos" class="custom-control-input">
+          <input type="radio" id="dificuldadeObjetos1" name="dificuldadeObjetos" formControlName="dificuldadeObjetos" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="dificuldadeObjetos1">Sem dificuldade</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="dificuldadeObjetos2" name="dificuldadeObjetos" class="custom-control-input">
+          <input type="radio" id="dificuldadeObjetos2" name="dificuldadeObjetos" formControlName="dificuldadeObjetos" class="custom-control-input" data-value="2">
           <label class="custom-control-label" for="dificuldadeObjetos2">Pouca dificuldade</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="dificuldadeObjetos3" name="dificuldadeObjetos" class="custom-control-input">
+          <input type="radio" id="dificuldadeObjetos3" name="dificuldadeObjetos" formControlName="dificuldadeObjetos" class="custom-control-input" data-value="3">
           <label class="custom-control-label" for="dificuldadeObjetos3">Dificuldade moderada</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="dificuldadeObjetos4" name="dificuldadeObjetos" class="custom-control-input">
+          <input type="radio" id="dificuldadeObjetos4" name="dificuldadeObjetos" formControlName="dificuldadeObjetos" class="custom-control-input" data-value="4">
           <label class="custom-control-label" for="dificuldadeObjetos4">Dificuldade intensa</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="dificuldadeObjetos5" name="dificuldadeObjetos" class="custom-control-input">
+          <input type="radio" id="dificuldadeObjetos5" name="dificuldadeObjetos" formControlName="dificuldadeObjetos" class="custom-control-input" data-value="5">
           <label class="custom-control-label" for="dificuldadeObjetos5">Dificuldade muito intensa</label>
         </div>
       </div>
@@ -272,23 +272,23 @@
         <div class="col-sm-12 col-md-6 mb-4">
           <h5>Escrever</h5>
           <div class="custom-control custom-radio">
-            <input type="radio" id="escrever1" name="escrever" class="custom-control-input">
+            <input type="radio" id="escrever1" name="escrever" formControlName="escrever" class="custom-control-input" data-value="1">
             <label class="custom-control-label" for="escrever1">Sem dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="escrever2" name="escrever" class="custom-control-input">
+            <input type="radio" id="escrever2" name="escrever" formControlName="escrever" class="custom-control-input" data-value="2">
             <label class="custom-control-label" for="escrever2">Pouca dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="escrever3" name="escrever" class="custom-control-input">
+            <input type="radio" id="escrever3" name="escrever" formControlName="escrever" class="custom-control-input" data-value="3">
             <label class="custom-control-label" for="escrever3">Dificuldade moderada</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="escrever4" name="escrever" class="custom-control-input">
+            <input type="radio" id="escrever4" name="escrever" formControlName="escrever" class="custom-control-input" data-value="4">
             <label class="custom-control-label" for="escrever4">Dificuldade intensa</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="escrever5" name="escrever" class="custom-control-input">
+            <input type="radio" id="escrever5" name="escrever" formControlName="escrever" class="custom-control-input" data-value="5">
             <label class="custom-control-label" for="escrever5"> Não pode realizar atividade por causa dos sintomas de mãos e punho</label>
           </div>
         </div>
@@ -296,23 +296,23 @@
         <div class="col-sm-12 col-md-6 mb-4">
           <h5>Abotoar as roupas</h5>
           <div class="custom-control custom-radio">
-            <input type="radio" id="abotoar1" name="abotoar" class="custom-control-input">
+            <input type="radio" id="abotoar1" name="abotoar" formControlName="abotoar" class="custom-control-input" data-value="1">
             <label class="custom-control-label" for="abotoar1">Sem dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="abotoar2" name="abotoar" class="custom-control-input">
+            <input type="radio" id="abotoar2" name="abotoar" formControlName="abotoar" class="custom-control-input" data-value="2">
             <label class="custom-control-label" for="abotoar2">Pouca dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="abotoar3" name="abotoar" class="custom-control-input">
+            <input type="radio" id="abotoar3" name="abotoar" formControlName="abotoar" class="custom-control-input" data-value="3">
             <label class="custom-control-label" for="abotoar3">Dificuldade moderada</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="abotoar4" name="abotoar" class="custom-control-input">
+            <input type="radio" id="abotoar4" name="abotoar" formControlName="abotoar" class="custom-control-input" data-value="4">
             <label class="custom-control-label" for="abotoar4">Dificuldade intensa</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="abotoar5" name="abotoar" class="custom-control-input">
+            <input type="radio" id="abotoar5" name="abotoar" formControlName="abotoar" class="custom-control-input" data-value="5">
             <label class="custom-control-label" for="abotoar5"> Não pode realizar atividade por causa dos sintomas de mãos e punho</label>
           </div>
         </div>
@@ -320,23 +320,23 @@
         <div class="col-sm-12 col-md-6 mb-4">
           <h5>Segurar um livro enquanto lê</h5>
           <div class="custom-control custom-radio">
-            <input type="radio" id="livro1" name="livro" class="custom-control-input">
+            <input type="radio" id="livro1" name="livro" formControlName="livro" class="custom-control-input" data-value="1">
             <label class="custom-control-label" for="livro1">Sem dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="livro2" name="livro" class="custom-control-input">
+            <input type="radio" id="livro2" name="livro" formControlName="livro" class="custom-control-input" data-value="2">
             <label class="custom-control-label" for="livro2">Pouca dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="livro3" name="livro" class="custom-control-input">
+            <input type="radio" id="livro3" name="livro" formControlName="livro" class="custom-control-input" data-value="3">
             <label class="custom-control-label" for="livro3">Dificuldade moderada</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="livro4" name="livro" class="custom-control-input">
+            <input type="radio" id="livro4" name="livro" formControlName="livro" class="custom-control-input" data-value="4">
             <label class="custom-control-label" for="livro4">Dificuldade intensa</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="livro5" name="livro" class="custom-control-input">
+            <input type="radio" id="livro5" name="livro" formControlName="livro" class="custom-control-input" data-value="5">
             <label class="custom-control-label" for="livro5"> Não pode realizar atividade por causa dos sintomas de mãos e punho</label>
           </div>
         </div>
@@ -344,23 +344,23 @@
         <div class="col-sm-12 col-md-6 mb-4">
           <h5>Segurar o telefone</h5>
           <div class="custom-control custom-radio">
-            <input type="radio" id="telefone1" name="telefone" class="custom-control-input">
+            <input type="radio" id="telefone1" name="telefone" formControlName="telefone" class="custom-control-input" data-value="1">
             <label class="custom-control-label" for="telefone1">Sem dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="telefone2" name="telefone" class="custom-control-input">
+            <input type="radio" id="telefone2" name="telefone" formControlName="telefone" class="custom-control-input" data-value="2">
             <label class="custom-control-label" for="telefone2">Pouca dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="telefone3" name="telefone" class="custom-control-input">
+            <input type="radio" id="telefone3" name="telefone" formControlName="telefone" class="custom-control-input" data-value="3">
             <label class="custom-control-label" for="telefone3">Dificuldade moderada</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="telefone4" name="telefone" class="custom-control-input">
+            <input type="radio" id="telefone4" name="telefone" formControlName="telefone" class="custom-control-input" data-value="4">
             <label class="custom-control-label" for="telefone4">Dificuldade intensa</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="telefone5" name="telefone" class="custom-control-input">
+            <input type="radio" id="telefone5" name="telefone" formControlName="telefone" class="custom-control-input" data-value="5">
             <label class="custom-control-label" for="telefone5"> Não pode realizar atividade por causa dos sintomas de mãos e punho</label>
           </div>
         </div>
@@ -368,23 +368,23 @@
         <div class="col-sm-12 col-md-6 mb-4">
           <h5>Trabalhos domésticos</h5>
           <div class="custom-control custom-radio">
-            <input type="radio" id="domesticos1" name="domesticos" class="custom-control-input">
+            <input type="radio" id="domesticos1" name="domesticos" formControlName="domesticos" class="custom-control-input" data-value="1">
             <label class="custom-control-label" for="domesticos1">Sem dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="domesticos2" name="domesticos" class="custom-control-input">
+            <input type="radio" id="domesticos2" name="domesticos" formControlName="domesticos" class="custom-control-input" data-value="2">
             <label class="custom-control-label" for="domesticos2">Pouca dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="domesticos3" name="domesticos" class="custom-control-input">
+            <input type="radio" id="domesticos3" name="domesticos" formControlName="domesticos" class="custom-control-input" data-value="3">
             <label class="custom-control-label" for="domesticos3">Dificuldade moderada</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="domesticos4" name="domesticos" class="custom-control-input">
+            <input type="radio" id="domesticos4" name="domesticos" formControlName="domesticos" class="custom-control-input" data-value="4">
             <label class="custom-control-label" for="domesticos4">Dificuldade intensa</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="domesticos5" name="domesticos" class="custom-control-input">
+            <input type="radio" id="domesticos5" name="domesticos" formControlName="domesticos" class="custom-control-input" data-value="5">
             <label class="custom-control-label" for="domesticos5"> Não pode realizar atividade por causa dos sintomas de mãos e punho</label>
           </div>
         </div>
@@ -392,23 +392,23 @@
         <div class="col-sm-12 col-md-6 mb-4">
           <h5>Abrir uma tampa de um vidro</h5>
           <div class="custom-control custom-radio">
-            <input type="radio" id="tampa1" name="tampa" class="custom-control-input">
+            <input type="radio" id="tampa1" name="tampa" formControlName="tampa" class="custom-control-input" data-value="1">
             <label class="custom-control-label" for="tampa1">Sem dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="tampa2" name="tampa" class="custom-control-input">
+            <input type="radio" id="tampa2" name="tampa" formControlName="tampa" class="custom-control-input" data-value="2">
             <label class="custom-control-label" for="tampa2">Pouca dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="tampa3" name="tampa" class="custom-control-input">
+            <input type="radio" id="tampa3" name="tampa" formControlName="tampa" class="custom-control-input" data-value="3">
             <label class="custom-control-label" for="tampa3">Dificuldade moderada</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="tampa4" name="tampa" class="custom-control-input">
+            <input type="radio" id="tampa4" name="tampa" formControlName="tampa" class="custom-control-input" data-value="4">
             <label class="custom-control-label" for="tampa4">Dificuldade intensa</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="tampa5" name="tampa" class="custom-control-input">
+            <input type="radio" id="tampa5" name="tampa" formControlName="tampa" class="custom-control-input" data-value="5">
             <label class="custom-control-label" for="tampa5"> Não pode realizar atividade por causa dos sintomas de mãos e punho</label>
           </div>
         </div>
@@ -416,23 +416,23 @@
         <div class="col-sm-12 col-md-6 mb-4">
           <h5>Carregar sacos de supermercado</h5>
           <div class="custom-control custom-radio">
-            <input type="radio" id="saco1" name="saco" class="custom-control-input">
+            <input type="radio" id="saco1" name="saco" formControlName="saco" class="custom-control-input" data-value="1">
             <label class="custom-control-label" for="saco1">Sem dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="saco2" name="saco" class="custom-control-input">
+            <input type="radio" id="saco2" name="saco" formControlName="saco" class="custom-control-input" data-value="2">
             <label class="custom-control-label" for="saco2">Pouca dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="saco3" name="saco" class="custom-control-input">
+            <input type="radio" id="saco3" name="saco" formControlName="saco" class="custom-control-input" data-value="3">
             <label class="custom-control-label" for="saco3">Dificuldade moderada</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="saco4" name="saco" class="custom-control-input">
+            <input type="radio" id="saco4" name="saco" formControlName="saco" class="custom-control-input" data-value="4">
             <label class="custom-control-label" for="saco4">Dificuldade intensa</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="saco5" name="saco" class="custom-control-input">
+            <input type="radio" id="saco5" name="saco" formControlName="saco" class="custom-control-input" data-value="5">
             <label class="custom-control-label" for="saco5"> Não pode realizar atividade por causa dos sintomas de mãos e punho</label>
           </div>
         </div>
@@ -440,23 +440,23 @@
         <div class="col-sm-12 col-md-6 mb-4">
           <h5>Tomar banho</h5>
           <div class="custom-control custom-radio">
-            <input type="radio" id="banho1" name="banho" class="custom-control-input">
+            <input type="radio" id="banho1" name="banho" formControlName="banho" class="custom-control-input" data-value="1">
             <label class="custom-control-label" for="banho1">Sem dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="banho2" name="banho" class="custom-control-input">
+            <input type="radio" id="banho2" name="banho" formControlName="banho" class="custom-control-input" data-value="2">
             <label class="custom-control-label" for="banho2">Pouca dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="banho3" name="banho" class="custom-control-input">
+            <input type="radio" id="banho3" name="banho" formControlName="banho" class="custom-control-input" data-value="3">
             <label class="custom-control-label" for="banho3">Dificuldade moderada</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="banho4" name="banho" class="custom-control-input">
+            <input type="radio" id="banho4" name="banho" formControlName="banho" class="custom-control-input" data-value="4">
             <label class="custom-control-label" for="banho4">Dificuldade intensa</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="banho5" name="banho" class="custom-control-input">
+            <input type="radio" id="banho5" name="banho" formControlName="banho" class="custom-control-input" data-value="5">
             <label class="custom-control-label" for="banho5"> Não pode realizar atividade por causa dos sintomas de mãos e punho</label>
           </div>
         </div>
@@ -464,24 +464,44 @@
         <div class="col-sm-12 col-md-6 mb-4">
           <h5>Vestir-se</h5>
           <div class="custom-control custom-radio">
-            <input type="radio" id="vestir1" name="vestir" class="custom-control-input">
+            <input type="radio" id="vestir1" name="vestir" formControlName="vestir" class="custom-control-input" data-value="1"  >
             <label class="custom-control-label" for="vestir1">Sem dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="vestir2" name="vestir" class="custom-control-input">
+            <input type="radio" id="vestir2" name="vestir" formControlName="vestir" class="custom-control-input" data-value="2"  >
             <label class="custom-control-label" for="vestir2">Pouca dificuldade</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="vestir3" name="vestir" class="custom-control-input">
+            <input type="radio" id="vestir3" name="vestir" formControlName="vestir" class="custom-control-input" data-value="3"  >
             <label class="custom-control-label" for="vestir3">Dificuldade moderada</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="vestir4" name="vestir" class="custom-control-input">
+            <input type="radio" id="vestir4" name="vestir" formControlName="vestir" class="custom-control-input" data-value="4"  >
             <label class="custom-control-label" for="vestir4">Dificuldade intensa</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="vestir5" name="vestir" class="custom-control-input">
+            <input type="radio" id="vestir5" name="vestir" formControlName="vestir" class="custom-control-input" data-value="5"  >
             <label class="custom-control-label" for="vestir5"> Não pode realizar atividade por causa dos sintomas de mãos e punho</label>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 mb-4">
+          <div class="col-sm-12 col-md-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12">
+                    <h2 class="m-b-0">
+                      <i class="mdi mdi-clipboard-outline text-info"></i>
+                    </h2>
+                    <h3>{{ this.score }}/100</h3>
+                    <h6 class="card-subtitle">Total</h6>
+                  </div>
+                  <div class="col-12">
+                    <p><ngb-progressbar type="info" [value]="this.width"></ngb-progressbar></p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -490,8 +510,8 @@
         <div class="form-group text-center p-b-20">
           <div class="col-lg-12 p-0">
             <button class="btn btn-info btn-md btn-block text-uppercase waves-effect waves-light"
-                    [routerLink]="['/patient']"
-                    >Salvar</button>
+            [routerLink]="['/patient']"
+            >Salvar</button>
           </div>
         </div>
       </div>
