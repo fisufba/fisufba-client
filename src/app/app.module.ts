@@ -14,6 +14,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgxMaskModule } from 'ngx-mask';
 import { NgxDatatableModule  } from '@swimlane/ngx-datatable';
 import { AngularValidateBrLibModule  } from 'angular-validate-br';
+import { ToastrModule } from 'ngx-toastr';
 
 import { FullComponent } from './layouts/full/full.component';
 import { BlankComponent } from './layouts/blank/blank.component';
@@ -129,7 +130,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PerfectScrollbarModule,
     AngularValidateBrLibModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     {
