@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from '../../account.service';
 
 @Component({
   selector: 'app-patient-page',
@@ -8,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
 export class PatientPageComponent implements OnInit {
 
   currentPage;
-  constructor() { }
+  user: any = "";
+  constructor(
+    private accountService: AccountService,
+  ) { }
 
   ngOnInit() {
-    this.currentPage = 'viewProfile'
+    this.currentPage = ''
+
+    this.accountService.getAccount(Number(localStorage.getItem('user_id'))).subscribe((user:any) => {
+      this.user = user;
+      console.log(user);
+    });
   }
 
   display(page) {
