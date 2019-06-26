@@ -114,7 +114,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     IadComponent,
     PhysioPageComponent,
     ProfilePhysioComponent,
-    UpdatePhysioComponent
+    UpdatePhysioComponent,
     SearchComponent
   ],
   imports: [
