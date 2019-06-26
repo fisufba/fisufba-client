@@ -12,6 +12,7 @@ import { ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { NgxMaskModule } from 'ngx-mask';
+import { NgxDatatableModule  } from '@swimlane/ngx-datatable';
 import { AngularValidateBrLibModule  } from 'angular-validate-br';
 
 import { FullComponent } from './layouts/full/full.component';
@@ -63,7 +64,7 @@ import { WomacComponent } from './forms/womac/womac.component';
 import { LefsComponent } from './forms/lefs/lefs.component';
 import { OswestryComponent } from './forms/oswestry/oswestry.component';
 import { IadComponent } from './forms/iad/iad.component';
-
+import { SearchComponent } from './patient/search/search.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -114,6 +115,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PhysioPageComponent,
     ProfilePhysioComponent,
     UpdatePhysioComponent
+    SearchComponent
   ],
   imports: [
     CommonModule,
@@ -122,6 +124,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FormsModule,
     HttpClientModule,
     NgxMaskModule.forRoot(),
+    NgxDatatableModule,
     NgbModule.forRoot(),
     PerfectScrollbarModule,
     AngularValidateBrLibModule,

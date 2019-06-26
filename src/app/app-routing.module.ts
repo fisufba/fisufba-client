@@ -9,6 +9,7 @@ import { RegisterPatientComponent } from './patient/register/register.component'
 import { RegisterManagerComponent } from './manager/register/register.component';
 import { RegisterPhysioComponent } from './physio/register/register.component';
 
+import { SearchComponent } from './patient/search/search.component';
 import { PatientPageComponent } from './patient/page/page.component';
 import { ManagerPageComponent } from './manager/page/page.component';
 import { PhysioPageComponent } from './physio/page/page.component';
@@ -49,6 +50,10 @@ export const routes: Routes = [
       {
         path: 'paciente',
         component: PatientPageComponent
+      },
+      {
+        path: 'pacientes',
+        component: SearchComponent
       },
       {
         path: 'atendente',
