@@ -35,9 +35,12 @@ import { RegisterPhysioComponent } from './physio/register/register.component';
 import { RegisterPatientComponent } from './patient/register/register.component';
 import { RegisterManagerComponent } from './manager/register/register.component';
 import { ProfilePatientComponent } from './patient/profile/profile.component';
+import { ProfilePhysioComponent } from './physio/profile/profile.component';
 import { PatientPageComponent } from './patient/page/page.component';
+import { PhysioPageComponent } from './physio/page/page.component';
 import { UpdateComponent } from './patient/update/update.component';
 import { UpdateManagerComponent } from './manager/update/update.component';
+import { UpdatePhysioComponent } from './physio/update/update.component';
 import { ManagerPageComponent } from './manager/page/page.component';
 import { ProfileComponent } from './manager/profile/profile.component';
 import { FormsComponent } from './forms/forms.component';
@@ -107,7 +110,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     WomacComponent,
     LefsComponent,
     OswestryComponent,
-    IadComponent
+    IadComponent,
     PhysioPageComponent,
     ProfilePhysioComponent,
     UpdatePhysioComponent

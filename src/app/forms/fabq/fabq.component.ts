@@ -39,9 +39,13 @@ export class FabqComponent implements OnInit {
   onUpdateForm() {
     this.score = 0;
     for( let value in this.form.value) {
+      if(value == 'causaDor' || value == 'pensao' ||
+         value == 'retornaTrabalho' || value == 'trabalhoPiora5' ||
+         value == 'trabalhoPiora4')
+        continue;
       this.score += Number(this.form.value[value]);
     }
-    this.width = (100*this.score)/96;
+    this.width = (100*this.score)/(96-6*5);
   }
 
 }

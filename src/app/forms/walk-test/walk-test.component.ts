@@ -8,6 +8,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class WalkTestComponent implements OnInit {
 
+  form: any;
+
   constructor() { }
 
   ngOnInit() {

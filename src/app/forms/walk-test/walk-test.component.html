@@ -2,7 +2,7 @@
   <div class="card-body">
     <h3 class="box-title m-b-20">Teste de Caminhada</h3>
 
-    <form class="form-horizontal form-material d-flex flex-row" style="flex-wrap: wrap" (keyup)="onUpdateForm()">
+    <form class="form-horizontal form-material d-flex flex-row" [formGroup]="form" style="flex-wrap: wrap" (keyup)="onUpdateForm()">
       <div class="col-md-6 col-sm-12">
         <h5>Antes</h5>
         <div class="form-group">

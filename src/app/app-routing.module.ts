@@ -13,7 +13,6 @@ import { PatientPageComponent } from './patient/page/page.component';
 import { ManagerPageComponent } from './manager/page/page.component';
 import { PhysioPageComponent } from './physio/page/page.component';
 
-import { RegisterPhysioComponent } from './register-physio/register-physio.component';
 import { FormsComponent } from './forms/forms.component';
 import { SociodemographicComponent } from './forms/sociodemographic/sociodemographic.component';
 
