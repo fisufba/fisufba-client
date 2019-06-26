@@ -2,12 +2,12 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ValidateBrService } from 'angular-validate-br';
 
-import { AccountService, Account, AccountGroup } from '../account.service';
+import { AccountService, Account, AccountGroup } from '../../account.service';
 
 @Component({
   selector: 'app-register-physio',
-  templateUrl: './register-physio.component.html',
-  styleUrls: ['./register-physio.component.css']
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
 export class RegisterPhysioComponent implements OnInit {
 
@@ -16,10 +16,10 @@ export class RegisterPhysioComponent implements OnInit {
 
   constructor(
     private validateBrService: ValidateBrService,
-    private accountService: AccountService) {}
+    private accountService: AccountService)
+  {}
 
   ngOnInit() {
-
     this.registerForm = new FormGroup({
     	'name': new FormControl('', [Validators.required]),
       'cpf': new FormControl('', [Validators.required,

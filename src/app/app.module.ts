@@ -32,7 +32,7 @@ import { AppComponent } from './app.component';
 import { SpinnerComponent } from './shared/spinner.component';
 import { AuthComponent } from './auth/auth.component';
 import { LoginComponent } from './auth/login/login.component';
-import { RegisterPhysioComponent } from './register-physio/register-physio.component';
+import { RegisterPhysioComponent } from './physio/register/register.component';
 import { RegisterPatientComponent } from './patient/register/register.component';
 import { RegisterManagerComponent } from './manager/register/register.component';
 import { ProfilePatientComponent } from './patient/profile/profile.component';
@@ -41,6 +41,9 @@ import { UpdateComponent } from './patient/update/update.component';
 import { UpdateManagerComponent } from './manager/update/update.component';
 import { ManagerPageComponent } from './manager/page/page.component';
 import { ProfileComponent } from './manager/profile/profile.component';
+import { PhysioPageComponent } from './physio/page/page.component';
+import { ProfilePhysioComponent } from './physio/profile/profile.component';
+import { UpdatePhysioComponent } from './physio/update/update.component';
 import { SearchComponent } from './patient/search/search.component';
 
 
@@ -70,6 +73,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     UpdateManagerComponent,
     ManagerPageComponent,
     ProfileComponent,
+    PhysioPageComponent,
+    ProfilePhysioComponent,
+    UpdatePhysioComponent
     SearchComponent
   ],
   imports: [
