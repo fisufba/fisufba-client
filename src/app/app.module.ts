@@ -31,7 +31,7 @@ import { AppComponent } from './app.component';
 import { SpinnerComponent } from './shared/spinner.component';
 import { AuthComponent } from './auth/auth.component';
 import { LoginComponent } from './auth/login/login.component';
-import { RegisterPhysioComponent } from './register-physio/register-physio.component';
+import { RegisterPhysioComponent } from './physio/register/register.component';
 import { RegisterPatientComponent } from './patient/register/register.component';
 import { RegisterManagerComponent } from './manager/register/register.component';
 import { ProfilePatientComponent } from './patient/profile/profile.component';
@@ -108,6 +108,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     LefsComponent,
     OswestryComponent,
     IadComponent
+    PhysioPageComponent,
+    ProfilePhysioComponent,
+    UpdatePhysioComponent
   ],
   imports: [
     CommonModule,

@@ -7,9 +7,11 @@ import { BlankComponent } from './layouts/blank/blank.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterPatientComponent } from './patient/register/register.component';
 import { RegisterManagerComponent } from './manager/register/register.component';
+import { RegisterPhysioComponent } from './physio/register/register.component';
 
 import { PatientPageComponent } from './patient/page/page.component';
 import { ManagerPageComponent } from './manager/page/page.component';
+import { PhysioPageComponent } from './physio/page/page.component';
 
 import { RegisterPhysioComponent } from './register-physio/register-physio.component';
 import { FormsComponent } from './forms/forms.component';
@@ -40,6 +42,10 @@ export const routes: Routes = [
       {
         path: 'novo/atendente',
         component: RegisterManagerComponent
+      },
+      {
+        path: 'fisioterapeuta',
+        component: PhysioPageComponent
       },
       {
         path: 'paciente',
