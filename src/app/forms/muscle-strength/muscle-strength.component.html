@@ -3,13 +3,15 @@
     <h3 class="box-title m-b-20">Força muscular</h3>
     <h5>Estrutura e função</h5>
 
-    <form class="form-horizontal form-material d-flex flex-row" style="flex-wrap: wrap">
+    <form class="form-horizontal form-material d-flex flex-row" [formGroup]="form" style="flex-wrap: wrap">
       <div *ngFor="let a of this.fields" class="col-md-6">
 
         <div class="form-group mt-5">
           <div class="col-xs-12 col-lg-8">
             <label for="">Músculo avaliado</label>
             <input class="form-control"
+                   name="evaluatedMuscle"
+                   formControlName="evaluatedMuscle"
                    type="text">
           </div>
         </div>
@@ -19,6 +21,8 @@
             <div class="col-xs-12 col-lg-10 p-0">
               <label for="">E</label>
               <input class="form-control"
+                     name="left"
+                     formControlName="left"
                      type="number">
             </div>
           </div>
@@ -27,6 +31,8 @@
             <div class="col-xs-12 col-lg-10">
               <label for="">D</label>
               <input class="form-control"
+                     name="right"
+                     formControlName="right"
                      type="number">
             </div>
           </div>

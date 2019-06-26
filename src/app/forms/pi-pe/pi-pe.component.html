@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-body">
-    <form class="form-horizontal form-material">
+    <form class="form-horizontal form-material" [formGroup]="form">
       <h3 class="box-title m-b-20">PI Pe</h3>
 
       <h5>Força muscular respiratória</h5>
@@ -10,6 +10,8 @@
           <div class="col-xs-12 col-lg-10 p-0">
             <label for="">PI max</label>
             <input class="form-control"
+                   name="piMax"
+                   formControlName="piMax"
                    type="number">
           </div>
         </div>
@@ -18,10 +20,11 @@
           <div class="col-xs-12 col-lg-10">
             <label for="">PE max</label>
             <input class="form-control"
+                   name="peMax"
+                   formControlName="peMax"
                    type="number">
           </div>
         </div>
-        <button class="btn btn btn-circle btn-sm btn-block text-uppercase waves-effect waves-light"><i class="mdi mdi-plus"></i></button>
       </div>
 
       <div class="form-group text-center p-b-20">

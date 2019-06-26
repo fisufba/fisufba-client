@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-ashworth',
@@ -9,10 +10,17 @@ export class AshworthComponent implements OnInit {
 
   n:number = 1;
   fields:any = Array.from({length: 1}, (x,i) => i);
+  form: any;
+
   constructor() {
   }
 
   ngOnInit() {
+    this.form = new FormGroup({
+      'evaluatedMuscle': new FormControl(),
+      'left': new FormControl(),
+      'right': new FormControl(),
+    });
   }
 
   updateFields() {

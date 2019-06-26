@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-body">
-    <form class="form-horizontal form-material">
+    <form class="form-horizontal form-material" [formGroup]="form">
       <h3 class="box-title m-b-20">Sensorial</h3>
 
       <h5>Toque leve</h5>
@@ -9,6 +9,8 @@
           <div class="col-xs-12 col-lg-10 p-0">
             <label for="">D</label>
             <input class="form-control"
+                   name="toqueLeveRight"
+                   formControlName="toqueLeveRight"
                    type="number">
           </div>
         </div>
@@ -17,6 +19,8 @@
           <div class="col-xs-12 col-lg-10">
             <label for="">E</label>
             <input class="form-control"
+                   name="toqueLeveLeft"
+                   formControlName="toqueLeveLeft"
                    type="number">
           </div>
         </div>
@@ -28,6 +32,8 @@
           <div class="col-xs-12 col-lg-10 p-0">
             <label for="">D</label>
             <input class="form-control"
+                   name="pressaoRight"
+                   formControlName="pressaoRight"
                    type="number">
           </div>
         </div>
@@ -36,6 +42,8 @@
           <div class="col-xs-12 col-lg-10">
             <label for="">E</label>
             <input class="form-control"
+                   name="pressaoLeft"
+                   formControlName="pressaoLeft"
                    type="number">
           </div>
         </div>
@@ -47,6 +55,8 @@
           <div class="col-xs-12 col-lg-10 p-0">
             <label for="">D</label>
             <input class="form-control"
+                   name="picadasRight"
+                   formControlName="picadasRight"
                    type="number">
           </div>
         </div>
@@ -55,6 +65,8 @@
           <div class="col-xs-12 col-lg-10">
             <label for="">E</label>
             <input class="form-control"
+                   name="picadasLeft"
+                   formControlName="picadasLeft"
                    type="number">
           </div>
         </div>
@@ -66,6 +78,8 @@
           <div class="col-xs-12 col-lg-10 p-0">
             <label for="">D</label>
             <input class="form-control"
+                   name="temperaturaRight"
+                   formControlName="temperaturaRight"
                    type="number">
           </div>
         </div>
@@ -74,6 +88,8 @@
           <div class="col-xs-12 col-lg-10">
             <label for="">E</label>
             <input class="form-control"
+                   name="temperaturaLeft"
+                   formControlName="temperaturaLeft"
                    type="number">
           </div>
         </div>
@@ -85,6 +101,8 @@
           <div class="col-xs-12 col-lg-10 p-0">
             <label for="">D</label>
             <input class="form-control"
+                   name="locTatilRight"
+                   formControlName="locTatilRight"
                    type="number">
           </div>
         </div>
@@ -93,6 +111,8 @@
           <div class="col-xs-12 col-lg-10">
             <label for="">E</label>
             <input class="form-control"
+                   name="locTatilLeft"
+                   formControlName="locTatilLeft"
                    type="number">
           </div>
         </div>
@@ -104,6 +124,8 @@
           <div class="col-xs-12 col-lg-12 p-0">
             <label for=""></label>
             <input class="form-control"
+                   name="toqueBilateralSimul"
+                   formControlName="toqueBilateralSimul"
                    type="text">
           </div>
         </div>
@@ -115,6 +137,8 @@
           <div class="col-xs-12 col-lg-12 p-0">
             <label for=""></label>
             <input class="form-control"
+                   name="propiocepcao"
+                   formControlName="propiocepcao"
                    type="text">
           </div>
         </div>
