@@ -7,11 +7,13 @@ import { BlankComponent } from './layouts/blank/blank.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterPatientComponent } from './patient/register/register.component';
 import { RegisterManagerComponent } from './manager/register/register.component';
+import { RegisterPhysioComponent } from './physio/register/register.component';
 
+import { SearchComponent } from './patient/search/search.component';
 import { PatientPageComponent } from './patient/page/page.component';
 import { ManagerPageComponent } from './manager/page/page.component';
+import { PhysioPageComponent } from './physio/page/page.component';
 
-import { RegisterPhysioComponent } from './register-physio/register-physio.component';
 import { FormsComponent } from './forms/forms.component';
 import { SociodemographicComponent } from './forms/sociodemographic/sociodemographic.component';
 
@@ -42,8 +44,16 @@ export const routes: Routes = [
         component: RegisterManagerComponent
       },
       {
+        path: 'fisioterapeuta',
+        component: PhysioPageComponent
+      },
+      {
         path: 'paciente',
         component: PatientPageComponent
+      },
+      {
+        path: 'pacientes',
+        component: SearchComponent
       },
       {
         path: 'atendente',

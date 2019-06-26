@@ -3,6 +3,7 @@
     <h3 class="box-title m-b-20">Formulário Cinético-funcional</h3>
     <form class="form-horizontal form-material d-flex flex-row"
           style="flex-wrap: wrap"
+          [formGroup]="form"
           (keyup)="onUpdateForm()">
 
       <div class="col-md-6">
@@ -11,6 +12,8 @@
           <div class="col-xs-12">
             <label class="control-label">Diagnóstico clínico</label>
             <input class="form-control"
+                   formControlName="clinicalDiagnosis"
+                   name="clinicalDiagnosis"
                    type="text"
                    required>
           </div>
@@ -20,6 +23,8 @@
           <div class="col-xs-12">
             <label class="control-label">Queixa principal</label>
             <input class="form-control"
+                   formControlName="mainComplaint"
+                   name="mainComplaint"
                    type="text"
                    required>
           </div>
@@ -29,6 +34,8 @@
           <div class="col-xs-12">
             <label class="control-label">Queixa funcional</label>
             <input class="form-control"
+                   formControlName="functionalComplaint"
+                   name="functionalComplaint"
                    type="text"
                    required>
           </div>
@@ -41,6 +48,8 @@
           <div class="col-xs-12">
             <label class="control-label">História clínica</label>
             <input class="form-control"
+                   formControlName="clinicalHistory"
+                   name="clinicalHistory"
                    type="text"
                    required>
           </div>
@@ -50,6 +59,8 @@
           <div class="col-xs-12">
             <label class="control-label">História funcional</label>
             <input class="form-control"
+                   formControlName="functionalHistory"
+                   name="functionalHistory"
                    type="text"
                    required>
           </div>
@@ -63,6 +74,8 @@
           <div class="col-xs-12">
             <label class="control-label">Estrutura e função</label>
             <input class="form-control"
+                   formControlName="structureFunction"
+                   name="structureFunction"
                    type="text"
                    required>
           </div>
@@ -72,6 +85,8 @@
           <div class="col-xs-12">
             <label class="control-label">Atividade e participação</label>
             <input class="form-control"
+                   formControlName="activityParticipation"
+                   name="activityParticipation"
                    type="text"
                    required>
           </div>
@@ -85,6 +100,8 @@
           <div class="col-xs-12">
             <label class="control-label">Resultado do teste físico-funcional</label>
             <input class="form-control"
+                   formControlName="functionalPhysicalResult"
+                   name="functionalPhysicalResult"
                    type="text"
                    required>
           </div>
@@ -98,6 +115,8 @@
           <div class="col-xs-12">
             <label class="control-label">Resultado dos exames complementares</label>
             <input class="form-control"
+                   formControlName="complementaryResult"
+                   name="complementaryResult"
                    type="text"
                    required>
           </div>
@@ -111,6 +130,8 @@
           <div class="col-xs-12">
             <label class="control-label">Deficiência</label>
             <input class="form-control"
+                   formControlName="disability"
+                   name="disability"
                    type="text"
                    required>
           </div>
@@ -119,6 +140,8 @@
           <div class="col-xs-12">
             <label class="control-label">Limitação de atividade</label>
             <input class="form-control"
+                   formControlName="activityLimitation"
+                   name="activityLimitation"
                    type="text"
                    required>
           </div>
@@ -127,6 +150,8 @@
           <div class="col-xs-12">
             <label class="control-label">Restrição de participação</label>
             <input class="form-control"
+                   formControlName="participationRestriction"
+                   name="participationRestriction"
                    type="text"
                    required>
           </div>
@@ -135,6 +160,8 @@
           <div class="col-xs-12">
             <label class="control-label">Fatores ambientais</label>
             <input class="form-control"
+                   formControlName="ambientalFactor"
+                   name="ambientalFactor"
                    type="text"
                    required>
           </div>
@@ -143,6 +170,8 @@
           <div class="col-xs-12">
             <label class="control-label">Objetivos funcionais</label>
             <input class="form-control"
+                   formControlName="functionalGoals"
+                   name="functionalGoals"
                    type="text"
                    required>
           </div>
@@ -151,6 +180,8 @@
           <div class="col-xs-12">
             <label class="control-label">Plano terapêutico</label>
             <input class="form-control"
+                   formControlName="therapeuticalPlan"
+                   name="therapeuticalPlan"
                    type="text"
                    required>
           </div>
@@ -160,7 +191,9 @@
           <div class="col-xs-12">
             <label class="control-label">Data de reavaliação</label>
             <input class="form-control"
-                   type="text"
+                   formControlName="date"
+                   name="date"
+                   type="date"
                    required>
           </div>
         </div>

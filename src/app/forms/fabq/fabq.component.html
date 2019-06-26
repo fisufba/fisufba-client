@@ -1,471 +1,556 @@
 <div class="card">
   <div class="card-body">
     <h3 class="box-title m-b-20">Fear- Avoidance Belifes Questionnaire</h3>
-    <form class="form-horizontal form-material d-flex flex-row" (keyup)="onUpdateForm()" style="flex-wrap: wrap">
+    <form class="form-horizontal form-material d-flex flex-row" [formGroup]="form" (change)="onUpdateForm()" style="flex-wrap: wrap">
 
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Minha dor foi causada por atividade física</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="causaDor1" name="causaDor" class="custom-control-input">
+          <input type="radio" id="causaDor1" name="causaDor" formControlName="causaDor" class="custom-control-input" data-value="0">
           <label class="custom-control-label" for="causaDor1">Discordo completamente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="causaDor2" name="causaDor" class="custom-control-input">
+          <input type="radio" id="causaDor2" name="causaDor" formControlName="causaDor" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="causaDor2">Discordo razoavelmente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="causaDor3" name="causaDor" class="custom-control-input">
-          <label class="custom-control-label" for="causaDor3">Não sei dizer</label>
+          <input type="radio" id="causaDor3" name="causaDor" formControlName="causaDor" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="causaDor3">Discordo ligeiramente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="causaDor4" name="causaDor" class="custom-control-input">
-          <label class="custom-control-label" for="causaDor4">Concordo ligeiramente</label>
+          <input type="radio" id="causaDor4" name="causaDor" formControlName="causaDor" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="causaDor4">Não sei dizer</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="causaDor5" name="causaDor" class="custom-control-input">
-          <label class="custom-control-label" for="causaDor5">Concordo razoavelmente</label>
+          <input type="radio" id="causaDor5" name="causaDor" formControlName="causaDor" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="causaDor5">Concordo ligeiramente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="causaDor6" name="causaDor" class="custom-control-input">
-          <label class="custom-control-label" for="causaDor6">Concordo completamente</label>
+          <input type="radio" id="causaDor6" name="causaDor" formControlName="causaDor" class="custom-control-input" data-value="5">
+          <label class="custom-control-label" for="causaDor6">Concordo razoavelmente</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="causaDor7" name="causaDor" formControlName="causaDor" class="custom-control-input" data-value="6">
+          <label class="custom-control-label" for="causaDor7">Concordo completamente</label>
         </div>
       </div>
 
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>A atividade física faz minha dor piorar</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="fisicaPiora1" name="fisicaPiora" class="custom-control-input">
+          <input type="radio" id="fisicaPiora1" name="fisicaPiora" formControlName="fisicaPiora" class="custom-control-input" data-value="0">
           <label class="custom-control-label" for="fisicaPiora1">Discordo completamente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="fisicaPiora2" name="fisicaPiora" class="custom-control-input">
+          <input type="radio" id="fisicaPiora2" name="fisicaPiora" formControlName="fisicaPiora" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="fisicaPiora2">Discordo razoavelmente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="fisicaPiora3" name="fisicaPiora" class="custom-control-input">
-          <label class="custom-control-label" for="fisicaPiora3">Não sei dizer</label>
+          <input type="radio" id="fisicaPiora3" name="fisicaPiora" formControlName="fisicaPiora" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="fisicaPiora3">Discordo ligeiramente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="fisicaPiora4" name="fisicaPiora" class="custom-control-input">
-          <label class="custom-control-label" for="fisicaPiora4">Concordo ligeiramente</label>
+          <input type="radio" id="fisicaPiora4" name="fisicaPiora" formControlName="fisicaPiora" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="fisicaPiora4">Não sei dizer</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="fisicaPiora5" name="fisicaPiora" class="custom-control-input">
-          <label class="custom-control-label" for="fisicaPiora5">Concordo razoavelmente</label>
+          <input type="radio" id="fisicaPiora5" name="fisicaPiora" formControlName="fisicaPiora" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="fisicaPiora5">Concordo ligeiramente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="fisicaPiora6" name="fisicaPiora" class="custom-control-input">
-          <label class="custom-control-label" for="fisicaPiora6">Concordo completamente</label>
+          <input type="radio" id="fisicaPiora6" name="fisicaPiora" formControlName="fisicaPiora" class="custom-control-input" data-value="5">
+          <label class="custom-control-label" for="fisicaPiora6">Concordo razoavelmente</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="fisicaPiora7" name="fisicaPiora" formControlName="fisicaPiora" class="custom-control-input" data-value="6">
+          <label class="custom-control-label" for="fisicaPiora7">Concordo completamente</label>
         </div>
       </div>
 
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>A atividade física pode afetar minhas costas</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="atividadeCostas1" name="atividadeCostas" class="custom-control-input">
+          <input type="radio" id="atividadeCostas1" name="atividadeCostas" formControlName="atividadeCostas" class="custom-control-input" data-value="0">
           <label class="custom-control-label" for="atividadeCostas1">Discordo completamente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="atividadeCostas2" name="atividadeCostas" class="custom-control-input">
+          <input type="radio" id="atividadeCostas2" name="atividadeCostas" formControlName="atividadeCostas" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="atividadeCostas2">Discordo razoavelmente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="atividadeCostas3" name="atividadeCostas" class="custom-control-input">
-          <label class="custom-control-label" for="atividadeCostas3">Não sei dizer</label>
+          <input type="radio" id="atividadeCostas3" name="atividadeCostas" formControlName="atividadeCostas" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="atividadeCostas3">Discordo ligeiramente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="atividadeCostas4" name="atividadeCostas" class="custom-control-input">
-          <label class="custom-control-label" for="atividadeCostas4">Concordo ligeiramente</label>
+          <input type="radio" id="atividadeCostas4" name="atividadeCostas" formControlName="atividadeCostas" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="atividadeCostas4">Não sei dizer</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="atividadeCostas5" name="atividadeCostas" class="custom-control-input">
-          <label class="custom-control-label" for="atividadeCostas5">Concordo razoavelmente</label>
+          <input type="radio" id="atividadeCostas5" name="atividadeCostas" formControlName="atividadeCostas" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="atividadeCostas5">Concordo ligeiramente</label>
+        </div>
+
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadeCostas6" name="atividadeCostas" formControlName="atividadeCostas" class="custom-control-input" data-value="5">
+          <label class="custom-control-label" for="atividadeCostas6">Concordo razoavelmente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="atividadeCostas6" name="atividadeCostas" class="custom-control-input">
-          <label class="custom-control-label" for="atividadeCostas6">Concordo completamente</label>
+          <input type="radio" id="atividadeCostas7" name="atividadeCostas" formControlName="atividadeCostas" class="custom-control-input" data-value="6">
+          <label class="custom-control-label" for="atividadeCostas7">Concordo completamente</label>
         </div>
       </div>
 
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Eu não deveria realizar atividades físicas que poderiam fazer a minha dor piorar</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="naofisica1" name="naofisica" class="custom-control-input">
+          <input type="radio" id="naofisica1" name="naofisica" formControlName="naofisica" class="custom-control-input" data-value="0">
           <label class="custom-control-label" for="naofisica1">Discordo completamente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="naofisica2" name="naofisica" class="custom-control-input">
+          <input type="radio" id="naofisica2" name="naofisica" formControlName="naofisica" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="naofisica2">Discordo razoavelmente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="naofisica3" name="naofisica" class="custom-control-input">
-          <label class="custom-control-label" for="naofisica3">Não sei dizer</label>
+          <input type="radio" id="naofisica3" name="naofisica" formControlName="naofisica" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="naofisica3">Discordo ligeiramente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="naofisica4" name="naofisica" class="custom-control-input">
-          <label class="custom-control-label" for="naofisica4">Concordo ligeiramente</label>
+          <input type="radio" id="naofisica4" name="naofisica" formControlName="naofisica" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="naofisica4">Não sei dizer</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="naofisica5" name="naofisica" class="custom-control-input">
-          <label class="custom-control-label" for="naofisica5">Concordo razoavelmente</label>
+          <input type="radio" id="naofisica5" name="naofisica" formControlName="naofisica" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="naofisica5">Concordo ligeiramente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="naofisica6" name="naofisica" class="custom-control-input">
-          <label class="custom-control-label" for="naofisica6">Concordo completamente</label>
+          <input type="radio" id="naofisica6" name="naofisica" formControlName="naofisica" class="custom-control-input" data-value="5">
+          <label class="custom-control-label" for="naofisica6">Concordo razoavelmente</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="naofisica7" name="naofisica" formControlName="naofisica" class="custom-control-input" data-value="6">
+          <label class="custom-control-label" for="naofisica7">Concordo completamente</label>
         </div>
       </div>
 
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Eu não posso realizar atividades físicas que poderiam fazer minha dor piorar</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="naofisica11" name="naofisica1" class="custom-control-input">
+          <input type="radio" id="naofisica11" name="naofisica1" formControlName="naofisica1" class="custom-control-input" data-value="0">
           <label class="custom-control-label" for="naofisica11">Discordo completamente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="naofisica12" name="naofisica1" class="custom-control-input">
+          <input type="radio" id="naofisica12" name="naofisica1" formControlName="naofisica1" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="naofisica12">Discordo razoavelmente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="naofisica13" name="naofisica1" class="custom-control-input">
-          <label class="custom-control-label" for="naofisica13">Não sei dizer</label>
+          <input type="radio" id="naofisica13" name="naofisica1" formControlName="naofisica1" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="naofisica13">Discordo ligeiramente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="naofisica14" name="naofisica1" class="custom-control-input">
-          <label class="custom-control-label" for="naofisica14">Concordo ligeiramente</label>
+          <input type="radio" id="naofisica14" name="naofisica1" formControlName="naofisica1" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="naofisica14">Não sei dizer</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="naofisica15" name="naofisica1" class="custom-control-input">
-          <label class="custom-control-label" for="naofisica15">Concordo razoavelmente</label>
+          <input type="radio" id="naofisica15" name="naofisica1" formControlName="naofisica1" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="naofisica15">Concordo ligeiramente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="naofisica16" name="naofisica1" class="custom-control-input">
-          <label class="custom-control-label" for="naofisica16">Concordo completamente</label>
+          <input type="radio" id="naofisica16" name="naofisica1" formControlName="naofisica1" class="custom-control-input" data-value="5">
+          <label class="custom-control-label" for="naofisica16">Concordo razoavelmente</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="naofisica17" name="naofisica1" formControlName="naofisica1" class="custom-control-input" data-value="6">
+          <label class="custom-control-label" for="naofisica17">Concordo completamente</label>
         </div>
       </div>
 
       <div class="col-sm-12 col-md-6 mb-4">
         <h5>Minha dor foi causada pelo meu trabalho ou por um acidente de trabalho</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="causaTrabalho1" name="causaTrabalho" class="custom-control-input">
+          <input type="radio" id="causaTrabalho1" name="causaTrabalho" formControlName="causaTrabalho" class="custom-control-input" data-value="0">
           <label class="custom-control-label" for="causaTrabalho1">Discordo completamente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="causaTrabalho2" name="causaTrabalho" class="custom-control-input">
+          <input type="radio" id="causaTrabalho2" name="causaTrabalho" formControlName="causaTrabalho" class="custom-control-input" data-value="1">
           <label class="custom-control-label" for="causaTrabalho2">Discordo razoavelmente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="causaTrabalho3" name="causaTrabalho" class="custom-control-input">
-          <label class="custom-control-label" for="causaTrabalho3">Não sei dizer</label>
+          <input type="radio" id="causaTrabalho3" name="causaTrabalho" formControlName="causaTrabalho" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="causaTrabalho3">Discordo ligeiramente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="causaTrabalho4" name="causaTrabalho" class="custom-control-input">
-          <label class="custom-control-label" for="causaTrabalho4">Concordo ligeiramente</label>
+          <input type="radio" id="causaTrabalho4" name="causaTrabalho" formControlName="causaTrabalho" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="causaTrabalho4">Não sei dizer</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="causaTrabalho5" name="causaTrabalho" class="custom-control-input">
-          <label class="custom-control-label" for="causaTrabalho5">Concordo razoavelmente</label>
+          <input type="radio" id="causaTrabalho5" name="causaTrabalho" formControlName="causaTrabalho" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="causaTrabalho5">Concordo ligeiramente</label>
         </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="causaTrabalho6" name="causaTrabalho" class="custom-control-input">
-          <label class="custom-control-label" for="causaTrabalho6">Concordo completamente</label>
-        </div>
-      </div>
 
-      <div class="col-sm-12 col-md-6 mb-4">
-        <h5>Meu trabalho agravou minha dor</h5>
         <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora1" name="trabalhoPiora" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora1">Discordo completamente</label>
+          <input type="radio" id="causaTrabalho6" name="causaTrabalho" formControlName="causaTrabalho" class="custom-control-input" data-value="5">
+          <label class="custom-control-label" for="causaTrabalho6">Concordo razoavelmente</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora2" name="trabalhoPiora" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora2">Discordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora3" name="trabalhoPiora" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora3">Não sei dizer</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora4" name="trabalhoPiora" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora4">Concordo ligeiramente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora5" name="trabalhoPiora" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora5">Concordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora6" name="trabalhoPiora" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora6">Concordo completamente</label>
-        </div>
-      </div>
+         <input type="radio" id="causaTrabalho7" name="causaTrabalho" formControlName="causaTrabalho" class="custom-control-input" data-value="6">
+         <label class="custom-control-label" for="causaTrabalho7">Concordo completamente</label>
+       </div>
+     </div>
 
-      <div class="col-sm-12 col-md-6 mb-4">
-        <h5>Eu tenho uma reivindicação de pensão em virtude da minha dor</h5>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="pensao1" name="pensao" class="custom-control-input">
-          <label class="custom-control-label" for="pensao1">Discordo completamente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="pensao2" name="pensao" class="custom-control-input">
-          <label class="custom-control-label" for="pensao2">Discordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="pensao3" name="pensao" class="custom-control-input">
-          <label class="custom-control-label" for="pensao3">Não sei dizer</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="pensao4" name="pensao" class="custom-control-input">
-          <label class="custom-control-label" for="pensao4">Concordo ligeiramente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="pensao5" name="pensao" class="custom-control-input">
-          <label class="custom-control-label" for="pensao5">Concordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="pensao6" name="pensao" class="custom-control-input">
-          <label class="custom-control-label" for="pensao6">Concordo completamente</label>
-        </div>
+     <div class="col-sm-12 col-md-6 mb-4">
+      <h5>Meu trabalho agravou minha dor</h5>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="trabalhoPiora1" name="trabalhoPiora" formControlName="trabalhoPiora" class="custom-control-input" data-value="0">
+        <label class="custom-control-label" for="trabalhoPiora1">Discordo completamente</label>
       </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="trabalhoPiora2" name="trabalhoPiora" formControlName="trabalhoPiora" class="custom-control-input" data-value="1">
+        <label class="custom-control-label" for="trabalhoPiora2">Discordo razoavelmente</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="trabalhoPiora3" name="trabalhoPiora" formControlName="trabalhoPiora" class="custom-control-input" data-value="2">
+        <label class="custom-control-label" for="trabalhoPiora3">Discordo ligeiramente</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="trabalhoPiora4" name="trabalhoPiora" formControlName="trabalhoPiora" class="custom-control-input" data-value="3">
+        <label class="custom-control-label" for="trabalhoPiora4">Não sei dizer</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="trabalhoPiora5" name="trabalhoPiora" formControlName="trabalhoPiora" class="custom-control-input" data-value="4">
+        <label class="custom-control-label" for="trabalhoPiora5">Concordo ligeiramente</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="trabalhoPiora6" name="trabalhoPiora" formControlName="trabalhoPiora" class="custom-control-input" data-value="5">
+        <label class="custom-control-label" for="trabalhoPiora6">Concordo razoavelmente</label>
+      </div>
+      <div class="custom-control custom-radio">
+       <input type="radio" id="trabalhoPiora7" name="trabalhoPiora" formControlName="trabalhoPiora" class="custom-control-input" data-value="6">
+       <label class="custom-control-label" for="trabalhoPiora7">Concordo completamente</label>
+     </div>
+   </div>
 
-      <div class="col-sm-12 col-md-6 mb-4">
-        <h5>Meu trabalho é muito pesado para mim</h5>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPesado1" name="trabalhoPesado" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPesado1">Discordo completamente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPesado2" name="trabalhoPesado" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPesado2">Discordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPesado3" name="trabalhoPesado" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPesado3">Não sei dizer</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPesado4" name="trabalhoPesado" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPesado4">Concordo ligeiramente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPesado5" name="trabalhoPesado" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPesado5">Concordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPesado6" name="trabalhoPesado" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPesado6">Concordo completamente</label>
-        </div>
-      </div>
+   <div cass="col-sm-12 col-md-6 mb-4">
+    <h5>Eu tenho uma reivindicação de pensão em virtude da minha dor</h5>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="pensao1" name="pensao" formControlName="pensao" class="custom-control-input" data-value="0">
+      <label class="custom-control-label" for="pensao1">Discordo completamente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="pensao2" name="pensao" formControlName="pensao" class="custom-control-input" data-value="1">
+      <label class="custom-control-label" for="pensao2">Discordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="pensao3" name="pensao" formControlName="pensao" class="custom-control-input" data-value="2">
+      <label class="custom-control-label" for="pensao3">Discordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="pensao4" name="pensao" formControlName="pensao" class="custom-control-input" data-value="3">
+      <label class="custom-control-label" for="pensao4">Não sei dizer</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="pensao5" name="pensao" formControlName="pensao" class="custom-control-input" data-value="4">
+      <label class="custom-control-label" for="pensao5">Concordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="pensao6" name="pensao" formControlName="pensao" class="custom-control-input" data-value="5">
+      <label class="custom-control-label" for="pensao6">Concordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="pensao7" name="pensao" formControlName="pensao" class="custom-control-input" data-value="6">
+      <label class="custom-control-label" for="pensao7">Concordo completamente</label>
+    </div>
+  </div>
 
-      <div class="col-sm-12 col-md-6 mb-4">
-        <h5>Meu trabalho faz ou poderia fazer minha dor piorar</h5>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora11" name="trabalhoPiora1" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora11">Discordo completamente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora12" name="trabalhoPiora1" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora12">Discordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora13" name="trabalhoPiora1" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora13">Não sei dizer</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora14" name="trabalhoPiora1" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora14">Concordo ligeiramente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora15" name="trabalhoPiora1" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora15">Concordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora16" name="trabalhoPiora1" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora16">Concordo completamente</label>
-        </div>
-      </div>
+  <div class="col-sm-12 col-md-6 mb-4">
+    <h5>Meu trabalho é muito pesado para mim</h5>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPesado1" name="trabalhoPesado" formControlName="trabalhoPesado" class="custom-control-input" data-value="0">
+      <label class="custom-control-label" for="trabalhoPesado1">Discordo completamente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPesado2" name="trabalhoPesado" formControlName="trabalhoPesado" class="custom-control-input" data-value="1">
+      <label class="custom-control-label" for="trabalhoPesado2">Discordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPesado3" name="trabalhoPesado" formControlName="trabalhoPesado" class="custom-control-input" data-value="2">
+      <label class="custom-control-label" for="trabalhoPesado3">Discordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPesado4" name="trabalhoPesado" formControlName="trabalhoPesado" class="custom-control-input" data-value="3">
+      <label class="custom-control-label" for="trabalhoPesado4">Não sei dizer</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPesado5" name="trabalhoPesado" formControlName="trabalhoPesado" class="custom-control-input" data-value="4">
+      <label class="custom-control-label" for="trabalhoPesado5">Concordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPesado6" name="trabalhoPesado" formControlName="trabalhoPesado" class="custom-control-input" data-value="5">
+      <label class="custom-control-label" for="trabalhoPesado6">Concordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPesado7" name="trabalhoPesado" formControlName="trabalhoPesado" class="custom-control-input" data-value="6">
+      <label class="custom-control-label" for="trabalhoPesado7">Concordo completamente</label>
+    </div>
+  </div>
 
-      <div class="col-sm-12 col-md-6 mb-4">
-        <h5>Meu trabalho pode prejudicar minhas costas</h5>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora21" name="trabalhoPiora2" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora21">Discordo completamente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora22" name="trabalhoPiora2" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora22">Discordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora23" name="trabalhoPiora2" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora23">Não sei dizer</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora24" name="trabalhoPiora2" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora24">Concordo ligeiramente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora25" name="trabalhoPiora2" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora25">Concordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora26" name="trabalhoPiora2" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora26">Concordo completamente</label>
-        </div>
-      </div>
+  <div class="col-sm-12 col-md-6 mb-4">
+    <h5>Meu trabalho faz ou poderia fazer minha dor piorar</h5>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora11" name="trabalhoPiora1" formControlName="trabalhoPiora1" class="custom-control-input" data-value="0">
+      <label class="custom-control-label" for="trabalhoPiora11">Discordo completamente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora12" name="trabalhoPiora1" formControlName="trabalhoPiora1" class="custom-control-input" data-value="1">
+      <label class="custom-control-label" for="trabalhoPiora12">Discordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora13" name="trabalhoPiora1" formControlName="trabalhoPiora1" class="custom-control-input" data-value="2">
+      <label class="custom-control-label" for="trabalhoPiora13">Discordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora14" name="trabalhoPiora1" formControlName="trabalhoPiora1" class="custom-control-input" data-value="3">
+      <label class="custom-control-label" for="trabalhoPiora14">Não sei dizer</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora15" name="trabalhoPiora1" formControlName="trabalhoPiora1" class="custom-control-input" data-value="4">
+      <label class="custom-control-label" for="trabalhoPiora15">Concordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora16" name="trabalhoPiora1" formControlName="trabalhoPiora1" class="custom-control-input" data-value="5">
+      <label class="custom-control-label" for="trabalhoPiora16">Concordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora17" name="trabalhoPiora1" formControlName="trabalhoPiora1" class="custom-control-input" data-value="6">
+      <label class="custom-control-label" for="trabalhoPiora17">Concordo completamente</label>
+    </div>
+  </div>
 
-      <div class="col-sm-12 col-md-6 mb-4">
-        <h5>Eu não deveria realizar meu trabalho normal com minha dor atual</h5>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora31" name="trabalhoPiora3" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora31">Discordo completamente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora32" name="trabalhoPiora3" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora32">Discordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora33" name="trabalhoPiora3" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora33">Não sei dizer</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora34" name="trabalhoPiora3" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora34">Concordo ligeiramente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora35" name="trabalhoPiora3" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora35">Concordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora36" name="trabalhoPiora3" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora36">Concordo completamente</label>
-        </div>
-      </div>
+  <div class="col-sm-12 col-md-6 mb-4">
+    <h5>Meu trabalho pode prejudicar minhas costas</h5>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora21" name="trabalhoPiora2" formControlName="trabalhoPiora2" class="custom-control-input" data-value="0">
+      <label class="custom-control-label" for="trabalhoPiora21">Discordo completamente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora22" name="trabalhoPiora2" formControlName="trabalhoPiora2" class="custom-control-input" data-value="1">
+      <label class="custom-control-label" for="trabalhoPiora22">Discordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora23" name="trabalhoPiora2" formControlName="trabalhoPiora2" class="custom-control-input" data-value="2">
+      <label class="custom-control-label" for="trabalhoPiora23">Discordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora24" name="trabalhoPiora2" formControlName="trabalhoPiora2" class="custom-control-input" data-value="3">
+      <label class="custom-control-label" for="trabalhoPiora24">Não sei dizer</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora25" name="trabalhoPiora2" formControlName="trabalhoPiora2" class="custom-control-input" data-value="4">
+      <label class="custom-control-label" for="trabalhoPiora25">Concordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora26" name="trabalhoPiora2" formControlName="trabalhoPiora2" class="custom-control-input" data-value="5">
+      <label class="custom-control-label" for="trabalhoPiora26">Concordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora27" name="trabalhoPiora2" formControlName="trabalhoPiora2" class="custom-control-input" data-value="6">
+      <label class="custom-control-label" for="trabalhoPiora27">Concordo completamente</label>
+    </div>
+  </div>
 
-      <div class="col-sm-12 col-md-6 mb-4">
-        <h5>Eu não posso realizar meu trabalho com minha dor atual</h5>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora41" name="trabalhoPiora4" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora41">Discordo completamente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora42" name="trabalhoPiora4" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora42">Discordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora43" name="trabalhoPiora4" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora43">Não sei dizer</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora44" name="trabalhoPiora4" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora44">Concordo ligeiramente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora45" name="trabalhoPiora4" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora45">Concordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora46" name="trabalhoPiora4" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora46">Concordo completamente</label>
-        </div>
-      </div>
+  <div class="col-sm-12 col-md-6 mb-4">
+    <h5>Eu não deveria realizar meu trabalho normal com minha dor atual</h5>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora31" name="trabalhoPiora3" formControlName="trabalhoPiora3" class="custom-control-input" data-value="0">
+      <label class="custom-control-label" for="trabalhoPiora31">Discordo completamente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora32" name="trabalhoPiora3" formControlName="trabalhoPiora3" class="custom-control-input" data-value="1">
+      <label class="custom-control-label" for="trabalhoPiora32">Discordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora33" name="trabalhoPiora3" formControlName="trabalhoPiora3" class="custom-control-input" data-value="2">
+      <label class="custom-control-label" for="trabalhoPiora33">Discordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora34" name="trabalhoPiora3" formControlName="trabalhoPiora3" class="custom-control-input" data-value="3">
+      <label class="custom-control-label" for="trabalhoPiora34">Não sei dizer</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora35" name="trabalhoPiora3" formControlName="trabalhoPiora3" class="custom-control-input" data-value="4">
+      <label class="custom-control-label" for="trabalhoPiora35">Concordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora36" name="trabalhoPiora3" formControlName="trabalhoPiora3" class="custom-control-input" data-value="5">
+      <label class="custom-control-label" for="trabalhoPiora36">Concordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora37" name="trabalhoPiora3" formControlName="trabalhoPiora3" class="custom-control-input" data-value="6">
+      <label class="custom-control-label" for="trabalhoPiora37">Concordo completamente</label>
+    </div>
+  </div>
 
-      <div class="col-sm-12 col-md-6 mb-4">
-        <h5>Eu não posso realizar meu trabalho normal até que minha dor seja tratada</h5>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora51" name="trabalhoPiora5" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora51">Discordo completamente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora52" name="trabalhoPiora5" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora52">Discordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora53" name="trabalhoPiora5" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora53">Não sei dizer</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora54" name="trabalhoPiora5" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora54">Concordo ligeiramente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora55" name="trabalhoPiora5" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora55">Concordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora56" name="trabalhoPiora5" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora56">Concordo completamente</label>
-        </div>
-      </div>
+  <div class="col-sm-12 col-md-6 mb-4">
+    <h5>Eu não posso realizar meu trabalho com minha dor atual</h5>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora41" name="trabalhoPiora4" formControlName="trabalhoPiora4" class="custom-control-input" data-value="0">
+      <label class="custom-control-label" for="trabalhoPiora41">Discordo completamente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora42" name="trabalhoPiora4" formControlName="trabalhoPiora4" class="custom-control-input" data-value="1">
+      <label class="custom-control-label" for="trabalhoPiora42">Discordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora43" name="trabalhoPiora4" formControlName="trabalhoPiora4" class="custom-control-input" data-value="2">
+      <label class="custom-control-label" for="trabalhoPiora43">Discordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora44" name="trabalhoPiora4" formControlName="trabalhoPiora4" class="custom-control-input" data-value="3">
+      <label class="custom-control-label" for="trabalhoPiora44">Não sei dizer</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora45" name="trabalhoPiora4" formControlName="trabalhoPiora4" class="custom-control-input" data-value="4">
+      <label class="custom-control-label" for="trabalhoPiora45">Concordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora46" name="trabalhoPiora4" formControlName="trabalhoPiora4" class="custom-control-input" data-value="5">
+      <label class="custom-control-label" for="trabalhoPiora46">Concordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora47" name="trabalhoPiora4" formControlName="trabalhoPiora4" class="custom-control-input" data-value="6">
+      <label class="custom-control-label" for="trabalhoPiora47">Concordo completamente</label>
+    </div>
+  </div>
 
-      <div class="col-sm-12 col-md-6 mb-4">
-        <h5>Eu não acho que estarei de volta ao trabalho normal dentro de três meses</h5>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora61" name="trabalhoPiora6" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora61">Discordo completamente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora62" name="trabalhoPiora6" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora62">Discordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora63" name="trabalhoPiora6" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora63">Não sei dizer</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora64" name="trabalhoPiora6" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora64">Concordo ligeiramente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora65" name="trabalhoPiora6" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora65">Concordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="trabalhoPiora66" name="trabalhoPiora6" class="custom-control-input">
-          <label class="custom-control-label" for="trabalhoPiora66">Concordo completamente</label>
-        </div>
-      </div>
+  <div class="col-sm-12 col-md-6 mb-4">
+    <h5>Eu não posso realizar meu trabalho normal até que minha dor seja tratada</h5>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora51" name="trabalhoPiora5" formControlName="trabalhoPiora5" class="custom-control-input" data-value="0">
+      <label class="custom-control-label" for="trabalhoPiora51">Discordo completamente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora52" name="trabalhoPiora5" formControlName="trabalhoPiora5" class="custom-control-input" data-value="1">
+      <label class="custom-control-label" for="trabalhoPiora52">Discordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora53" name="trabalhoPiora5" formControlName="trabalhoPiora5" class="custom-control-input" data-value="2">
+      <label class="custom-control-label" for="trabalhoPiora53">Discordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora54" name="trabalhoPiora5" formControlName="trabalhoPiora5" class="custom-control-input" data-value="3">
+      <label class="custom-control-label" for="trabalhoPiora54">Não sei dizer</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora55" name="trabalhoPiora5" formControlName="trabalhoPiora5" class="custom-control-input" data-value="4">
+      <label class="custom-control-label" for="trabalhoPiora55">Concordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora56" name="trabalhoPiora5" formControlName="trabalhoPiora5" class="custom-control-input" data-value="5">
+      <label class="custom-control-label" for="trabalhoPiora56">Concordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora57" name="trabalhoPiora5" formControlName="trabalhoPiora5" class="custom-control-input" data-value="6">
+      <label class="custom-control-label" for="trabalhoPiora57">Concordo completamente</label>
+    </div>
+  </div>
 
-      <div class="col-sm-12 col-md-6 mb-4">
-        <h5>Eu não acho que algum dia estarei apto para retornar ao meu trabalho</h5>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="retornaTrabalho1" name="retornaTrabalho" class="custom-control-input">
-          <label class="custom-control-label" for="retornaTrabalho1">Discordo completamente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="retornaTrabalho2" name="retornaTrabalho" class="custom-control-input">
-          <label class="custom-control-label" for="retornaTrabalho2">Discordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="retornaTrabalho3" name="retornaTrabalho" class="custom-control-input">
-          <label class="custom-control-label" for="retornaTrabalho3">Não sei dizer</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="retornaTrabalho4" name="retornaTrabalho" class="custom-control-input">
-          <label class="custom-control-label" for="retornaTrabalho4">Concordo ligeiramente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="retornaTrabalho5" name="retornaTrabalho" class="custom-control-input">
-          <label class="custom-control-label" for="retornaTrabalho5">Concordo razoavelmente</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" id="retornaTrabalho6" name="retornaTrabalho" class="custom-control-input">
-          <label class="custom-control-label" for="retornaTrabalho6">Concordo completamente</label>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-12 mb-4">
-        <ngb-alert class="alert " role="alert">
-          <p>Questões de 1-5 com resultado maior que 15 e questões de 6-16 maior que 34:  fortes indicadores para a crença de medo e evitação de atividade físicas e laborais.</p>
-        </ngb-alert>
-      </div>
+  <div class="col-sm-12 col-md-6 mb-4">
+    <h5>Eu não acho que estarei de volta ao trabalho normal dentro de três meses</h5>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora61" name="trabalhoPiora6" formControlName="trabalhoPiora6" class="custom-control-input" data-value="0">
+      <label class="custom-control-label" for="trabalhoPiora61">Discordo completamente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora62" name="trabalhoPiora6" formControlName="trabalhoPiora6" class="custom-control-input" data-value="1">
+      <label class="custom-control-label" for="trabalhoPiora62">Discordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora63" name="trabalhoPiora6" formControlName="trabalhoPiora6" class="custom-control-input" data-value="2">
+      <label class="custom-control-label" for="trabalhoPiora63">Discordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora64" name="trabalhoPiora6" formControlName="trabalhoPiora6" class="custom-control-input" data-value="3">
+      <label class="custom-control-label" for="trabalhoPiora64">Não sei dizer</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora65" name="trabalhoPiora6" formControlName="trabalhoPiora6" class="custom-control-input" data-value="4">
+      <label class="custom-control-label" for="trabalhoPiora65">Concordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora66" name="trabalhoPiora6" formControlName="trabalhoPiora6" class="custom-control-input" data-value="5">
+      <label class="custom-control-label" for="trabalhoPiora66">Concordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trabalhoPiora67" name="trabalhoPiora6" formControlName="trabalhoPiora6" class="custom-control-input" data-value="6">
+      <label class="custom-control-label" for="trabalhoPiora67">Concordo completamente</label>
+    </div>
+  </div>
 
-      <div class="col-sm-12 col-md-12 mb-4">
-        <div class="form-group text-center p-b-20">
-          <div class="col-lg-12 p-0">
-            <button class="btn btn-info btn-md btn-block text-uppercase waves-effect waves-light"
-                    [routerLink]="['/patient']"
-                    >Salvar</button>
+  <div class="col-sm-12 col-md-6 mb-4">
+    <h5>Eu não acho que algum dia estarei apto para retornar ao meu trabalho</h5>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="retornaTrabalho1" name="retornaTrabalho" formControlName="retornaTrabalho" class="custom-control-input" data-value="0">
+      <label class="custom-control-label" for="retornaTrabalho1">Discordo completamente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="retornaTrabalho2" name="retornaTrabalho" formControlName="retornaTrabalho" class="custom-control-input" data-value="1">
+      <label class="custom-control-label" for="retornaTrabalho2">Discordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="retornaTrabalho3" name="retornaTrabalho" formControlName="retornaTrabalho" class="custom-control-input" data-value="2">
+      <label class="custom-control-label" for="retornaTrabalho3">Discordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="retornaTrabalho4" name="retornaTrabalho" formControlName="retornaTrabalho" class="custom-control-input" data-value="3">
+      <label class="custom-control-label" for="retornaTrabalho4">Não sei dizer</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="retornaTrabalho5" name="retornaTrabalho" formControlName="retornaTrabalho" class="custom-control-input" data-value="4">
+      <label class="custom-control-label" for="retornaTrabalho5">Concordo ligeiramente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="retornaTrabalho6" name="retornaTrabalho" formControlName="retornaTrabalho" class="custom-control-input" data-value="5">
+      <label class="custom-control-label" for="retornaTrabalho6">Concordo razoavelmente</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="retornaTrabalho7" name="retornaTrabalho" formControlName="retornaTrabalho" class="custom-control-input" data-value="6">
+      <label class="custom-control-label" for="retornaTrabalho7">Concordo completamente</label>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-12 mb-4">
+    <ngb-alert class="alert " role="alert">
+      <p>Questões de 1-5 com resultado maior que 15 e questões de 6-16 maior que 34:  fortes indicadores para a crença de medo e evitação de atividade físicas e laborais.</p>
+    </ngb-alert>
+  </div>
+
+  <div class="col-sm-12 col-md-4 mb-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="m-b-0">
+              <i class="mdi mdi-clipboard-outline text-info"></i>
+            </h2>
+            <h3>{{ this.score }}/66</h3>
+            <h6 class="card-subtitle">Total</h6>
+          </div>
+          <div class="col-12">
+            <p><ngb-progressbar type="info" [value]="this.width"></ngb-progressbar></p>
           </div>
         </div>
       </div>
-
-    </form>
+    </div>
   </div>
+
+  <div class="col-sm-12 col-md-12 mb-4">
+    <div class="form-group text-center p-b-20">
+      <div class="col-lg-12 p-0">
+        <button class="btn btn-info btn-md btn-block text-uppercase waves-effect waves-light"
+        [routerLink]="['/patient']"
+        >Salvar</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
 </div>

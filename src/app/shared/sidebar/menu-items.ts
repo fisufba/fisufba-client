@@ -2,16 +2,6 @@ import { RouteInfo } from './sidebar.metadata';
 
 export const ROUTES: RouteInfo[] = [
   {
-    path: '',
-    title: 'Personal',
-    icon: '',
-    class: 'nav-small-cap',
-    label: '',
-    labelClass: '',
-    extralink: true,
-    submenu: []
-  },
-  {
     path: '/home',
     title: 'Início',
     icon: 'mdi mdi-home',
@@ -41,6 +31,15 @@ export const ROUTES: RouteInfo[] = [
       }, {
         path: '/paciente',
         title: 'Paciente',
+        icon: 'mdi mdi-account',
+        class: '',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: []
+      }, {
+        path: '/pacientes',
+        title: 'Pacientes',
         icon: 'mdi mdi-account',
         class: '',
         label: '',

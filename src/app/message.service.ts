@@ -1,26 +1,16 @@
 import { Injectable } from '@angular/core';
-
 import { HttpErrorResponse } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessageService {
 
-  messages: string[] = [];
+  constructor(private toastr: ToastrService) { }
 
-  constructor() { }
-
-  add(message: string) {
-
-    // TODO remove this after adding the pop-up component.
-    console.log(`MessageService: ${message}`); 
-
-    this.messages.push(message);
-  }
-
-  clear() {
-    this.messages = [];
+  addError(message: string) {
+    this.toastr.error(message);
   }
 
   handleGenericError(error: HttpErrorResponse) {
@@ -28,6 +18,6 @@ export class MessageService {
     //       an agreement regarding these messages.
     console.log("@@@@@@@@ " + JSON.stringify(error));
     const message = error.error.message;
-    this.add(error.error.message);
+    this.addError(error.error.message);
   }
 }

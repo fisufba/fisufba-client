@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-goniometry',
@@ -6,12 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./goniometry.component.css']
 })
 export class GoniometryComponent implements OnInit {
+
   n:number = 1;
   fields:any = Array.from({length: 1}, (x,i) => i);
+  form: any;
 
   constructor() { }
 
   ngOnInit() {
+    this.form = new FormGroup({
+      'measuredArticulation': new FormControl(),
+      'left': new FormControl(),
+      'right': new FormControl(),
+    });
   }
 
   updateFields() {

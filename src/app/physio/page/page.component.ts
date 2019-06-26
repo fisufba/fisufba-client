@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-manager-page',
+  selector: 'app-physio-page',
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css']
 })
-export class ManagerPageComponent implements OnInit {
+export class PhysioPageComponent implements OnInit {
 
   currentPage;
   constructor() { }
@@ -22,5 +22,4 @@ export class ManagerPageComponent implements OnInit {
     this.currentPage = page;
       console.log(this.currentPage)
   }
-
 }
