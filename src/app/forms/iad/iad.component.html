@@ -1,0 +1,757 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="box-title m-b-20">Inventário de Atitudes Frente à Dor</h3>
+    <form class="form-horizontal form-material d-flex flex-row" [formGroup]="form" (change)="onUpdateForm()" style="flex-wrap: wrap">
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Muitas vezes eu consigo influenciar a intensidade da dor que sinto.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="influencioDor1" name="influencioDor" formControlName="influencioDor" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="influencioDor1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="influencioDor2" name="influencioDor" formControlName="influencioDor" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="influencioDor2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="influencioDor3" name="influencioDor" formControlName="influencioDor" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="influencioDor3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="influencioDor4" name="influencioDor" formControlName="influencioDor" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="influencioDor4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="influencioDor5" name="influencioDor" formControlName="influencioDor" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="influencioDor5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Provavelmente eu sempre terei que tomar medicamentos para dor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="medicacaoPermanente1" name="medicacaoPermanente" formControlName="medicacaoPermanente" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="medicacaoPermanente1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="medicacaoPermanente2" name="medicacaoPermanente" formControlName="medicacaoPermanente" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="medicacaoPermanente2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="medicacaoPermanente3" name="medicacaoPermanente" formControlName="medicacaoPermanente" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="medicacaoPermanente3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="medicacaoPermanente4" name="medicacaoPermanente" formControlName="medicacaoPermanente" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="medicacaoPermanente4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="medicacaoPermanente5" name="medicacaoPermanente" formControlName="medicacaoPermanente" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="medicacaoPermanente5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Sempre que eu sinto dor eu quero que minha família me trate melhor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="familiaTratamento1" name="familiaTratamento" formControlName="familiaTratamento" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="familiaTratamento1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="familiaTratamento2" name="familiaTratamento" formControlName="familiaTratamento" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="familiaTratamento2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="familiaTratamento3" name="familiaTratamento" formControlName="familiaTratamento" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="familiaTratamento3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="familiaTratamento4" name="familiaTratamento" formControlName="familiaTratamento" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="familiaTratamento4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="familiaTratamento5" name="familiaTratamento" formControlName="familiaTratamento" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="familiaTratamento5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Eu não espero cura médica para minha dor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="semCura11" name="semCura1" formControlName="semCura1" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="semCura11">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="semCura12" name="semCura1" formControlName="semCura1" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="semCura12">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="semCura13" name="semCura1" formControlName="semCura1" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="semCura13">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="semCura14" name="semCura1" formControlName="semCura1" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="semCura14">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="semCura15" name="semCura1" formControlName="semCura1" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="semCura15">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>O maior alívio da dor que eu tive foi com uso de medicamentos.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="medicamentoAlivia1" name="medicamentoAlivia" formControlName="medicamentoAlivia" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="medicamentoAlivia1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="medicamentoAlivia2" name="medicamentoAlivia" formControlName="medicamentoAlivia" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="medicamentoAlivia2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="medicamentoAlivia3" name="medicamentoAlivia" formControlName="medicamentoAlivia" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="medicamentoAlivia3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="medicamentoAlivia4" name="medicamentoAlivia" formControlName="medicamentoAlivia" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="medicamentoAlivia4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="medicamentoAlivia5" name="medicamentoAlivia" formControlName="medicamentoAlivia" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="medicamentoAlivia5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>A ansiedade aumenta a minha dor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="ansiedadePiora1" name="ansiedadePiora" formControlName="ansiedadePiora" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="ansiedadePiora1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="ansiedadePiora2" name="ansiedadePiora" formControlName="ansiedadePiora" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="ansiedadePiora2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="ansiedadePiora3" name="ansiedadePiora" formControlName="ansiedadePiora" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="ansiedadePiora3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="ansiedadePiora4" name="ansiedadePiora" formControlName="ansiedadePiora" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="ansiedadePiora4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="ansiedadePiora5" name="ansiedadePiora" formControlName="ansiedadePiora" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="ansiedadePiora5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Sempre que eu sinto dor as pessoas devem me tratar com cuidado e preocupação.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="cuidado1" name="cuidado" formControlName="cuidado" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="cuidado1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="cuidado2" name="cuidado" formControlName="cuidado" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="cuidado2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="cuidado3" name="cuidado" formControlName="cuidado" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="cuidado3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="cuidado4" name="cuidado" formControlName="cuidado" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="cuidado4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="cuidado5" name="cuidado" formControlName="cuidado" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="cuidado5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Eu desisti de buscar a completa eliminação da minha dor através do trabalho da medicina.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="desistiCura1" name="desistiCura" formControlName="desistiCura" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="desistiCura1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="desistiCura2" name="desistiCura" formControlName="desistiCura" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="desistiCura2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="desistiCura3" name="desistiCura" formControlName="desistiCura" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="desistiCura3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="desistiCura4" name="desistiCura" formControlName="desistiCura" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="desistiCura4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="desistiCura5" name="desistiCura" formControlName="desistiCura" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="desistiCura5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>É responsabilidade daqueles que me amam ajudarem-me quando eu sentir dor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividades1" name="atividades" formControlName="atividades" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="atividades1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividades2" name="atividades" formControlName="atividades" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="atividades2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividades3" name="atividades" formControlName="atividades" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="atividades3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividades4" name="atividades" formControlName="atividades" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="atividades4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividades5" name="atividades" formControlName="atividades" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="atividades5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>O estresse na minha vida aumenta a minha dor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="estressePiora1" name="estressePiora" formControlName="estressePiora" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="estressePiora1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="estressePiora2" name="estressePiora" formControlName="estressePiora" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="estressePiora2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="estressePiora3" name="estressePiora" formControlName="estressePiora" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="estressePiora3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="estressePiora4" name="estressePiora" formControlName="estressePiora" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="estressePiora4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="estressePiora5" name="estressePiora" formControlName="estressePiora" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="estressePiora5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Exercício e movimento são bons para o meu problema de dor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exercicioFunciona1" name="exercicioFunciona" formControlName="exercicioFunciona" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="exercicioFunciona1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exercicioFunciona2" name="exercicioFunciona" formControlName="exercicioFunciona" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="exercicioFunciona2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exercicioFunciona3" name="exercicioFunciona" formControlName="exercicioFunciona" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="exercicioFunciona3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exercicioFunciona4" name="exercicioFunciona" formControlName="exercicioFunciona" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="exercicioFunciona4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exercicioFunciona5" name="exercicioFunciona" formControlName="exercicioFunciona" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="exercicioFunciona5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Concentrando-me ou relaxando-me consigo diminuir a minha dor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="concentracao1" name="concentracao" formControlName="concentracao" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="concentracao1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="concentracao2" name="concentracao" formControlName="concentracao" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="concentracao2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="concentracao3" name="concentracao" formControlName="concentracao" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="concentracao3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="concentracao4" name="concentracao" formControlName="concentracao" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="concentracao4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="concentracao5" name="concentracao" formControlName="concentracao" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="concentracao5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Remédio é um dos melhores tratamentos para dor crônica.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="remedioTrata1" name="remedioTrata" formControlName="remedioTrata" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="remedioTrata1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="remedioTrata2" name="remedioTrata" formControlName="remedioTrata" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="remedioTrata2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="remedioTrata3" name="remedioTrata" formControlName="remedioTrata" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="remedioTrata3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="remedioTrata4" name="remedioTrata" formControlName="remedioTrata" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="remedioTrata4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="remedioTrata5" name="remedioTrata" formControlName="remedioTrata" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="remedioTrata5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>A minha família precisa aprender a cuidar melhor de mim quando eu estiver com dor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="familia1" name="familia" formControlName="familia" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="familia1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="familia2" name="familia" formControlName="familia" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="familia2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="familia3" name="familia" formControlName="familia" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="familia3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="familia4" name="familia" formControlName="familia" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="familia4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="familia5" name="familia" formControlName="familia" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="familia5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>A depressão aumenta a dor que sinto.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="depressao1" name="depressao" formControlName="depressao" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="depressao1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="depressao2" name="depressao" formControlName="depressao" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="depressao2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="depressao3" name="depressao" formControlName="depressao" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="depressao3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="depressao4" name="depressao" formControlName="depressao" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="depressao4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="depressao5" name="depressao" formControlName="depressao" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="depressao5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Se eu me exercitasse poderia piorar ainda mais o meu problema de dor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exercicioPiora1" name="exercicioPiora" formControlName="exercicioPiora" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="exercicioPiora1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exercicioPiora2" name="exercicioPiora" formControlName="exercicioPiora" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="exercicioPiora2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exercicioPiora3" name="exercicioPiora" formControlName="exercicioPiora" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="exercicioPiora3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exercicioPiora4" name="exercicioPiora" formControlName="exercicioPiora" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="exercicioPiora4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exercicioPiora5" name="exercicioPiora" formControlName="exercicioPiora" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="exercicioPiora5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Eu acredito poder controlar a dor que sinto mudando meus pensamentos.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="pensamentos1" name="pensamentos" formControlName="pensamentos" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="pensamentos1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="pensamentos2" name="pensamentos" formControlName="pensamentos" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="pensamentos2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="pensamentos3" name="pensamentos" formControlName="pensamentos" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="pensamentos3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="pensamentos4" name="pensamentos" formControlName="pensamentos" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="pensamentos4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="pensamentos5" name="pensamentos" formControlName="pensamentos" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="pensamentos5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Muitas vezes quando eu estou com dor eu preciso de mais carinho do que estou recebendo agora.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carinho1" name="carinho" formControlName="carinho" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="carinho1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carinho2" name="carinho" formControlName="carinho" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="carinho2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carinho3" name="carinho" formControlName="carinho" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="carinho3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carinho4" name="carinho" formControlName="carinho" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="carinho4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carinho5" name="carinho" formControlName="carinho" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="carinho5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Alguma coisa está errada com o meu corpo que impede muito movimento ou exercício.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="impedeMovimento1" name="impedeMovimento" formControlName="impedeMovimento" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="impedeMovimento1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="impedeMovimento2" name="impedeMovimento" formControlName="impedeMovimento" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="impedeMovimento2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="impedeMovimento3" name="impedeMovimento" formControlName="impedeMovimento" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="impedeMovimento3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="impedeMovimento4" name="impedeMovimento" formControlName="impedeMovimento" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="impedeMovimento4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="impedeMovimento5" name="impedeMovimento" formControlName="impedeMovimento" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="impedeMovimento5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Eu aprendi a controlar a minha dor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="controlaDor1" name="controlaDor" formControlName="controlaDor" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="controlaDor1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="controlaDor2" name="controlaDor" formControlName="controlaDor" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="controlaDor2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="controlaDor3" name="controlaDor" formControlName="controlaDor" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="controlaDor3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="controlaDor4" name="controlaDor" formControlName="controlaDor" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="controlaDor4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="controlaDor5" name="controlaDor" formControlName="controlaDor" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="controlaDor5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Eu confio que a medicina pode curar a minha dor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="medicinaCura1" name="medicinaCura" formControlName="medicinaCura" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="medicinaCura1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="medicinaCura2" name="medicinaCura" formControlName="medicinaCura" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="medicinaCura2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="medicinaCura3" name="medicinaCura" formControlName="medicinaCura" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="medicinaCura3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="medicinaCura4" name="medicinaCura" formControlName="medicinaCura" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="medicinaCura4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="medicinaCura5" name="medicinaCura" formControlName="medicinaCura" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="medicinaCura5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Eu sei com certeza que posso aprender a lidar com a minha dor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="lidar1" name="lidar" formControlName="lidar" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="lidar1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="lidar2" name="lidar" formControlName="lidar" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="lidar2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="lidar3" name="lidar" formControlName="lidar" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="lidar3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="lidar4" name="lidar" formControlName="lidar" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="lidar4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="lidar5" name="lidar" formControlName="lidar" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="lidar5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>A minha dor não impede de levar uma vida fisicamente ativa.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaAtiva11" name="vidaAtiva1" formControlName="vidaAtiva1" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="vidaAtiva11">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaAtiva12" name="vidaAtiva1" formControlName="vidaAtiva1" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="vidaAtiva12">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaAtiva13" name="vidaAtiva1" formControlName="vidaAtiva1" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="vidaAtiva13">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaAtiva14" name="vidaAtiva1" formControlName="vidaAtiva1" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="vidaAtiva14">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaAtiva15" name="vidaAtiva1" formControlName="vidaAtiva1" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="vidaAtiva15">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>A minha dor física não será curada.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="semCura1" name="semCura" formControlName="semCura" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="semCura1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="semCura2" name="semCura" formControlName="semCura" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="semCura2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="semCura3" name="semCura" formControlName="semCura" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="semCura3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="semCura4" name="semCura" formControlName="semCura" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="semCura4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="semCura5" name="semCura" formControlName="semCura" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="semCura5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Há uma forte ligação entre as minhas emoções e a intensidade da minha dor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="emocoes1" name="emocoes" formControlName="emocoes" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="emocoes1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="emocoes2" name="emocoes" formControlName="emocoes" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="emocoes2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="emocoes3" name="emocoes" formControlName="emocoes" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="emocoes3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="emocoes4" name="emocoes" formControlName="emocoes" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="emocoes4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="emocoes5" name="emocoes" formControlName="emocoes" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="emocoes5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Eu posso fazer quase tudo tão bem quanto eu podia antes de ter o problema da dor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="dorIndiferente1" name="dorIndiferente" formControlName="dorIndiferente" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="dorIndiferente1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="dorIndiferente2" name="dorIndiferente" formControlName="dorIndiferente" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="dorIndiferente2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="dorIndiferente3" name="dorIndiferente" formControlName="dorIndiferente" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="dorIndiferente3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="dorIndiferente4" name="dorIndiferente" formControlName="dorIndiferente" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="dorIndiferente4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="dorIndiferente5" name="dorIndiferente" formControlName="dorIndiferente" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="dorIndiferente5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Se eu não fizer quase tudo exercícios regularmente o problema da minha dor continuará a piorar.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exerciciosRegulares1" name="exerciciosRegulares" formControlName="exerciciosRegulares" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="exerciciosRegulares1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exerciciosRegulares2" name="exerciciosRegulares" formControlName="exerciciosRegulares" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="exerciciosRegulares2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exerciciosRegulares3" name="exerciciosRegulares" formControlName="exerciciosRegulares" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="exerciciosRegulares3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exerciciosRegulares4" name="exerciciosRegulares" formControlName="exerciciosRegulares" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="exerciciosRegulares4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exerciciosRegulares5" name="exerciciosRegulares" formControlName="exerciciosRegulares" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="exerciciosRegulares5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>O exercício pode diminuir a intensidade da dor que eu sinto.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exercicioDiminui1" name="exercicioDiminui" formControlName="exercicioDiminui" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="exercicioDiminui1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exercicioDiminui2" name="exercicioDiminui" formControlName="exercicioDiminui" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="exercicioDiminui2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exercicioDiminui3" name="exercicioDiminui" formControlName="exercicioDiminui" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="exercicioDiminui3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exercicioDiminui4" name="exercicioDiminui" formControlName="exercicioDiminui" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="exercicioDiminui4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="exercicioDiminui5" name="exercicioDiminui" formControlName="exercicioDiminui" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="exercicioDiminui5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Estou convencido de que não há procedimento médico que ajuste a minha dor.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="procedimentoMedico1" name="procedimentoMedico" formControlName="procedimentoMedico" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="procedimentoMedico1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="procedimentoMedico2" name="procedimentoMedico" formControlName="procedimentoMedico" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="procedimentoMedico2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="procedimentoMedico3" name="procedimentoMedico" formControlName="procedimentoMedico" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="procedimentoMedico3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="procedimentoMedico4" name="procedimentoMedico" formControlName="procedimentoMedico" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="procedimentoMedico4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="procedimentoMedico5" name="procedimentoMedico" formControlName="procedimentoMedico" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="procedimentoMedico5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>A dor que sinto impediria qualquer pessoa de levar uma vida ativa.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaAtiva1" name="vidaAtiva" formControlName="vidaAtiva" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="vidaAtiva1">Totalmente falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaAtiva2" name="vidaAtiva" formControlName="vidaAtiva" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="vidaAtiva2">Quase falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaAtiva3" name="vidaAtiva" formControlName="vidaAtiva" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="vidaAtiva3">Nem verdadeiro nem falso</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaAtiva4" name="vidaAtiva" formControlName="vidaAtiva" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="vidaAtiva4">Quase verdadeiro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="vidaAtiva5" name="vidaAtiva" formControlName="vidaAtiva" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="vidaAtiva5">Totalmente verdadeiro</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="m-b-0">
+                  <i class="mdi mdi-clipboard-outline text-info"></i>
+                </h2>
+                <h3>{{ this.score }}/120</h3>
+                <h6 class="card-subtitle">Total</h6>
+              </div>
+              <div class="col-12">
+                <p><ngb-progressbar type="info" [value]="this.width"></ngb-progressbar></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-12 mb-4">
+        <div class="form-group text-center p-b-20">
+          <div class="col-lg-12 p-0">
+            <button class="btn btn-info btn-md btn-block text-uppercase waves-effect waves-light"
+                    [routerLink]="['/patient']"
+                    >Salvar</button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

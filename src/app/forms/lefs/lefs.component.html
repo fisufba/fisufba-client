@@ -1,0 +1,518 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="box-title m-b-20">Lower Extremity Functional Scale (LEFS)</h3>
+    <form class="form-horizontal form-material d-flex flex-row" [formGroup]="form" (change)="onUpdateForm()" style="flex-wrap: wrap">
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h4>Hoje, você tem ou teria dificuldade para:</h4>
+        <h5>Qualquer uma de suas atividades usuais no trabalho, em casa ou na escola.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividades1" name="atividades" formControlName="atividades" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="atividades1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividades2" name="atividades" formControlName="atividades" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="atividades2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividades3" name="atividades" formControlName="atividades" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="atividades3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividades4" name="atividades" formControlName="atividades" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="atividades4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividades5" name="atividades" formControlName="atividades" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="atividades5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Seus passatempos habituais, atividades recreativas ou esportivas</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="passatempos1" name="passatempos" formControlName="passatempos" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="passatempos1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="passatempos2" name="passatempos" formControlName="passatempos" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="passatempos2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="passatempos3" name="passatempos" formControlName="passatempos" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="passatempos3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="passatempos4" name="passatempos" formControlName="passatempos" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="passatempos4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="passatempos5" name="passatempos" formControlName="passatempos" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="passatempos5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Ultrapassar um obstáculo de 50 cm de altura, como entrar ou sair de uma banheira</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="obstaculo1" name="obstaculo" formControlName="obstaculo" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="obstaculo1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="obstaculo2" name="obstaculo" formControlName="obstaculo" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="obstaculo2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="obstaculo3" name="obstaculo" formControlName="obstaculo" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="obstaculo3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="obstaculo4" name="obstaculo" formControlName="obstaculo" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="obstaculo4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="obstaculo5" name="obstaculo" formControlName="obstaculo" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="obstaculo5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Caminhar do quarto à sala</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="quartoSala1" name="quartoSala" formControlName="quartoSala" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="quartoSala1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="quartoSala2" name="quartoSala" formControlName="quartoSala" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="quartoSala2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="quartoSala3" name="quartoSala" formControlName="quartoSala" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="quartoSala3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="quartoSala4" name="quartoSala" formControlName="quartoSala" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="quartoSala4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="quartoSala5" name="quartoSala" formControlName="quartoSala" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="quartoSala5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Colocar o sapato ou as meias.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="calcar1" name="calcar" formControlName="calcar" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="calcar1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="calcar2" name="calcar" formControlName="calcar" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="calcar2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="calcar3" name="calcar" formControlName="calcar" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="calcar3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="calcar4" name="calcar" formControlName="calcar" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="calcar4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="calcar5" name="calcar" formControlName="calcar" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="calcar5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Ficar agachado (de cócoras).</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="agachado1" name="agachado" formControlName="agachado" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="agachado1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="agachado2" name="agachado" formControlName="agachado" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="agachado2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="agachado3" name="agachado" formControlName="agachado" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="agachado3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="agachado4" name="agachado" formControlName="agachado" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="agachado4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="agachado5" name="agachado" formControlName="agachado" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="agachado5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Levantar um objeto, como uma sacola de compras do chão.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levantar1" name="levantar" formControlName="levantar" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="levantar1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levantar2" name="levantar" formControlName="levantar" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="levantar2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levantar3" name="levantar" formControlName="levantar" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="levantar3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levantar4" name="levantar" formControlName="levantar" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="levantar4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="levantar5" name="levantar" formControlName="levantar" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="levantar5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Realizar atividades domiciliares leves.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadesLeves1" name="atividadesLeves" formControlName="atividadesLeves" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="atividadesLeves1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadesLeves2" name="atividadesLeves" formControlName="atividadesLeves" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="atividadesLeves2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadesLeves3" name="atividadesLeves" formControlName="atividadesLeves" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="atividadesLeves3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadesLeves4" name="atividadesLeves" formControlName="atividadesLeves" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="atividadesLeves4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadesLeves5" name="atividadesLeves" formControlName="atividadesLeves" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="atividadesLeves5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Realizar atividades domiciliares pesadas.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadesPesadas1" name="atividadesPesadas" formControlName="atividadesPesadas" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="atividadesPesadas1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadesPesadas2" name="atividadesPesadas" formControlName="atividadesPesadas" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="atividadesPesadas2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadesPesadas3" name="atividadesPesadas" formControlName="atividadesPesadas" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="atividadesPesadas3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadesPesadas4" name="atividadesPesadas" formControlName="atividadesPesadas" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="atividadesPesadas4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="atividadesPesadas5" name="atividadesPesadas" formControlName="atividadesPesadas" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="atividadesPesadas5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Entrar ou sair do carro.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carro1" name="carro" formControlName="carro" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="carro1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carro2" name="carro" formControlName="carro" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="carro2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carro3" name="carro" formControlName="carro" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="carro3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carro4" name="carro" formControlName="carro" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="carro4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="carro5" name="carro" formControlName="carro" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="carro5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Caminhar dois quarteirões.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="doisQuarteiroes1" name="doisQuarteiroes" formControlName="doisQuarteiroes" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="doisQuarteiroes1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="doisQuarteiroes2" name="doisQuarteiroes" formControlName="doisQuarteiroes" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="doisQuarteiroes2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="doisQuarteiroes3" name="doisQuarteiroes" formControlName="doisQuarteiroes" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="doisQuarteiroes3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="doisQuarteiroes4" name="doisQuarteiroes" formControlName="doisQuarteiroes" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="doisQuarteiroes4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="doisQuarteiroes5" name="doisQuarteiroes" formControlName="doisQuarteiroes" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="doisQuarteiroes5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Caminhar 1 kilômetro</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="umkm1" name="umkm" formControlName="umkm" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="umkm1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="umkm2" name="umkm" formControlName="umkm" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="umkm2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="umkm3" name="umkm" formControlName="umkm" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="umkm3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="umkm4" name="umkm" formControlName="umkm" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="umkm4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="umkm5" name="umkm" formControlName="umkm" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="umkm5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Subir ou descer 10 degraus (1 lance de escada).</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="escada1" name="escada" formControlName="escada" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="escada1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="escada2" name="escada" formControlName="escada" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="escada2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="escada3" name="escada" formControlName="escada" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="escada3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="escada4" name="escada" formControlName="escada" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="escada4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="escada5" name="escada" formControlName="escada" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="escada5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Ficar em pé durante 1 hora.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="emPe1" name="emPe" formControlName="emPe" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="emPe1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="emPe2" name="emPe" formControlName="emPe" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="emPe2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="emPe3" name="emPe" formControlName="emPe" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="emPe3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="emPe4" name="emPe" formControlName="emPe" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="emPe4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="emPe5" name="emPe" formControlName="emPe" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="emPe5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Ficar sentado durante 1 hora.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentado1" name="sentado" formControlName="sentado" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="sentado1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentado2" name="sentado" formControlName="sentado" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="sentado2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentado3" name="sentado" formControlName="sentado" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="sentado3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentado4" name="sentado" formControlName="sentado" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="sentado4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="sentado5" name="sentado" formControlName="sentado" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="sentado5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Correr em terreno plano.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="plano1" name="plano" formControlName="plano" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="plano1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="plano2" name="plano" formControlName="plano" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="plano2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="plano3" name="plano" formControlName="plano" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="plano3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="plano4" name="plano" formControlName="plano" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="plano4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="plano5" name="plano" formControlName="plano" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="plano5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Correr em terreno acidentado (irregular).</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="acidentado1" name="acidentado" formControlName="acidentado" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="acidentado1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="acidentado2" name="acidentado" formControlName="acidentado" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="acidentado2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="acidentado3" name="acidentado" formControlName="acidentado" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="acidentado3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="acidentado4" name="acidentado" formControlName="acidentado" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="acidentado4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="acidentado5" name="acidentado" formControlName="acidentado" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="acidentado5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Fazer mudanças bruscas de direção enquanto corre rapidamente.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="direcao1" name="direcao" formControlName="direcao" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="direcao1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="direcao2" name="direcao" formControlName="direcao" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="direcao2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="direcao3" name="direcao" formControlName="direcao" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="direcao3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="direcao4" name="direcao" formControlName="direcao" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="direcao4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="direcao5" name="direcao" formControlName="direcao" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="direcao5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Dar pulinhos</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="pulinhos1" name="pulinhos" formControlName="pulinhos" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="pulinhos1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="pulinhos2" name="pulinhos" formControlName="pulinhos" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="pulinhos2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="pulinhos3" name="pulinhos" formControlName="pulinhos" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="pulinhos3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="pulinhos4" name="pulinhos" formControlName="pulinhos" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="pulinhos4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="pulinhos5" name="pulinhos" formControlName="pulinhos" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="pulinhos5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 mb-4">
+        <h5>Rolar para mudar de lado na cama.</h5>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="rolar1" name="rolar" formControlName="rolar" class="custom-control-input" data-value="0">
+          <label class="custom-control-label" for="rolar1">Extremamente difícil ou incapaz de realizar</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="rolar2" name="rolar" formControlName="rolar" class="custom-control-input" data-value="1">
+          <label class="custom-control-label" for="rolar2">Bastante dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="rolar3" name="rolar" formControlName="rolar" class="custom-control-input" data-value="2">
+          <label class="custom-control-label" for="rolar3">Dificuldade moderada</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="rolar4" name="rolar" formControlName="rolar" class="custom-control-input" data-value="3">
+          <label class="custom-control-label" for="rolar4">Um pouco de dificuldade</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="rolar5" name="rolar" formControlName="rolar" class="custom-control-input" data-value="4">
+          <label class="custom-control-label" for="rolar5">Sem dificuldade</label>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="m-b-0">
+                  <i class="mdi mdi-clipboard-outline text-info"></i>
+                </h2>
+                <h3>{{ this.score }}/80</h3>
+                <h6 class="card-subtitle">Total</h6>
+              </div>
+              <div class="col-12">
+                <p><ngb-progressbar type="info" [value]="this.width"></ngb-progressbar></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-12 mb-4">
+        <div class="form-group text-center p-b-20">
+          <div class="col-lg-12 p-0">
+            <button class="btn btn-info btn-md btn-block text-uppercase waves-effect waves-light"
+            [routerLink]="['/patient']"
+            >Salvar</button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

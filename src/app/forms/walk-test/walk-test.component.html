@@ -1,0 +1,244 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="box-title m-b-20">Teste de Caminhada</h3>
+
+    <form class="form-horizontal form-material d-flex flex-row" [formGroup]="form" style="flex-wrap: wrap" (keyup)="onUpdateForm()">
+      <div class="col-md-6 col-sm-12">
+        <h5>Antes</h5>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">BORG</label>
+            <input class="form-control"
+                   name="borgBefore"
+                   formControlName="borgBefore"
+                   type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">FC</label>
+            <input class="form-control"
+                   name="fcBefore"
+                   formControlName="fcBefore"
+                   type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">PAS/PAD(PAM)</label>
+            <input class="form-control"
+                   name="pasBefore"
+                   formControlName="pasBefore"
+                   type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">SpO2</label>
+            <input class="form-control"
+                   name="spO2Before"
+                   formControlName="spO2Before"
+                   type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">FR</label>
+            <input class="form-control"
+                   name="frBefore"
+                   formControlName="frBefore"
+                   type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">Distancia Percorrida</label>
+            <input class="form-control"
+                   name="frBefore"
+                   formControlName="distBefore"
+                   type="text">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <h5>Final</h5>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">BORG</label>
+            <input class="form-control"
+                   name="borgFinal"
+                   formControlName="borgFinal"
+                   type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">FC</label>
+            <input class="form-control"
+                   name="fcFinal"
+                   formControlName="fcFinal"
+                   type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">PAS/PAD(PAM)</label>
+            <input class="form-control"
+                   name="pasFinal"
+                   formControlName="pasFinal"
+                   type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">SpO2</label>
+            <input class="form-control"
+                   name="spO2Final"
+                   formControlName="spO2Final"
+                   type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">FR</label>
+            <input class="form-control"
+                   name="frFinal"
+                   formControlName="frFinal"
+                   type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">Distancia Percorrida</label>
+            <input class="form-control"
+                   name="distFinal"
+                   formControlName="distFinal"
+                   type="text">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <h5>5 min</h5>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">BORG</label>
+            <input class="form-control"
+                   name="borgFive"
+                   formControlName="borgFive"
+                   type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">FC</label>
+            <input class="form-control"
+                   name="fcFive"
+                   formControlName="fcFive"
+                   type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">PAS/PAD(PAM)</label>
+            <input class="form-control"
+                   name="pasFive"
+                   formControlName="pasFive"
+                   type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">SpO2</label>
+            <input class="form-control"
+                   name="spO2Five"
+                   formControlName="spO2Five"
+                   type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">FR</label>
+            <input class="form-control"
+                   name="frFive"
+                   formControlName="frFive"
+                   type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="">Distancia Percorrida</label>
+            <input class="form-control"
+                   name="distFive"
+                   formControlName="distFive"
+                   type="text">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12 d-flex flex-row align-content-start" style="flex-wrap: wrap">
+        <h5 class="col-md-12">Dados</h5>
+        <div class="form-group col-md-4">
+          <label for="">Altura</label>
+          <input class="form-control"
+                 name="height"
+                 formControlName="height"
+                 type="text">
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="">Idade</label>
+          <input class="form-control"
+                 name="age"
+                 formControlName="age"
+                 type="text">
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="">Peso</label>
+          <input class="form-control"
+                 name="weight"
+                 formControlName="weight"
+                 type="text">
+        </div>
+
+        <div class="col-md-12 d-flex flex-row align-content-start" style="flex-wrap: wrap">
+          <ngb-alert class="alert alert-info">
+            <strong>Valores de referência</strong> <br/>
+            <strong> H: (7,57 x altura cm) - (5,02 x idade) - (1,76 x peso Kg) - 309 m</strong> <br/>
+            <strong> M: (2,11 x altura cm) - (5,78 x idade) - (2,29 x peso Kg) + 667 m</strong> <br/>
+            <strong> Enright PL, Sherrill DL. Reference equations for the six-minute walk in healthy</strong> <br/>
+            <strong> adults. Am J Respir Crit Care Med. 1998; 158 (5 Pt 1): 1384-7.</strong> <br/>
+          </ngb-alert>
+        </div>
+      </div>
+
+
+      <div class="col-sm-12 col-md-12 mb-4">
+        <div class="form-group text-center p-b-20">
+          <div class="col-lg-12 p-0">
+            <button class="btn btn-info btn-md btn-block text-uppercase waves-effect waves-light"
+                    [routerLink]="['/patient']"
+                    >Salvar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
