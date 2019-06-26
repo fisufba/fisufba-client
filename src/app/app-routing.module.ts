@@ -8,6 +8,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterPatientComponent } from './patient/register/register.component';
 import { RegisterManagerComponent } from './manager/register/register.component';
 
+import { SearchComponent } from './patient/search/search.component';
 import { PatientPageComponent } from './patient/page/page.component';
 import { ManagerPageComponent } from './manager/page/page.component';
 
@@ -42,6 +43,10 @@ export const routes: Routes = [
       {
         path: 'paciente',
         component: PatientPageComponent
+      },
+      {
+        path: 'pacientes',
+        component: SearchComponent
       },
       {
         path: 'atendente',

@@ -59,7 +59,7 @@ export class AccountService {
   }
 
   searchAccount(
-    cpf: string, displayName: string, 
+    cpf: string, displayName: string,
     phone: string, email: string): Observable<Account[] | null> {
 
       let params = [];
@@ -94,7 +94,7 @@ export class AccountService {
     };
   }
 
-  private accountDataToPayload(account: Account, 
+  private accountDataToPayload(account: Account,
                                password: string | undefined): Object {
     return {
       id: account.id,
