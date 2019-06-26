@@ -3,6 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ROUTES } from './menu-items';
 import { RouteInfo } from './sidebar.metadata';
 import { Router, ActivatedRoute } from '@angular/router';
+import { AccountService } from '../../account.service';
 declare var $: any;
 @Component({
   selector: 'app-sidebar',
@@ -11,6 +12,7 @@ declare var $: any;
 export class SidebarComponent implements OnInit {
   showMenu = '';
   showSubMenu = '';
+  name: string;
   public sidebarnavItems: any[];
   // this is for the open close
   addExpandClass(element: any) {
@@ -31,10 +33,15 @@ export class SidebarComponent implements OnInit {
   constructor(
     private modalService: NgbModal,
     private router: Router,
+    private accountService: AccountService,
     private route: ActivatedRoute
   ) {}
   // End open close
   ngOnInit() {
+    this.accountService.getAccount(Number(localStorage.getItem('user_id'))).subscribe((user:any) => {
+      this.name = user.displayName;
+    });
+
     this.sidebarnavItems = ROUTES.filter(sidebarnavItem => sidebarnavItem);
     $(function() {
       $('.sidebartoggler').on('click', function() {
