@@ -28,7 +28,7 @@ export const ROUTES: RouteInfo[] = [
         labelClass: '',
         extralink: false,
         submenu: []
-      }, {
+      }, /*{
         path: '/paciente',
         title: 'Paciente',
         icon: 'mdi mdi-account',
@@ -37,7 +37,7 @@ export const ROUTES: RouteInfo[] = [
         labelClass: '',
         extralink: false,
         submenu: []
-      }, {
+      },*/ {
         path: '/pacientes',
         title: 'Pacientes',
         icon: 'mdi mdi-account',
@@ -66,7 +66,7 @@ export const ROUTES: RouteInfo[] = [
         labelClass: '',
         extralink: false,
         submenu: []
-      }, {
+      }, /*{
         path: '/atendente',
         title: 'Atendente',
         icon: 'mdi mdi-account',
@@ -75,7 +75,7 @@ export const ROUTES: RouteInfo[] = [
         labelClass: '',
         extralink: false,
         submenu: []
-      },
+      },*/
     ]
   }, {
     path: '',
@@ -95,7 +95,7 @@ export const ROUTES: RouteInfo[] = [
         labelClass: '',
         extralink: false,
         submenu: []
-      }, {
+      }, /*{
         path: '/fisioterapeuta',
         title: 'Fisioterapeuta',
         icon: 'mdi mdi-account',
@@ -104,7 +104,7 @@ export const ROUTES: RouteInfo[] = [
         labelClass: '',
         extralink: false,
         submenu: []
-      },
+      },*/
     ]
   }
 ];
