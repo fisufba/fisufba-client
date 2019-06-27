@@ -45,9 +45,12 @@ export class SearchComponent implements OnInit {
       this.form.value.telefone.toString(),
       this.form.value.email.toString(),
     ).subscribe((users:any) => {
-        this.users = users
+        if(users == null)
+          this.users = [];
+        else
+          this.users = users;
 
-        this.rows = this.users;
+        this.data = [];
         for(let field in this.users) {
           let register = {
             'nome': '',
@@ -55,10 +58,10 @@ export class SearchComponent implements OnInit {
             'acao': ''
           }
 
-          register.nome = this.users[field].displayName
-          register.cpf = this.users[field].cpf
-          register.acao = '<a href="/paciente/' + this.users[field].id + '" class="btn btn-info btn-rounded" style="color: white"><i class="mdi mdi-eye"></i> Detalhes</a>'
-          this.data.push(register)
+          register.nome = this.users[field].displayName;
+          register.cpf = this.users[field].cpf;
+          register.acao = '<a href="#/paciente/' + this.users[field].id + '" class="btn btn-info btn-rounded" style="color: white"><i class="mdi mdi-eye"></i> Detalhes</a>';
+          this.data.push(register);
         }
         this.rows = this.data;
       });

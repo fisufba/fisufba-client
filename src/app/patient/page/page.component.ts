@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
 import { AccountService } from '../../account.service';
 
 @Component({
@@ -12,14 +15,17 @@ export class PatientPageComponent implements OnInit {
   user: any = "";
   constructor(
     private accountService: AccountService,
+    private route: ActivatedRoute,
+    private location: Location
   ) { }
 
   ngOnInit() {
     this.currentPage = ''
 
-    this.accountService.getAccount(Number(localStorage.getItem('user_id'))).subscribe((user:any) => {
+    const user_id = +this.route.snapshot.paramMap.get('id');
+
+    this.accountService.getAccount(user_id).subscribe((user:any) => {
       this.user = user;
-      console.log(user);
     });
   }
 

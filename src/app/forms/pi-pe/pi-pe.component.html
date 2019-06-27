@@ -30,7 +30,8 @@
       <div class="form-group text-center p-b-20">
         <div class="col-lg-4">
           <button class="btn btn-info btn-md btn-block text-uppercase waves-effect waves-light"
-                  [routerLink]="['/patient']"
+                  [disabled]="this.disableForm"
+                  (click)="onSave()"
                   >Salvar</button>
         </div>
       </div>

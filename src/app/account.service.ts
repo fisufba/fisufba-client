@@ -76,7 +76,7 @@ export class AccountService {
       return this.authService.get(`/accounts/search?${params.join('&')}`).pipe(
         map(payload => {
           const payloadItems = payload["_embedded"]["items"];
-          return payloadItems.filter(item => (item["type"] == "user"))
+          return payloadItems.filter(item => (item["type"] == "patient"))
                              .map(item => this.payloadToAccountData(item["_embedded"]));
         }),
         catchError(this.errorHandler(null))
