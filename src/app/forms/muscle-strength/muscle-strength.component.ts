@@ -17,7 +17,7 @@ export class MuscleStrengthComponent implements OnInit {
   n:number = 1;
   fields:any = Array.from({length: 1}, (x,i) => i);
   form: any;
-  disableForm: boolean = false;
+  disableForm: boolean = true;
 
   constructor(
     private service: MuscleStrengthService,
