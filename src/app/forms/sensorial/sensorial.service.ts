@@ -64,11 +64,11 @@ export class SensorialService extends StructureAndFunctionService<SensorialForm>
     return {
       measures: data.measures.map(measure => {
         return {
-          date: measure.date.toISOString().split('T')[0],
+          date: measure.date? measure.date.toISOString().split('T')[0] : null,
           type: measure.type,
           sensory_type: measure.sensoryType,
           target: measure.target,
-          value: measure.toString()
+          value: measure.value.toString()
         };
       })
     }
