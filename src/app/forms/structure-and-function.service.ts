@@ -4,7 +4,7 @@ import { MessageService } from '../message.service';
 
 export enum LeftRightMeasure {
   LeftSide = "E",
-  RightSide = "R"
+  RightSide = "D"
 }
 
 export abstract class StructureAndFunctionService<FormType extends Form> 

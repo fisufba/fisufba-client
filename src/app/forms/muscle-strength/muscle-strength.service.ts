@@ -52,11 +52,11 @@ export class MuscleStrengthService extends StructureAndFunctionService<MuscleStr
     return {
       measures: data.measures.map(measure => {
         return {
-          date: measure.date.toISOString().split('T')[0],
+          date: measure.date? measure.date.toISOString().split('T')[0] : null,
           type: measure.type,
           sensory_type: null,
           target: measure.target,
-          value: measure.toString()
+          value: measure.value.toString()
         };
       })
     }
