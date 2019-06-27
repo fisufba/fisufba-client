@@ -44,7 +44,7 @@ export class PainScaleComponent implements OnInit {
     const onFormUpdate = ((result) => {
       if(result == null) return;
       console.log(`added measure to form ${result}`);
-      this.messageService.addSuccess("Formulário criado com sucesso");
+      this.messageService.addSuccess("Medida acrescentada com sucesso");
     });
 
     this.service.getFormIds(userId).subscribe(formIds => {
