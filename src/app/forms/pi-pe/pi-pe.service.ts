@@ -55,11 +55,11 @@ export class PiPeService extends StructureAndFunctionService<PiPeForm> {
     return {
       measures: data.measures.map(measure => {
         return {
-          date: measure.date.toISOString().split('T')[0],
+          date: measure.date? measure.date.toISOString().split('T')[0] : null,
           type: measure.type,
           sensory_type: null,
           target: null,
-          value: measure.toString()
+          value: measure.value.toString()
         };
       })
     }
