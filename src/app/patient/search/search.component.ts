@@ -20,6 +20,8 @@ export class SearchComponent implements OnInit {
   loadingIndicator = true;
   reorderable = true;
   rows: any = [];
+  auto: any = "auto";
+  flex: any = "flex";
 
   @ViewChild(SearchComponent) table: SearchComponent;
   constructor(private accountService: AccountService) {

@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api_path: null  // TODO
+  apiUrl: window.location.origin + '/api'
 };
