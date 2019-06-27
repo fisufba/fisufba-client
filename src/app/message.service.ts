@@ -13,6 +13,10 @@ export class MessageService {
     this.toastr.error(message);
   }
 
+  addSuccess(message: string) {
+    this.toastr.success(message);
+  }
+
   handleGenericError(error: HttpErrorResponse) {
     // FIXME currently the server message is very bad! We should reach
     //       an agreement regarding these messages.

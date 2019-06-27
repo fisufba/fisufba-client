@@ -48,7 +48,7 @@ export const routes: Routes = [
         component: PhysioPageComponent
       },
       {
-        path: 'paciente',
+        path: 'paciente/:id',
         component: PatientPageComponent
       },
       {
